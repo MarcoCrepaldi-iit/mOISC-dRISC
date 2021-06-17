@@ -5,18 +5,18 @@
 
 Open source implementation of a multi-One Instruction Set Processor (mOISC) or dynamic Reduced Instruction Set Computer (dRISC) for microcontroller applications. 
 
-This repository comprises a basic monolithic compilation toolchain that compiles C source code to mOISC assembly and binary files using the `clang` front-end LLVM-IR output. Moreover, it translates `clang` and `llc` generated assembly to the
-mOISC assembler and provides an RTL proof-of-concept microarchitecture written in VHDL. mOISC can be used for educational purposes or other research activities, for instance devising other minimalistic architectures.
+This repository comprises a basic monolithic compilation toolchain that compiles C source code to mOISC assembly and binary files using the `clang` front-end LLVM-IR output. Moreover, it translates `clang` and `llc` generated assembly of commercial ISA (ARM, MIPS, RISC-V and x86) to the
+mOISC assembler and binary files and provides an RTL proof-of-concept microarchitecture written in VHDL. mOISC can be used for educational purposes or other research activities, for instance devising other minimalistic architectures.
 
 ###### <strong>A full machine description (registers included) is available in the first comments of the file `m.py`</strong>.
 
-Copyiright (C) 2020-2021 Marco Crepaldi, Istituto Italiano di Tecnologia (www.iit.it), Electronic Design Laboratory (https://edl.iit.it)
+Copyright (C) 2020-2021 Marco Crepaldi, Istituto Italiano di Tecnologia (www.iit.it), Electronic Design Laboratory (https://edl.iit.it)
 
-The software is *experimental* and *work in progress*, we have not implemented all LLVM-IR instructions, and the compiler works for simple programs based on integer only. The mOISC picocontroller is conceived for low complexity applications. This software is only a starting point to devise more complex projects/architectures. This code is the output of an our internal research project involving OISC.
+The software is *experimental* and *work in progress*. We have not implemented all LLVM-IR instructions, and the compiler works for simple programs based on integer variables, vectors and pointers only. The mOISC picocontroller is conceived for low complexity applications. This software is a starting point to devise more complex projects/architectures. This code is the output of an our internal research project involving OISC.
 
 ## Prerequisites
 
-The software has been tested under MacOS with Darwin Kernel Version 20.5.0, and under CentOS Linux 7, Kernel 3.10.0-1160.25.1.el7. We have tested compilation using LLVM 9.0 and 10.0. The RTL description has been verified using Quartus Prime Lite 19.1 and 20.1. 
+The software has been tested under MacOS with the Darwin Kernel Version 20.5.0, and under CentOS Linux 7, with Kernel 3.10.0-1160.25.1.el7. We have tested compilation using LLVM 9.0 and 10.0. The RTL description has been verified using Quartus Prime Lite 19.1 and 20.1 in a realistic wireless telemetry application involving an SPI LoRA transceiver and an I2C temperature sensor. 
 
 To run the compilation and simulation toolchain you need to install the following software:
 

@@ -64,7 +64,7 @@
 #
 # hence the operation for these registers the machine is transport triggered
 #
-# Fast mode (ultimate RISC)
+# Fast mode (CISC mode)
 #
 # label: {movleq, subleq, mem, memr, pc, pcs, addleq, andleq, orleq, xorleq, xnorleq, shlleq, shrleq} a, b -> c
 #
@@ -79,7 +79,7 @@
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 #
-# BOOTSTRAP REGISTERS
+# MACHINE REGISTERS
 #
 # b = 0x00 - MCR - Machine Code Register
 #            sets the execution mode of the CPU and dynamically defines the type of running OISC. 
@@ -193,22 +193,22 @@
 #
 # ASSEMBLER USAGE
 #
-# command line: python3 drisc.py <programname>
+# command line: python3 -in m.py <programname>
 #               <programname> is the name of the assembler file without extension
 #
-# class usage:
+# class usage and some methods:
 #
 # asm = DRISC()
 #   instantiates the class
 # 
-# asm.assemble(filein="program.asm", fileout="program.bin", filesym="program.sym")
+# asm.assemble
 #   assembles the program in program.asm and generates program.bin (binary code), and program.sym (symbols table for 
 #   the simulator)
 #
-# asm.load(filein="program.bin", filesym="program.sym")
+# asm.load
 #   loads binary and symbol data for simulation
 #
-# asm.simulate(umemprint=64, umempsym=True)
+# asm.simulate
 #   simulates the system, load() must be done in advance
 #   umemprint: defines the length of the memory to be printed
 #   umempsym: if false prints out the complete memory until umemprint
@@ -221,7 +221,7 @@
 #
 # ---------------------------------------------------------------------------------------------------------------------
 #
-# ASSEMBLY (.asm)
+# ASSEMBLY (.asm/.fasm)
 #
 # '#' turn a line to a comment
 # variables are analphanumeric but cannot start with a number, valid ones are, e.g., t0, line1, lab.1, a, b, g, etc...
@@ -232,7 +232,7 @@
 # assembly file structure:
 #
 # region 1 *** machine registers 
-# region 2 *** code memory 
+# region 2 *** program memory 
 # region 3 *** data memory 
 #
 # machine registers - the first 8 addresses (0-7) must be reserved for bootstrap with the only sequence:
@@ -246,13 +246,13 @@
 # IDR:  <value_idr>
 # where <value_*> is an 8 bit unsigned integer
 #
-# code memory - starting from address 8 the code memory can be arbitrarily specified, e.g.:
+# code memory - starting from address 8 the program memory can be arbitrarily specified, e.g.:
 # label.0:		exec R5, T -> C
 #				exec R5, R5
 #				exec 10, 25
 #               ...
 #
-#    ... or in fast mode ...
+#    ... or in CISC mode ...
 #
 #				subleq A0, A1 -> jp.325
 #				movleq A2, _ADDR
@@ -260,7 +260,7 @@
 #				memr A4, A5
 #               ...
 #
-# data memory - data memory can be appended at the end of the code, e.g.:
+# data memory - data memory can be appended at the end of the program, e.g.:
 # R5:		123
 # T:		-56
 # C:		0
@@ -271,7 +271,7 @@
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #
-# dRISC 816 (uRISC 816) - u = micro - 1st 8 = IOR width, 2nd; 16 = code/data memory width, irrespective of size
+# dRISC 816 (mOISC 816) - 1st 8 = IOR width, 2nd 16 = code/data memory width, irrespective of size
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
@@ -372,16 +372,16 @@ class DRISC:
 									sys.stdout.write(bcolors.FAIL + bcolors.FAIL + "Error: " + bcolors.ENDC + "" + bcolors.ENDC + "Bootstrap error. Address 1 is reserved to CPU halt register.\n")
 									raise Exception
 								elif (addr == 2) and (self.symbolic[2] != "IWR"):
-									sys.stdout.write(bcolors.FAIL + bcolors.FAIL + "Error: " + bcolors.ENDC + "" + bcolors.ENDC + "Bootstrap error. Address 2 is reserved to interrupt trigger register.\n")
+									sys.stdout.write(bcolors.FAIL + bcolors.FAIL + "Error: " + bcolors.ENDC + "" + bcolors.ENDC + "Bootstrap error. Address 2 is reserved to interrupt wait register.\n")
 									raise Exception
 								elif (addr == 3) and (self.symbolic[3] != "ICR"):
-									sys.stdout.write(bcolors.FAIL + bcolors.FAIL + "Error: " + bcolors.ENDC + "" + bcolors.ENDC + "Bootstrap error. Address 3 is reserved to interrupt mask register.\n")
+									sys.stdout.write(bcolors.FAIL + bcolors.FAIL + "Error: " + bcolors.ENDC + "" + bcolors.ENDC + "Bootstrap error. Address 3 is reserved to interrupt configuration register.\n")
 									raise Exception
 								elif (addr == 4) and (self.symbolic[4] != "CSR"):
 									sys.stdout.write(bcolors.FAIL + bcolors.FAIL + "Error: " + bcolors.ENDC + "" + bcolors.ENDC + "Bootstrap error. Address 4 is reserved to clock speed register.\n")
 									raise Exception
 								elif (addr == 5) and (self.symbolic[5] != "ISR"):
-									sys.stdout.write(bcolors.FAIL + bcolors.FAIL + "Error: " + bcolors.ENDC + "" + bcolors.ENDC + "Bootstrap error. Address 5 is reserved to interrupt return register (read-only), dummy value expected.\n")
+									sys.stdout.write(bcolors.FAIL + bcolors.FAIL + "Error: " + bcolors.ENDC + "" + bcolors.ENDC + "Bootstrap error. Address 5 is reserved to interrupt status register (read-only), dummy value expected.\n")
 									raise Exception	
 								elif (addr == 6) and (self.symbolic[6] != "IDR"):
 									sys.stdout.write(bcolors.FAIL + bcolors.FAIL + "Error: " + bcolors.ENDC + "" + bcolors.ENDC + "Bootstrap error. Address 6 is reserved to input/output direction register.\n")
@@ -633,16 +633,16 @@ class DRISC:
 									sys.stdout.write(bcolors.FAIL + bcolors.FAIL + "Error: " + bcolors.ENDC + "" + bcolors.ENDC + "Bootstrap error. Address 1 is reserved to CPU halt register.\n")
 									raise Exception
 								elif (addr == 2) and (self.symbolic[2] != "IWR"):
-									sys.stdout.write(bcolors.FAIL + bcolors.FAIL + "Error: " + bcolors.ENDC + "" + bcolors.ENDC + "Bootstrap error. Address 2 is reserved to interrupt trigger register.\n")
+									sys.stdout.write(bcolors.FAIL + bcolors.FAIL + "Error: " + bcolors.ENDC + "" + bcolors.ENDC + "Bootstrap error. Address 2 is reserved to interrupt wait register.\n")
 									raise Exception
 								elif (addr == 3) and (self.symbolic[3] != "ICR"):
-									sys.stdout.write(bcolors.FAIL + bcolors.FAIL + "Error: " + bcolors.ENDC + "" + bcolors.ENDC + "Bootstrap error. Address 3 is reserved to interrupt mask register.\n")
+									sys.stdout.write(bcolors.FAIL + bcolors.FAIL + "Error: " + bcolors.ENDC + "" + bcolors.ENDC + "Bootstrap error. Address 3 is reserved to interrupt configuration register.\n")
 									raise Exception
 								elif (addr == 4) and (self.symbolic[4] != "CSR"):
 									sys.stdout.write(bcolors.FAIL + bcolors.FAIL + "Error: " + bcolors.ENDC + "" + bcolors.ENDC + "Bootstrap error. Address 4 is reserved to clock speed register.\n")
 									raise Exception
 								elif (addr == 5) and (self.symbolic[5] != "ISR"):
-									sys.stdout.write(bcolors.FAIL + bcolors.FAIL + "Error: " + bcolors.ENDC + "" + bcolors.ENDC + "Bootstrap error. Address 5 is reserved to interrupt return register (read-only), dummy value expected.\n")
+									sys.stdout.write(bcolors.FAIL + bcolors.FAIL + "Error: " + bcolors.ENDC + "" + bcolors.ENDC + "Bootstrap error. Address 5 is reserved to interrupt status register (read-only), dummy value expected.\n")
 									raise Exception	
 								elif (addr == 6) and (self.symbolic[6] != "IDR"):
 									sys.stdout.write(bcolors.FAIL + bcolors.FAIL + "Error: " + bcolors.ENDC + "" + bcolors.ENDC + "Bootstrap error. Address 6 is reserved to input/output direction register.\n")

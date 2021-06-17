@@ -1,6 +1,6 @@
 # mOISC-dRISC
 
-![dRISC_logo](/logo/dRISC.pdf)
+![dRISC_logo](/logo/dRISC.png)
 
 
 Open source implementation of a multi-One Instruction Set Processor (mOISC) or dynamic Reduced Instruction Set Computer (dRISC) for microcontroller applications. 

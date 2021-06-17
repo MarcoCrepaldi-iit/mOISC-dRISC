@@ -31,9 +31,9 @@ For the FPGA synthesis you need to install the following software:
 
 + Quartus Prime Lite ([download](https://fpgasoftware.intel.com/?edition=lite));
 
-*Note: Quartus Prime Lite is subject to the acceptance of the End User License Agreement. See section License for further details.*
+*Note: Using Quartus Prime is subject to the acceptance of the End User License Agreement. See section License for further details.*
 
-## Compiling C source code
+## Compilation of C source code
 
 Compilation from C to binary files is achieved using `mc.py` and `m.py`. For ease of use we have created two scritps that compile
 the code by running both programs in sequence.

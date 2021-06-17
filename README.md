@@ -115,7 +115,7 @@ pin mapping configured by default as,
 | PIN_J2    | IOR[7]    |
 | PIN_D9    | RST       |
 
-The CLK pin is the default pin of the on-board 50MHz oscillator.
+The CLK pin is the default physical pin of the on-board 50MHz oscillator.
 
 In all cases, pins can be configured using `mautogen.py` and by adding additional arguments to `autogen`. Run `python3 mautogen.py -help` for further information.
 

@@ -98,7 +98,7 @@ To run graphical simulation (internally invoking `gtkwave`), run the following c
 ```
 Press CTRL-C to stop simulation execution (few seconds will be enough for `sine_wave`). The simulation engine will generate a VCD file that will be opened in the same `examples/` subdirectory, and used as input for `gtkwave`. Once opened, add IOR to the currently displayed wave to see the effect of the code on the I/O output port. You can also add `\DEBUG.INFO` for information on the currently executed function. 
 
-## Generation of mOISC microarchitecture VHDL code
+## Generation of mOISC synthesizable VHDL code
 
 The toolchain also provides automatic VHDL and Quartus project files generation for a [Cyclone 10LP Evaluation Kit](https://www.intel.com/content/www/us/en/programmable/products/boards_and_kits/dev-kits/altera/cyclone-10-lp-evaluation-kit.html), with IOR port
 pin mapping configured by default as,

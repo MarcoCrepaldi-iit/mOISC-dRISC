@@ -14,14 +14,14 @@
 // Overrides declaration
 // FOR DEBUG PURPOSES ONLY
 /*
-void __setcsr(int16_t x);
-void __seticr(int16_t x);
-void __setidr(int16_t x);
-void __setiwr(int16_t x);
-void __setchr(int16_t x);
-void __setior(int16_t x);
-int16_t __getior(void);
-int16_t __getisr(void);*/
+void __setcsr(int x);
+void __seticr(int x);
+void __setidr(int x);
+void __setiwr(int x);
+void __setchr(int x);
+void __setior(int x);
+int __getior(void);
+int __getisr(void);*/
 
 // Compatibility w.r.t. x86 memcpy
 void memcpy(void *dest, const void *src, int n);

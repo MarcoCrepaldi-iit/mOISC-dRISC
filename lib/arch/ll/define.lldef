@@ -1,0 +1,5 @@
+define dso_local void <name>($) <tag> {
+define dso_local void <name>() <tag> {
+define void <name>($) <tag> {
+define dso_local <var> <name>($) <tag> {
+define <var> <name>($) <tag> {

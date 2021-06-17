@@ -1,0 +1,5 @@
+<retval> = call <type> <name>($)  
+call void @llvm.memset.p0i8.i64(<ty> align <alignment> <var>, <ty> <val>, <ty> <val>, i1 false)
+call void @llvm.memset.p0i8.i32(<ty> align <alignment> <var>, <ty> <val>, <ty> <val>, i1 false)
+call void @llvm.memset.p0i8.i16(<ty> align <alignment> <var>, <ty> <val>, <ty> <val>, i1 false)
+call void <name>($)

@@ -1,0 +1,10 @@
+python3 m.py -simulate $1 -time 10000000 -vcd -debug -pmem 20000 -syms \$__const.main.vector,\$1,\$2,\$3,\$4,\$5,\$6,\$7,\$8,\$ra,\$sp,\$fp,_TMP,_ISEQUAL,_ISMINOR,_ISGREATER,ebp,esp,ecx,eax,edi,esi,_TMP2,_TMP3,sp,lr,r0,r1,r2,r3,r4,r12,r5,r6,r7,r8,r9,r10,r11,LCPI9_0,_ZERO,a0,s0,ra,edx,_RESULT,_TMPS,_tmp_vector,_tmp_vector.4,_tmp_vector.8,_tmp_vector.12,_tmp_vector.16,_tmp_vector.20,_tmp_vector.24,tmp_vector,tmp_vector.4,tmp_vector.8,tmp_vector.12,tmp_vector.16,tmp_vector.20,tmp_vector.24,cl,al,dl,bl,fp,\$fp,fp,mp,Var_10_main,Var_11_main,Var_12_main,Var_9_main,m_ptr,link_register,_TMP2,_TMP4,_TMPZERO,_ONETMP,_ONECONST,Var_7_main,Var_7_main.0,Var_7_main.1,Var_7_main.2,Var_7_main.3,Var_7_main.4,Var_7_main.5,Var_7_main.6,Var_7_main.7,Var_7_main.8
+#-iorovr 0 
+
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+        gtkwave $1.vcd
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+        open -a gtkwave.app $1.vcd
+fi
+
+

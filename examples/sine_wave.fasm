@@ -1,0 +1,440 @@
+MCR: 0
+CHR: 0
+IWR: 0
+ICR: 0
+CSR: 0
+ISR: 0
+IDR: 0
+IOR: 0
+	subleq _NULL, _NULL -> main
+memcpy: 	subleq _NULL, _NULL
+	memr Var_2_memcpy, m_ptr
+	subleq imm.0, m_ptr
+	memr Var_1_memcpy, m_ptr
+	subleq imm.0, m_ptr
+	memr Var_0_memcpy, m_ptr
+	subleq imm.0, m_ptr
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	mem Var_0_memcpy, _TMP
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	mem Var_1_memcpy, _TMP
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	mem Var_2_memcpy, _TMP
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	memr Var_10_memcpy, _TMP
+	movleq Var_10_memcpy, Var_11_memcpy
+	movleq imm.3, _TMP
+	addleq m_ptr, _TMP
+	mem Var_11_memcpy, _TMP
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	memr Var_12_memcpy, _TMP
+	movleq Var_12_memcpy, Var_13_memcpy
+	movleq imm.4, _TMP
+	addleq m_ptr, _TMP
+	mem Var_13_memcpy, _TMP
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	subleq _NULL, _NULL -> Label_14_memcpy
+Label_14_memcpy: 	subleq _NULL, _NULL
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	memr Var_15_memcpy, _TMP
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	memr Var_16_memcpy, _TMP
+	movleq Var_15_memcpy, Var_17_memcpy
+	subleq Var_16_memcpy, Var_17_memcpy
+	movleq CHR, Var_17_memcpy
+	andleq _icmp_slt, Var_17_memcpy -> Label_31_memcpy
+	subleq _NULL, _NULL -> Label_18_memcpy
+Label_18_memcpy: 	subleq _NULL, _NULL
+	movleq imm.3, _TMP
+	addleq m_ptr, _TMP
+	memr Var_19_memcpy, _TMP
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	memr Var_20_memcpy, _TMP
+	movleq Var_20_memcpy, Var_21_memcpy
+	movleq Var_19_memcpy, _TMP
+	addleq Var_21_memcpy, _TMP
+	movleq _TMP, Var_22_memcpy
+	memr Var_23_memcpy, Var_22_memcpy
+	movleq imm.4, _TMP
+	addleq m_ptr, _TMP
+	memr Var_24_memcpy, _TMP
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	memr Var_25_memcpy, _TMP
+	movleq Var_25_memcpy, Var_26_memcpy
+	movleq Var_24_memcpy, _TMP
+	addleq Var_26_memcpy, _TMP
+	movleq _TMP, Var_27_memcpy
+	mem Var_23_memcpy, Var_27_memcpy
+	subleq _NULL, _NULL -> Label_28_memcpy
+Label_28_memcpy: 	subleq _NULL, _NULL
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	memr Var_29_memcpy, _TMP
+	movleq imm.0, Var_30_memcpy
+	addleq Var_29_memcpy, Var_30_memcpy
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	mem Var_30_memcpy, _TMP
+	subleq _NULL, _NULL -> Label_14_memcpy
+Label_31_memcpy: 	subleq _NULL, _NULL
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	pcs _TMP, link_register
+sleep: 	subleq _NULL, _NULL
+	memr Var_1_sleep, m_ptr
+	subleq imm.0, m_ptr
+	memr Var_0_sleep, m_ptr
+	subleq imm.0, m_ptr
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	mem Var_0_sleep, _TMP
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	mem Var_1_sleep, _TMP
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	mem imm.0, _TMP
+	subleq _NULL, _NULL -> Label_6_sleep
+Label_6_sleep: 	subleq _NULL, _NULL
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	memr Var_7_sleep, _TMP
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	memr Var_8_sleep, _TMP
+	movleq Var_7_sleep, Var_9_sleep
+	subleq Var_8_sleep, Var_9_sleep
+	movleq CHR, Var_9_sleep
+	andleq _icmp_sle, Var_9_sleep -> Label_14_sleep
+	subleq _NULL, _NULL -> Label_10_sleep
+Label_10_sleep: 	subleq _NULL, _NULL
+	subleq _NULL, _NULL -> Label_11_sleep
+Label_11_sleep: 	subleq _NULL, _NULL
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	memr Var_12_sleep, _TMP
+	movleq imm.0, Var_13_sleep
+	addleq Var_12_sleep, Var_13_sleep
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	mem Var_13_sleep, _TMP
+	subleq _NULL, _NULL -> Label_6_sleep
+Label_14_sleep: 	subleq _NULL, _NULL
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	memr Var_15_sleep, _TMP
+	movleq Var_15_sleep, Var_16_sleep
+	subleq imm.7, Var_16_sleep
+	movleq CHR, Var_16_sleep
+	andleq _icmp_sgt, Var_16_sleep -> Label_18_sleep
+	subleq _NULL, _NULL -> Label_17_sleep
+Label_17_sleep: 	subleq _NULL, _NULL
+	mem imm.0, %ma-Global_direction
+	subleq _NULL, _NULL -> Label_18_sleep
+Label_18_sleep: 	subleq _NULL, _NULL
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	memr Var_19_sleep, _TMP
+	movleq Var_19_sleep, Var_20_sleep
+	subleq imm.5, Var_20_sleep
+	movleq CHR, Var_20_sleep
+	andleq _icmp_slt, Var_20_sleep -> Label_22_sleep
+	subleq _NULL, _NULL -> Label_21_sleep
+Label_21_sleep: 	subleq _NULL, _NULL
+	mem imm.5, %ma-Global_direction
+	subleq _NULL, _NULL -> Label_22_sleep
+Label_22_sleep: 	subleq _NULL, _NULL
+	memr Var_23_sleep, %ma-Global_direction
+	movleq Var_23_sleep, Var_24_sleep
+	subleq imm.0, Var_24_sleep
+	movleq CHR, Var_24_sleep
+	andleq _icmp_eq, Var_24_sleep -> Label_28_sleep
+	subleq _NULL, _NULL -> Label_25_sleep
+Label_25_sleep: 	subleq _NULL, _NULL
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	memr Var_26_sleep, _TMP
+	movleq imm.8, Var_27_sleep
+	addleq Var_26_sleep, Var_27_sleep
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	mem Var_27_sleep, _TMP
+	subleq _NULL, _NULL -> Label_31_sleep
+Label_28_sleep: 	subleq _NULL, _NULL
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	memr Var_29_sleep, _TMP
+	movleq imm.0, Var_30_sleep
+	addleq Var_29_sleep, Var_30_sleep
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	mem Var_30_sleep, _TMP
+	subleq _NULL, _NULL -> Label_31_sleep
+Label_31_sleep: 	subleq _NULL, _NULL
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	memr Var_32_sleep, _TMP
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	addleq imm.0, m_ptr
+	mem Var_32_sleep, m_ptr
+	pcs _TMP, link_register
+main: 	subleq _NULL, _NULL
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	memr Var_5_main, %ma-Global_mOISC_csr
+	mem imm.9, Var_5_main
+	memr Var_6_main, %ma-Global_mOISC_idr
+	mem imm.10, Var_6_main
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	subleq _NULL, _NULL -> Label_7_main
+Label_7_main: 	subleq _NULL, _NULL
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	memr Var_8_main, _TMP
+	movleq Var_8_main, Var_9_main
+	movleq %ma-Global_sine, _TMP
+	addleq imm.5, _TMP
+	addleq Var_9_main, _TMP
+	movleq _TMP, Var_10_main
+	memr Var_11_main, Var_10_main
+	memr Var_12_main, %ma-Global_mOISC_ior
+	mem Var_11_main, Var_12_main
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	memr Var_13_main, _TMP
+	movleq imm.0, Var_14_main
+	addleq Var_13_main, Var_14_main
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	mem Var_14_main, _TMP
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	memr Var_15_main, _TMP
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	memr Var_16_main, _TMP
+	movleq m_ptr, _TMP
+	addleq imm.4, m_ptr
+	mem _TMP, m_ptr
+	movleq Var_15_main, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq Var_16_main, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> sleep
+	memr Var_17_main, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	mem Var_17_main, _TMP
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	memr Var_18_main, _TMP
+	movleq imm.11, Var_19_main
+	andleq Var_18_main, Var_19_main
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	mem Var_19_main, _TMP
+	subleq _NULL, _NULL -> Label_7_main
+_SUBLMCR:	255
+_MOVMCR:	238
+_ADDMCR:	204
+_SHLMCR:	153
+_SHRMCR:	136
+_ORMCR:	119
+_ANDMCR:	102
+_XORMCR:	85
+_XNORMCR:	68
+_PCMCR:	51
+_MEMMCR:	34
+_MEMRMCR:	17
+_PCSMCR:	0
+_NULL:	0
+m_ptr:	31500
+link_register:	0
+_TMP:	0
+%ma-Global_mOISC_ior:	1074
+Global_mOISC_ior:	7
+%ma-Global_mOISC_idr:	1076
+Global_mOISC_idr:	6
+%ma-Global_mOISC_isr:	1078
+Global_mOISC_isr:	5
+%ma-Global_mOISC_csr:	1080
+Global_mOISC_csr:	4
+%ma-Global_mOISC_icr:	1082
+Global_mOISC_icr:	3
+%ma-Global_mOISC_iwr:	1084
+Global_mOISC_iwr:	2
+%ma-Global_mOISC_chr:	1086
+Global_mOISC_chr:	1
+%ma-Global_mOISC_mcr:	1088
+Global_mOISC_mcr:	0
+%ma-Global_sine:	1090
+Global_sine.0:	127
+Global_sine.1:	140
+Global_sine.2:	152
+Global_sine.3:	165
+Global_sine.4:	177
+Global_sine.5:	188
+Global_sine.6:	199
+Global_sine.7:	209
+Global_sine.8:	218
+Global_sine.9:	227
+Global_sine.10:	234
+Global_sine.11:	241
+Global_sine.12:	246
+Global_sine.13:	250
+Global_sine.14:	253
+Global_sine.15:	254
+Global_sine.16:	254
+Global_sine.17:	253
+Global_sine.18:	251
+Global_sine.19:	248
+Global_sine.20:	243
+Global_sine.21:	237
+Global_sine.22:	230
+Global_sine.23:	222
+Global_sine.24:	213
+Global_sine.25:	203
+Global_sine.26:	193
+Global_sine.27:	181
+Global_sine.28:	170
+Global_sine.29:	158
+Global_sine.30:	145
+Global_sine.31:	132
+Global_sine.32:	120
+Global_sine.33:	107
+Global_sine.34:	94
+Global_sine.35:	82
+Global_sine.36:	71
+Global_sine.37:	59
+Global_sine.38:	49
+Global_sine.39:	39
+Global_sine.40:	31
+Global_sine.41:	23
+Global_sine.42:	16
+Global_sine.43:	10
+Global_sine.44:	6
+Global_sine.45:	2
+Global_sine.46:	0
+Global_sine.47:	0
+Global_sine.48:	0
+Global_sine.49:	2
+Global_sine.50:	5
+Global_sine.51:	9
+Global_sine.52:	14
+Global_sine.53:	21
+Global_sine.54:	28
+Global_sine.55:	37
+Global_sine.56:	47
+Global_sine.57:	57
+Global_sine.58:	68
+Global_sine.59:	79
+Global_sine.60:	91
+Global_sine.61:	104
+Global_sine.62:	116
+Global_sine.63:	129
+%ma-Global_direction:	1155
+Global_direction:	0
+imm.0:	1
+Var_0_memcpy:	0
+Var_1_memcpy:	0
+Var_2_memcpy:	0
+imm.1:	2
+imm.2:	3
+Var_10_memcpy:	0
+Var_11_memcpy:	0
+imm.3:	4
+Var_12_memcpy:	0
+Var_13_memcpy:	0
+imm.4:	5
+imm.5:	0
+imm.6:	6
+Var_15_memcpy:	0
+Var_16_memcpy:	0
+Var_17_memcpy:	0
+_icmp_slt:	4
+Var_19_memcpy:	0
+Var_20_memcpy:	0
+Var_21_memcpy:	0
+Var_22_memcpy:	0
+Var_23_memcpy:	0
+Var_24_memcpy:	0
+Var_25_memcpy:	0
+Var_26_memcpy:	0
+Var_27_memcpy:	0
+Var_29_memcpy:	0
+Var_30_memcpy:	0
+Var_0_sleep:	0
+Var_1_sleep:	0
+Var_7_sleep:	0
+Var_8_sleep:	0
+Var_9_sleep:	0
+_icmp_sle:	12
+Var_12_sleep:	0
+Var_13_sleep:	0
+Var_15_sleep:	0
+Var_16_sleep:	0
+imm.7:	128
+_icmp_sgt:	2
+Var_19_sleep:	0
+Var_20_sleep:	0
+Var_23_sleep:	0
+Var_24_sleep:	0
+_icmp_eq:	8
+Var_26_sleep:	0
+Var_27_sleep:	0
+imm.8:	-1
+Var_29_sleep:	0
+Var_30_sleep:	0
+Var_32_sleep:	0
+Var_5_main:	0
+imm.9:	192
+Var_6_main:	0
+imm.10:	255
+Var_8_main:	0
+Var_9_main:	0
+Var_10_main:	0
+Var_11_main:	0
+Var_12_main:	0
+Var_13_main:	0
+Var_14_main:	0
+Var_15_main:	0
+Var_16_main:	0
+_PCMCR_RETADDRBL:	-8
+Var_17_main:	0
+Var_18_main:	0
+Var_19_main:	0
+imm.11:	63

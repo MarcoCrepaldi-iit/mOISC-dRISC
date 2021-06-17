@@ -1,0 +1,7 @@
+	exec _MEMRMCR, MCR
+	exec %1, _TMP
+	exec _ADDMCR, MCR
+	exec _AUTOINC, _TMP
+_ADDMCR:	204
+_MEMRMCR:	17
+_AUTOINC:	4

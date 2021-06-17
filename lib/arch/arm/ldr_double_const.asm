@@ -1,0 +1,6 @@
+	exec _MOVMCR, MCR
+	exec %2, %1
+_MOVMCR:	238
+_MEMMCR:	34
+_MEMRMCR:	17
+_TMP:		0

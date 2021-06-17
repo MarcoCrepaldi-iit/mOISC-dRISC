@@ -1,0 +1,2 @@
+<result> = load volatile <ty>, <ty>* <pointer>, align <alignment>
+<result> = load <ty>, <ty>* <pointer>, align <alignment>

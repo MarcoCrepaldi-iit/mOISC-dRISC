@@ -1,0 +1,2 @@
+ret void
+ret <ty> <val>

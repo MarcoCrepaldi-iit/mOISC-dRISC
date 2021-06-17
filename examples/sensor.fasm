@@ -1,0 +1,4329 @@
+MCR: 0
+CHR: 0
+IWR: 0
+ICR: 0
+CSR: 0
+ISR: 0
+IDR: 0
+IOR: 0
+	subleq _NULL, _NULL -> main
+memcpy: 	subleq _NULL, _NULL
+	memr Var_2_memcpy, m_ptr
+	subleq imm.0, m_ptr
+	memr Var_1_memcpy, m_ptr
+	subleq imm.0, m_ptr
+	memr Var_0_memcpy, m_ptr
+	subleq imm.0, m_ptr
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	mem Var_0_memcpy, _TMP
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	mem Var_1_memcpy, _TMP
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	mem Var_2_memcpy, _TMP
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	memr Var_10_memcpy, _TMP
+	movleq Var_10_memcpy, Var_11_memcpy
+	movleq imm.3, _TMP
+	addleq m_ptr, _TMP
+	mem Var_11_memcpy, _TMP
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	memr Var_12_memcpy, _TMP
+	movleq Var_12_memcpy, Var_13_memcpy
+	movleq imm.4, _TMP
+	addleq m_ptr, _TMP
+	mem Var_13_memcpy, _TMP
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	subleq _NULL, _NULL -> Label_14_memcpy
+Label_14_memcpy: 	subleq _NULL, _NULL
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	memr Var_15_memcpy, _TMP
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	memr Var_16_memcpy, _TMP
+	movleq Var_15_memcpy, Var_17_memcpy
+	subleq Var_16_memcpy, Var_17_memcpy
+	movleq CHR, Var_17_memcpy
+	andleq _icmp_slt, Var_17_memcpy -> Label_31_memcpy
+	subleq _NULL, _NULL -> Label_18_memcpy
+Label_18_memcpy: 	subleq _NULL, _NULL
+	movleq imm.3, _TMP
+	addleq m_ptr, _TMP
+	memr Var_19_memcpy, _TMP
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	memr Var_20_memcpy, _TMP
+	movleq Var_20_memcpy, Var_21_memcpy
+	movleq Var_19_memcpy, _TMP
+	addleq Var_21_memcpy, _TMP
+	movleq _TMP, Var_22_memcpy
+	memr Var_23_memcpy, Var_22_memcpy
+	movleq imm.4, _TMP
+	addleq m_ptr, _TMP
+	memr Var_24_memcpy, _TMP
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	memr Var_25_memcpy, _TMP
+	movleq Var_25_memcpy, Var_26_memcpy
+	movleq Var_24_memcpy, _TMP
+	addleq Var_26_memcpy, _TMP
+	movleq _TMP, Var_27_memcpy
+	mem Var_23_memcpy, Var_27_memcpy
+	subleq _NULL, _NULL -> Label_28_memcpy
+Label_28_memcpy: 	subleq _NULL, _NULL
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	memr Var_29_memcpy, _TMP
+	movleq imm.0, Var_30_memcpy
+	addleq Var_29_memcpy, Var_30_memcpy
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	mem Var_30_memcpy, _TMP
+	subleq _NULL, _NULL -> Label_14_memcpy
+Label_31_memcpy: 	subleq _NULL, _NULL
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	pcs _TMP, link_register
+delay: 	subleq _NULL, _NULL
+	memr Var_0_delay, m_ptr
+	subleq imm.0, m_ptr
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	mem Var_0_delay, _TMP
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	mem imm.0, _TMP
+	subleq _NULL, _NULL -> Label_4_delay
+Label_4_delay: 	subleq _NULL, _NULL
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	memr Var_5_delay, _TMP
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	memr Var_6_delay, _TMP
+	movleq Var_5_delay, Var_7_delay
+	subleq Var_6_delay, Var_7_delay
+	movleq CHR, Var_7_delay
+	andleq _icmp_sle, Var_7_delay -> Label_12_delay
+	subleq _NULL, _NULL -> Label_8_delay
+Label_8_delay: 	subleq _NULL, _NULL
+	subleq _NULL, _NULL -> Label_9_delay
+Label_9_delay: 	subleq _NULL, _NULL
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	memr Var_10_delay, _TMP
+	movleq imm.0, Var_11_delay
+	addleq Var_10_delay, Var_11_delay
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	mem Var_11_delay, _TMP
+	subleq _NULL, _NULL -> Label_4_delay
+Label_12_delay: 	subleq _NULL, _NULL
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	pcs _TMP, link_register
+spi_ll: 	subleq _NULL, _NULL
+	memr Var_2_spi_ll, m_ptr
+	subleq imm.0, m_ptr
+	memr Var_1_spi_ll, m_ptr
+	subleq imm.0, m_ptr
+	memr Var_0_spi_ll, m_ptr
+	subleq imm.0, m_ptr
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	mem Var_0_spi_ll, _TMP
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	mem Var_1_spi_ll, _TMP
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	mem Var_2_spi_ll, _TMP
+	movleq imm.7, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	movleq imm.8, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	movleq imm.9, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	memr Var_14_spi_ll, %ma-Global_mOISC_ior
+	memr Var_15_spi_ll, Var_14_spi_ll
+	movleq imm.10, Var_16_spi_ll
+	andleq Var_15_spi_ll, Var_16_spi_ll
+	movleq imm.9, _TMP
+	addleq m_ptr, _TMP
+	mem Var_16_spi_ll, _TMP
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	memr Var_17_spi_ll, _TMP
+	movleq imm.11, Var_18_spi_ll
+	andleq Var_17_spi_ll, Var_18_spi_ll
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	memr Var_19_spi_ll, _TMP
+	movleq imm.12, Var_20_spi_ll
+	shlleq Var_19_spi_ll, Var_20_spi_ll
+	movleq Var_20_spi_ll, Var_21_spi_ll
+	orleq Var_18_spi_ll, Var_21_spi_ll
+	movleq imm.8, _TMP
+	addleq m_ptr, _TMP
+	mem Var_21_spi_ll, _TMP
+	movleq imm.9, _TMP
+	addleq m_ptr, _TMP
+	memr Var_22_spi_ll, _TMP
+	movleq Var_22_spi_ll, Var_23_spi_ll
+	orleq imm.5, Var_23_spi_ll
+	memr Var_24_spi_ll, %ma-Global_mOISC_ior
+	mem Var_23_spi_ll, Var_24_spi_ll
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	subleq _NULL, _NULL -> Label_25_spi_ll
+Label_25_spi_ll: 	subleq _NULL, _NULL
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	memr Var_26_spi_ll, _TMP
+	movleq Var_26_spi_ll, Var_27_spi_ll
+	subleq imm.7, Var_27_spi_ll
+	movleq CHR, Var_27_spi_ll
+	andleq _icmp_slt, Var_27_spi_ll -> Label_46_spi_ll
+	subleq _NULL, _NULL -> Label_28_spi_ll
+Label_28_spi_ll: 	subleq _NULL, _NULL
+	movleq imm.8, _TMP
+	addleq m_ptr, _TMP
+	memr Var_29_spi_ll, _TMP
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	memr Var_30_spi_ll, _TMP
+	movleq imm.12, Var_31_spi_ll
+	subleq Var_30_spi_ll, Var_31_spi_ll
+	movleq Var_31_spi_ll, _TMP
+	movleq Var_29_spi_ll, _TMP2
+	movleq Var_29_spi_ll, _TMPZERO
+	movleq _ONECONST, _ONETMP
+	movleq _ZERO, _TMP4
+	subleq _ZERO, _TMP2 -> negativeOrZero_114_
+	shrleq Var_29_spi_ll, _TMP
+	movleq _TMP, Var_32_spi_ll
+	subleq _TMP, _TMP -> exit_114_
+negativeOrZero_114_: 	andleq _NEGATIVE, _TMPZERO
+	subleq _TMPZERO, _TMP4 -> exit2_114_
+	movleq _ZERO, _TMP4
+	subleq _ONECONST, _TMP
+loop_114_: 	shrleq Var_31_spi_ll, _ONETMP
+	orleq _NEGATIVE, _ONETMP
+	movleq _ONETMP, Var_32_spi_ll
+	movleq _ZERO, _TMP4
+	movleq _ONECONST, _ONETMP
+	subleq _ONECONST, _TMP
+	subleq _TMP, _TMP4 -> loop_114_
+exit2_114_: 	movleq Var_29_spi_ll, Var_32_spi_ll
+exit_114_: 	subleq _NULL, _NULL
+	movleq imm.0, Var_33_spi_ll
+	andleq Var_32_spi_ll, Var_33_spi_ll
+	movleq imm.4, _TMP
+	addleq m_ptr, _TMP
+	mem Var_33_spi_ll, _TMP
+	movleq imm.4, _TMP
+	addleq m_ptr, _TMP
+	memr Var_34_spi_ll, _TMP
+	movleq imm.9, _TMP
+	addleq m_ptr, _TMP
+	memr Var_35_spi_ll, _TMP
+	movleq Var_35_spi_ll, Var_36_spi_ll
+	orleq Var_34_spi_ll, Var_36_spi_ll
+	memr Var_37_spi_ll, %ma-Global_mOISC_ior
+	mem Var_36_spi_ll, Var_37_spi_ll
+	movleq imm.4, _TMP
+	addleq m_ptr, _TMP
+	memr Var_38_spi_ll, _TMP
+	movleq Var_38_spi_ll, Var_39_spi_ll
+	orleq imm.1, Var_39_spi_ll
+	movleq imm.9, _TMP
+	addleq m_ptr, _TMP
+	memr Var_40_spi_ll, _TMP
+	movleq Var_40_spi_ll, Var_41_spi_ll
+	orleq Var_39_spi_ll, Var_41_spi_ll
+	memr Var_42_spi_ll, %ma-Global_mOISC_ior
+	mem Var_41_spi_ll, Var_42_spi_ll
+	subleq _NULL, _NULL -> Label_43_spi_ll
+Label_43_spi_ll: 	subleq _NULL, _NULL
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	memr Var_44_spi_ll, _TMP
+	movleq imm.0, Var_45_spi_ll
+	addleq Var_44_spi_ll, Var_45_spi_ll
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	mem Var_45_spi_ll, _TMP
+	subleq _NULL, _NULL -> Label_25_spi_ll
+Label_46_spi_ll: 	subleq _NULL, _NULL
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	subleq _NULL, _NULL -> Label_47_spi_ll
+Label_47_spi_ll: 	subleq _NULL, _NULL
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	memr Var_48_spi_ll, _TMP
+	movleq Var_48_spi_ll, Var_49_spi_ll
+	subleq imm.7, Var_49_spi_ll
+	movleq CHR, Var_49_spi_ll
+	andleq _icmp_slt, Var_49_spi_ll -> Label_79_spi_ll
+	subleq _NULL, _NULL -> Label_50_spi_ll
+Label_50_spi_ll: 	subleq _NULL, _NULL
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	memr Var_51_spi_ll, _TMP
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	memr Var_52_spi_ll, _TMP
+	movleq imm.12, Var_53_spi_ll
+	subleq Var_52_spi_ll, Var_53_spi_ll
+	movleq Var_53_spi_ll, _TMP
+	movleq Var_51_spi_ll, _TMP2
+	movleq Var_51_spi_ll, _TMPZERO
+	movleq _ONECONST, _ONETMP
+	movleq _ZERO, _TMP4
+	subleq _ZERO, _TMP2 -> negativeOrZero_145_
+	shrleq Var_51_spi_ll, _TMP
+	movleq _TMP, Var_54_spi_ll
+	subleq _TMP, _TMP -> exit_145_
+negativeOrZero_145_: 	andleq _NEGATIVE, _TMPZERO
+	subleq _TMPZERO, _TMP4 -> exit2_145_
+	movleq _ZERO, _TMP4
+	subleq _ONECONST, _TMP
+loop_145_: 	shrleq Var_53_spi_ll, _ONETMP
+	orleq _NEGATIVE, _ONETMP
+	movleq _ONETMP, Var_54_spi_ll
+	movleq _ZERO, _TMP4
+	movleq _ONECONST, _ONETMP
+	subleq _ONECONST, _TMP
+	subleq _TMP, _TMP4 -> loop_145_
+exit2_145_: 	movleq Var_51_spi_ll, Var_54_spi_ll
+exit_145_: 	subleq _NULL, _NULL
+	movleq imm.0, Var_55_spi_ll
+	andleq Var_54_spi_ll, Var_55_spi_ll
+	movleq imm.12, _TMP
+	addleq m_ptr, _TMP
+	mem Var_55_spi_ll, _TMP
+	movleq imm.12, _TMP
+	addleq m_ptr, _TMP
+	memr Var_56_spi_ll, _TMP
+	movleq Var_56_spi_ll, Var_57_spi_ll
+	orleq imm.5, Var_57_spi_ll
+	movleq imm.9, _TMP
+	addleq m_ptr, _TMP
+	memr Var_58_spi_ll, _TMP
+	movleq Var_58_spi_ll, Var_59_spi_ll
+	orleq Var_57_spi_ll, Var_59_spi_ll
+	memr Var_60_spi_ll, %ma-Global_mOISC_ior
+	mem Var_59_spi_ll, Var_60_spi_ll
+	memr Var_61_spi_ll, %ma-Global_mOISC_ior
+	memr Var_62_spi_ll, Var_61_spi_ll
+	movleq imm.3, Var_63_spi_ll
+	andleq Var_62_spi_ll, Var_63_spi_ll
+	movleq imm.1, _TMP
+	movleq Var_63_spi_ll, _TMP2
+	movleq Var_63_spi_ll, _TMPZERO
+	movleq _ONECONST, _ONETMP
+	movleq _ZERO, _TMP4
+	subleq _ZERO, _TMP2 -> negativeOrZero_157_
+	shrleq Var_63_spi_ll, _TMP
+	movleq _TMP, Var_64_spi_ll
+	subleq _TMP, _TMP -> exit_157_
+negativeOrZero_157_: 	andleq _NEGATIVE, _TMPZERO
+	subleq _TMPZERO, _TMP4 -> exit2_157_
+	movleq _ZERO, _TMP4
+	subleq _ONECONST, _TMP
+loop_157_: 	shrleq imm.1, _ONETMP
+	orleq _NEGATIVE, _ONETMP
+	movleq _ONETMP, Var_64_spi_ll
+	movleq _ZERO, _TMP4
+	movleq _ONECONST, _ONETMP
+	subleq _ONECONST, _TMP
+	subleq _TMP, _TMP4 -> loop_157_
+exit2_157_: 	movleq Var_63_spi_ll, Var_64_spi_ll
+exit_157_: 	subleq _NULL, _NULL
+	movleq imm.3, _TMP
+	addleq m_ptr, _TMP
+	mem Var_64_spi_ll, _TMP
+	movleq imm.7, _TMP
+	addleq m_ptr, _TMP
+	memr Var_65_spi_ll, _TMP
+	movleq imm.3, _TMP
+	addleq m_ptr, _TMP
+	memr Var_66_spi_ll, _TMP
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	memr Var_67_spi_ll, _TMP
+	movleq imm.12, Var_68_spi_ll
+	subleq Var_67_spi_ll, Var_68_spi_ll
+	movleq Var_68_spi_ll, Var_69_spi_ll
+	shlleq Var_66_spi_ll, Var_69_spi_ll
+	movleq Var_69_spi_ll, Var_70_spi_ll
+	orleq Var_65_spi_ll, Var_70_spi_ll
+	movleq imm.7, _TMP
+	addleq m_ptr, _TMP
+	mem Var_70_spi_ll, _TMP
+	movleq imm.12, _TMP
+	addleq m_ptr, _TMP
+	memr Var_71_spi_ll, _TMP
+	movleq Var_71_spi_ll, Var_72_spi_ll
+	orleq imm.1, Var_72_spi_ll
+	movleq imm.9, _TMP
+	addleq m_ptr, _TMP
+	memr Var_73_spi_ll, _TMP
+	movleq Var_73_spi_ll, Var_74_spi_ll
+	orleq Var_72_spi_ll, Var_74_spi_ll
+	memr Var_75_spi_ll, %ma-Global_mOISC_ior
+	mem Var_74_spi_ll, Var_75_spi_ll
+	subleq _NULL, _NULL -> Label_76_spi_ll
+Label_76_spi_ll: 	subleq _NULL, _NULL
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	memr Var_77_spi_ll, _TMP
+	movleq imm.0, Var_78_spi_ll
+	addleq Var_77_spi_ll, Var_78_spi_ll
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	mem Var_78_spi_ll, _TMP
+	subleq _NULL, _NULL -> Label_47_spi_ll
+Label_79_spi_ll: 	subleq _NULL, _NULL
+	movleq imm.9, _TMP
+	addleq m_ptr, _TMP
+	memr Var_80_spi_ll, _TMP
+	movleq Var_80_spi_ll, Var_81_spi_ll
+	orleq imm.5, Var_81_spi_ll
+	memr Var_82_spi_ll, %ma-Global_mOISC_ior
+	mem Var_81_spi_ll, Var_82_spi_ll
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.4, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> delay
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq imm.9, _TMP
+	addleq m_ptr, _TMP
+	memr Var_83_spi_ll, _TMP
+	movleq Var_83_spi_ll, Var_84_spi_ll
+	orleq imm.7, Var_84_spi_ll
+	memr Var_85_spi_ll, %ma-Global_mOISC_ior
+	mem Var_84_spi_ll, Var_85_spi_ll
+	movleq imm.7, _TMP
+	addleq m_ptr, _TMP
+	memr Var_86_spi_ll, _TMP
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	addleq imm.0, m_ptr
+	mem Var_86_spi_ll, m_ptr
+	pcs _TMP, link_register
+spitransaction: 	subleq _NULL, _NULL
+	memr Var_0_spitransaction, m_ptr
+	subleq imm.0, m_ptr
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	mem Var_0_spitransaction, _TMP
+	movleq imm.4, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	movleq imm.12, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	memr Var_9_spitransaction, %ma-Global_mOISC_ior
+	memr Var_10_spitransaction, Var_9_spitransaction
+	movleq imm.12, _TMP
+	addleq m_ptr, _TMP
+	mem Var_10_spitransaction, _TMP
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	memr Var_11_spitransaction, _TMP
+	movleq imm.14, Var_12_spitransaction
+	andleq Var_11_spitransaction, Var_12_spitransaction
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	mem Var_12_spitransaction, _TMP
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	subleq _NULL, _NULL -> Label_13_spitransaction
+Label_13_spitransaction: 	subleq _NULL, _NULL
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	memr Var_14_spitransaction, _TMP
+	movleq Var_14_spitransaction, Var_15_spitransaction
+	subleq imm.7, Var_15_spitransaction
+	movleq CHR, Var_15_spitransaction
+	andleq _icmp_slt, Var_15_spitransaction -> Label_34_spitransaction
+	subleq _NULL, _NULL -> Label_16_spitransaction
+Label_16_spitransaction: 	subleq _NULL, _NULL
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	memr Var_17_spitransaction, _TMP
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	memr Var_18_spitransaction, _TMP
+	movleq imm.12, Var_19_spitransaction
+	subleq Var_18_spitransaction, Var_19_spitransaction
+	movleq Var_19_spitransaction, _TMP
+	movleq Var_17_spitransaction, _TMP2
+	movleq Var_17_spitransaction, _TMPZERO
+	movleq _ONECONST, _ONETMP
+	movleq _ZERO, _TMP4
+	subleq _ZERO, _TMP2 -> negativeOrZero_219_
+	shrleq Var_17_spitransaction, _TMP
+	movleq _TMP, Var_20_spitransaction
+	subleq _TMP, _TMP -> exit_219_
+negativeOrZero_219_: 	andleq _NEGATIVE, _TMPZERO
+	subleq _TMPZERO, _TMP4 -> exit2_219_
+	movleq _ZERO, _TMP4
+	subleq _ONECONST, _TMP
+loop_219_: 	shrleq Var_19_spitransaction, _ONETMP
+	orleq _NEGATIVE, _ONETMP
+	movleq _ONETMP, Var_20_spitransaction
+	movleq _ZERO, _TMP4
+	movleq _ONECONST, _ONETMP
+	subleq _ONECONST, _TMP
+	subleq _TMP, _TMP4 -> loop_219_
+exit2_219_: 	movleq Var_17_spitransaction, Var_20_spitransaction
+exit_219_: 	subleq _NULL, _NULL
+	movleq imm.0, Var_21_spitransaction
+	andleq Var_20_spitransaction, Var_21_spitransaction
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	mem Var_21_spitransaction, _TMP
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	memr Var_22_spitransaction, _TMP
+	movleq imm.12, _TMP
+	addleq m_ptr, _TMP
+	memr Var_23_spitransaction, _TMP
+	movleq Var_23_spitransaction, Var_24_spitransaction
+	orleq Var_22_spitransaction, Var_24_spitransaction
+	memr Var_25_spitransaction, %ma-Global_mOISC_ior
+	mem Var_24_spitransaction, Var_25_spitransaction
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	memr Var_26_spitransaction, _TMP
+	movleq Var_26_spitransaction, Var_27_spitransaction
+	orleq imm.1, Var_27_spitransaction
+	movleq imm.12, _TMP
+	addleq m_ptr, _TMP
+	memr Var_28_spitransaction, _TMP
+	movleq Var_28_spitransaction, Var_29_spitransaction
+	orleq Var_27_spitransaction, Var_29_spitransaction
+	memr Var_30_spitransaction, %ma-Global_mOISC_ior
+	mem Var_29_spitransaction, Var_30_spitransaction
+	subleq _NULL, _NULL -> Label_31_spitransaction
+Label_31_spitransaction: 	subleq _NULL, _NULL
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	memr Var_32_spitransaction, _TMP
+	movleq imm.0, Var_33_spitransaction
+	addleq Var_32_spitransaction, Var_33_spitransaction
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	mem Var_33_spitransaction, _TMP
+	subleq _NULL, _NULL -> Label_13_spitransaction
+Label_34_spitransaction: 	subleq _NULL, _NULL
+	movleq imm.12, _TMP
+	addleq m_ptr, _TMP
+	memr Var_35_spitransaction, _TMP
+	memr Var_36_spitransaction, %ma-Global_mOISC_ior
+	mem Var_35_spitransaction, Var_36_spitransaction
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	pcs _TMP, link_register
+spiselect: 	subleq _NULL, _NULL
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	memr Var_2_spiselect, %ma-Global_mOISC_ior
+	memr Var_3_spiselect, Var_2_spiselect
+	movleq imm.10, Var_4_spiselect
+	andleq Var_3_spiselect, Var_4_spiselect
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	mem Var_4_spiselect, _TMP
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	memr Var_5_spiselect, _TMP
+	movleq Var_5_spiselect, Var_6_spiselect
+	andleq imm.10, Var_6_spiselect
+	memr Var_7_spiselect, %ma-Global_mOISC_ior
+	mem Var_6_spiselect, Var_7_spiselect
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	pcs _TMP, link_register
+spiunselect: 	subleq _NULL, _NULL
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	memr Var_2_spiunselect, %ma-Global_mOISC_ior
+	memr Var_3_spiunselect, Var_2_spiunselect
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	mem Var_3_spiunselect, _TMP
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	memr Var_4_spiunselect, _TMP
+	movleq Var_4_spiunselect, Var_5_spiunselect
+	orleq imm.7, Var_5_spiunselect
+	memr Var_6_spiunselect, %ma-Global_mOISC_ior
+	mem Var_5_spiunselect, Var_6_spiunselect
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	pcs _TMP, link_register
+spiLEDInit: 	subleq _NULL, _NULL
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	memr Var_1_spiLEDInit, %ma-Global_current_idr
+	movleq imm.15, Var_2_spiLEDInit
+	orleq Var_1_spiLEDInit, Var_2_spiLEDInit
+	mem Var_2_spiLEDInit, %ma-Global_current_idr
+	memr Var_3_spiLEDInit, %ma-Global_current_idr
+	memr Var_4_spiLEDInit, %ma-Global_mOISC_idr
+	mem Var_3_spiLEDInit, Var_4_spiLEDInit
+	memr Var_5_spiLEDInit, %ma-Global_mOISC_ior
+	mem imm.7, Var_5_spiLEDInit
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	pcs _TMP, link_register
+spiWrite: 	subleq _NULL, _NULL
+	memr Var_1_spiWrite, m_ptr
+	subleq imm.0, m_ptr
+	memr Var_0_spiWrite, m_ptr
+	subleq imm.0, m_ptr
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	mem Var_0_spiWrite, _TMP
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	mem Var_1_spiWrite, _TMP
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	mem imm.0, _TMP
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	memr Var_6_spiWrite, _TMP
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	memr Var_7_spiWrite, _TMP
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	memr Var_8_spiWrite, _TMP
+	movleq m_ptr, _TMP
+	addleq imm.3, m_ptr
+	mem _TMP, m_ptr
+	movleq Var_6_spiWrite, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq Var_7_spiWrite, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq Var_8_spiWrite, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spi_ll
+	memr Var_9_spiWrite, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	addleq imm.0, m_ptr
+	mem Var_9_spiWrite, m_ptr
+	pcs _TMP, link_register
+spiRead: 	subleq _NULL, _NULL
+	memr Var_0_spiRead, m_ptr
+	subleq imm.0, m_ptr
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	mem Var_0_spiRead, _TMP
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	memr Var_4_spiRead, _TMP
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	memr Var_5_spiRead, _TMP
+	movleq m_ptr, _TMP
+	addleq imm.2, m_ptr
+	mem _TMP, m_ptr
+	movleq Var_4_spiRead, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq Var_5_spiRead, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.5, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spi_ll
+	memr Var_6_spiRead, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	addleq imm.0, m_ptr
+	mem Var_6_spiRead, m_ptr
+	pcs _TMP, link_register
+spiBurstWrite: 	subleq _NULL, _NULL
+	memr Var_2_spiBurstWrite, m_ptr
+	subleq imm.0, m_ptr
+	memr Var_1_spiBurstWrite, m_ptr
+	subleq imm.0, m_ptr
+	memr Var_0_spiBurstWrite, m_ptr
+	subleq imm.0, m_ptr
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	mem Var_0_spiBurstWrite, _TMP
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	mem Var_1_spiBurstWrite, _TMP
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	mem Var_2_spiBurstWrite, _TMP
+	movleq m_ptr, _TMP
+	addleq imm.3, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiselect
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	memr Var_7_spiBurstWrite, _TMP
+	movleq imm.16, Var_8_spiBurstWrite
+	orleq Var_7_spiBurstWrite, Var_8_spiBurstWrite
+	movleq m_ptr, _TMP
+	addleq imm.3, m_ptr
+	mem _TMP, m_ptr
+	movleq Var_8_spiBurstWrite, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spitransaction
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	subleq _NULL, _NULL -> Label_9_spiBurstWrite
+Label_9_spiBurstWrite: 	subleq _NULL, _NULL
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	memr Var_10_spiBurstWrite, _TMP
+	movleq imm.17, Var_11_spiBurstWrite
+	addleq Var_10_spiBurstWrite, Var_11_spiBurstWrite
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	mem Var_11_spiBurstWrite, _TMP
+	movleq Var_10_spiBurstWrite, Var_12_spiBurstWrite
+	subleq imm.5, Var_12_spiBurstWrite
+	movleq CHR, Var_12_spiBurstWrite
+	andleq _icmp_eq, Var_12_spiBurstWrite -> Label_13_spiBurstWrite
+	subleq _NULL, _NULL -> Label_19_spiBurstWrite
+Label_13_spiBurstWrite: 	subleq _NULL, _NULL
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	memr Var_14_spiBurstWrite, _TMP
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	memr Var_15_spiBurstWrite, _TMP
+	movleq Var_15_spiBurstWrite, Var_16_spiBurstWrite
+	movleq Var_14_spiBurstWrite, _TMP
+	addleq Var_16_spiBurstWrite, _TMP
+	movleq _TMP, Var_17_spiBurstWrite
+	memr Var_18_spiBurstWrite, Var_17_spiBurstWrite
+	movleq m_ptr, _TMP
+	addleq imm.3, m_ptr
+	mem _TMP, m_ptr
+	movleq Var_18_spiBurstWrite, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spitransaction
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	subleq _NULL, _NULL -> Label_9_spiBurstWrite
+Label_19_spiBurstWrite: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.3, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiunselect
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	pcs _TMP, link_register
+RH_RF95_setFrequency_868: 	subleq _NULL, _NULL
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.6, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.18, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_1_RH_RF95_setFrequency_868, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.12, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.5, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_2_RH_RF95_setFrequency_868, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.7, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.5, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_3_RH_RF95_setFrequency_868, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	pcs _TMP, link_register
+RH_RF95_setFrequency_915: 	subleq _NULL, _NULL
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.6, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.19, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_1_RH_RF95_setFrequency_915, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.12, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.20, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_2_RH_RF95_setFrequency_915, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.7, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.5, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_3_RH_RF95_setFrequency_915, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	pcs _TMP, link_register
+RH_RF95_setPreambleLength: 	subleq _NULL, _NULL
+	memr Var_0_RH_RF95_setPreambleLength, m_ptr
+	subleq imm.0, m_ptr
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	mem Var_0_RH_RF95_setPreambleLength, _TMP
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	memr Var_3_RH_RF95_setPreambleLength, _TMP
+	movleq imm.7, _TMP
+	movleq Var_3_RH_RF95_setPreambleLength, _TMP2
+	movleq Var_3_RH_RF95_setPreambleLength, _TMPZERO
+	movleq _ONECONST, _ONETMP
+	movleq _ZERO, _TMP4
+	subleq _ZERO, _TMP2 -> negativeOrZero_350_
+	shrleq Var_3_RH_RF95_setPreambleLength, _TMP
+	movleq _TMP, Var_4_RH_RF95_setPreambleLength
+	subleq _TMP, _TMP -> exit_350_
+negativeOrZero_350_: 	andleq _NEGATIVE, _TMPZERO
+	subleq _TMPZERO, _TMP4 -> exit2_350_
+	movleq _ZERO, _TMP4
+	subleq _ONECONST, _TMP
+loop_350_: 	shrleq imm.7, _ONETMP
+	orleq _NEGATIVE, _ONETMP
+	movleq _ONETMP, Var_4_RH_RF95_setPreambleLength
+	movleq _ZERO, _TMP4
+	movleq _ONECONST, _ONETMP
+	subleq _ONECONST, _TMP
+	subleq _TMP, _TMP4 -> loop_350_
+exit2_350_: 	movleq Var_3_RH_RF95_setPreambleLength, Var_4_RH_RF95_setPreambleLength
+exit_350_: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.1, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.21, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq Var_4_RH_RF95_setPreambleLength, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_5_RH_RF95_setPreambleLength, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	memr Var_6_RH_RF95_setPreambleLength, _TMP
+	movleq imm.14, Var_7_RH_RF95_setPreambleLength
+	andleq Var_6_RH_RF95_setPreambleLength, Var_7_RH_RF95_setPreambleLength
+	movleq m_ptr, _TMP
+	addleq imm.1, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.22, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq Var_7_RH_RF95_setPreambleLength, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_8_RH_RF95_setPreambleLength, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	pcs _TMP, link_register
+RH_RF95_setModeIdle: 	subleq _NULL, _NULL
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.0, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.0, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_1_RH_RF95_setModeIdle, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	pcs _TMP, link_register
+RH_RF95_setModemConfig_Bw125Cr45Sf128: 	subleq _NULL, _NULL
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.23, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.24, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_1_RH_RF95_setModemConfig_Bw125Cr45Sf128, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.25, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.26, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_2_RH_RF95_setModemConfig_Bw125Cr45Sf128, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.27, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.5, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_3_RH_RF95_setModemConfig_Bw125Cr45Sf128, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	pcs _TMP, link_register
+RH_RF95_setModemConfig_Bw500Cr45Sf128: 	subleq _NULL, _NULL
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.23, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.28, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_1_RH_RF95_setModemConfig_Bw500Cr45Sf128, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.25, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.26, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_2_RH_RF95_setModemConfig_Bw500Cr45Sf128, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.27, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.5, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_3_RH_RF95_setModemConfig_Bw500Cr45Sf128, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	pcs _TMP, link_register
+RH_RF95_setModemConfig_Bw31_25Cr48Sf512: 	subleq _NULL, _NULL
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.23, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.29, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_1_RH_RF95_setModemConfig_Bw31_25Cr48Sf512, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.25, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.30, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_2_RH_RF95_setModemConfig_Bw31_25Cr48Sf512, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.27, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.5, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_3_RH_RF95_setModemConfig_Bw31_25Cr48Sf512, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	pcs _TMP, link_register
+RH_RF95_setModemConfig_Bw125Cr48Sf4096: 	subleq _NULL, _NULL
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.23, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.31, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_1_RH_RF95_setModemConfig_Bw125Cr48Sf4096, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.25, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.32, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_2_RH_RF95_setModemConfig_Bw125Cr48Sf4096, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.27, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.5, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_3_RH_RF95_setModemConfig_Bw125Cr48Sf4096, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	pcs _TMP, link_register
+RH_RF95_setTxPower: 	subleq _NULL, _NULL
+	memr Var_0_RH_RF95_setTxPower, m_ptr
+	subleq imm.0, m_ptr
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	mem Var_0_RH_RF95_setTxPower, _TMP
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	memr Var_3_RH_RF95_setTxPower, _TMP
+	movleq Var_3_RH_RF95_setTxPower, Var_4_RH_RF95_setTxPower
+	subleq imm.4, Var_4_RH_RF95_setTxPower
+	movleq Var_4_RH_RF95_setTxPower, Var_5_RH_RF95_setTxPower
+	orleq imm.16, Var_5_RH_RF95_setTxPower
+	movleq m_ptr, _TMP
+	addleq imm.1, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.8, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq Var_5_RH_RF95_setTxPower, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_6_RH_RF95_setTxPower, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	pcs _TMP, link_register
+RH_RF95_setModeTx: 	subleq _NULL, _NULL
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.0, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.2, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_1_RH_RF95_setModeTx, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.33, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.33, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_2_RH_RF95_setModeTx, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	pcs _TMP, link_register
+RH_RF95_send: 	subleq _NULL, _NULL
+	memr Var_1_RH_RF95_send, m_ptr
+	subleq imm.0, m_ptr
+	memr Var_0_RH_RF95_send, m_ptr
+	subleq imm.0, m_ptr
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	mem Var_0_RH_RF95_send, _TMP
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	mem Var_1_RH_RF95_send, _TMP
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	memr Var_6_RH_RF95_send, _TMP
+	movleq Var_6_RH_RF95_send, Var_7_RH_RF95_send
+	subleq imm.34, Var_7_RH_RF95_send
+	movleq CHR, Var_7_RH_RF95_send
+	andleq _icmp_sgt, Var_7_RH_RF95_send -> Label_9_RH_RF95_send
+	subleq _NULL, _NULL -> Label_8_RH_RF95_send
+Label_8_RH_RF95_send: 	subleq _NULL, _NULL
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	subleq _NULL, _NULL -> Label_26_RH_RF95_send
+Label_9_RH_RF95_send: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.3, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> RH_RF95_setModeIdle
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.3, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.35, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.5, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_10_RH_RF95_send, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.3, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.5, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.14, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_11_RH_RF95_send, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.3, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.5, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.14, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_12_RH_RF95_send, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.3, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.5, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.5, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_13_RH_RF95_send, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.3, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.5, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.5, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_14_RH_RF95_send, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	memr Var_15_RH_RF95_send, _TMP
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	memr Var_16_RH_RF95_send, _TMP
+	movleq m_ptr, _TMP
+	addleq imm.3, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.5, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq Var_15_RH_RF95_send, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq Var_16_RH_RF95_send, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiBurstWrite
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	memr Var_17_RH_RF95_send, _TMP
+	movleq imm.3, Var_18_RH_RF95_send
+	addleq Var_17_RH_RF95_send, Var_18_RH_RF95_send
+	movleq m_ptr, _TMP
+	addleq imm.3, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.36, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq Var_18_RH_RF95_send, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_19_RH_RF95_send, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.3, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> RH_RF95_setModeTx
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	subleq _NULL, _NULL -> Label_20_RH_RF95_send
+Label_20_RH_RF95_send: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.3, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.37, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiRead
+	memr Var_21_RH_RF95_send, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq imm.7, Var_22_RH_RF95_send
+	andleq Var_21_RH_RF95_send, Var_22_RH_RF95_send
+	movleq Var_22_RH_RF95_send, Var_23_RH_RF95_send
+	subleq imm.7, Var_23_RH_RF95_send
+	movleq CHR, Var_23_RH_RF95_send
+	andleq _icmp_eq, Var_23_RH_RF95_send -> Label_24_RH_RF95_send
+	subleq _NULL, _NULL -> Label_25_RH_RF95_send
+Label_24_RH_RF95_send: 	subleq _NULL, _NULL
+	subleq _NULL, _NULL -> Label_20_RH_RF95_send
+Label_25_RH_RF95_send: 	subleq _NULL, _NULL
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	mem imm.0, _TMP
+	subleq _NULL, _NULL -> Label_26_RH_RF95_send
+Label_26_RH_RF95_send: 	subleq _NULL, _NULL
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	memr Var_27_RH_RF95_send, _TMP
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	addleq imm.0, m_ptr
+	mem Var_27_RH_RF95_send, m_ptr
+	pcs _TMP, link_register
+RH_RF95_init: 	subleq _NULL, _NULL
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.1, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.0, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.16, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_2_RH_RF95_init, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.1, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.38, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> delay
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.1, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.0, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiRead
+	memr Var_3_RH_RF95_init, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq Var_3_RH_RF95_init, Var_4_RH_RF95_init
+	subleq imm.16, Var_4_RH_RF95_init
+	movleq CHR, Var_4_RH_RF95_init
+	andleq _icmp_eq, Var_4_RH_RF95_init -> Label_5_RH_RF95_init
+	subleq _NULL, _NULL -> Label_6_RH_RF95_init
+Label_5_RH_RF95_init: 	subleq _NULL, _NULL
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	subleq _NULL, _NULL -> Label_9_RH_RF95_init
+Label_6_RH_RF95_init: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.1, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.39, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.5, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_7_RH_RF95_init, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.1, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.40, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.5, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiWrite
+	memr Var_8_RH_RF95_init, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.1, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> RH_RF95_setModeIdle
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.1, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> RH_RF95_setModemConfig_Bw125Cr45Sf128
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.1, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.7, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> RH_RF95_setPreambleLength
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.1, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> RH_RF95_setFrequency_868
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.1, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.35, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> RH_RF95_setTxPower
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	mem imm.0, _TMP
+	subleq _NULL, _NULL -> Label_9_RH_RF95_init
+Label_9_RH_RF95_init: 	subleq _NULL, _NULL
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	memr Var_10_RH_RF95_init, _TMP
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	addleq imm.0, m_ptr
+	mem Var_10_RH_RF95_init, m_ptr
+	pcs _TMP, link_register
+i2c_low_scl: 	subleq _NULL, _NULL
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	memr Var_1_i2c_low_scl, %ma-Global_current_idr
+	movleq imm.16, Var_2_i2c_low_scl
+	orleq Var_1_i2c_low_scl, Var_2_i2c_low_scl
+	mem Var_2_i2c_low_scl, %ma-Global_current_idr
+	memr Var_3_i2c_low_scl, %ma-Global_current_idr
+	memr Var_4_i2c_low_scl, %ma-Global_mOISC_idr
+	mem Var_3_i2c_low_scl, Var_4_i2c_low_scl
+	memr Var_5_i2c_low_scl, %ma-Global_mOISC_ior
+	memr Var_6_i2c_low_scl, Var_5_i2c_low_scl
+	movleq Var_6_i2c_low_scl, Var_7_i2c_low_scl
+	andleq imm.41, Var_7_i2c_low_scl
+	memr Var_8_i2c_low_scl, %ma-Global_mOISC_ior
+	mem Var_7_i2c_low_scl, Var_8_i2c_low_scl
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	pcs _TMP, link_register
+i2c_high_scl: 	subleq _NULL, _NULL
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	memr Var_1_i2c_high_scl, %ma-Global_current_idr
+	movleq imm.11, Var_2_i2c_high_scl
+	andleq Var_1_i2c_high_scl, Var_2_i2c_high_scl
+	mem Var_2_i2c_high_scl, %ma-Global_current_idr
+	memr Var_3_i2c_high_scl, %ma-Global_current_idr
+	memr Var_4_i2c_high_scl, %ma-Global_mOISC_idr
+	mem Var_3_i2c_high_scl, Var_4_i2c_high_scl
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	pcs _TMP, link_register
+i2c_low_sda: 	subleq _NULL, _NULL
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	memr Var_1_i2c_low_sda, %ma-Global_current_idr
+	movleq imm.33, Var_2_i2c_low_sda
+	orleq Var_1_i2c_low_sda, Var_2_i2c_low_sda
+	mem Var_2_i2c_low_sda, %ma-Global_current_idr
+	memr Var_3_i2c_low_sda, %ma-Global_current_idr
+	memr Var_4_i2c_low_sda, %ma-Global_mOISC_idr
+	mem Var_3_i2c_low_sda, Var_4_i2c_low_sda
+	memr Var_5_i2c_low_sda, %ma-Global_mOISC_ior
+	memr Var_6_i2c_low_sda, Var_5_i2c_low_sda
+	movleq Var_6_i2c_low_sda, Var_7_i2c_low_sda
+	andleq imm.42, Var_7_i2c_low_sda
+	memr Var_8_i2c_low_sda, %ma-Global_mOISC_ior
+	mem Var_7_i2c_low_sda, Var_8_i2c_low_sda
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	pcs _TMP, link_register
+i2c_release_sda: 	subleq _NULL, _NULL
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	memr Var_1_i2c_release_sda, %ma-Global_current_idr
+	movleq imm.42, Var_2_i2c_release_sda
+	andleq Var_1_i2c_release_sda, Var_2_i2c_release_sda
+	mem Var_2_i2c_release_sda, %ma-Global_current_idr
+	memr Var_3_i2c_release_sda, %ma-Global_current_idr
+	memr Var_4_i2c_release_sda, %ma-Global_mOISC_idr
+	mem Var_3_i2c_release_sda, Var_4_i2c_release_sda
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	pcs _TMP, link_register
+i2c_drive_sda: 	subleq _NULL, _NULL
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	memr Var_1_i2c_drive_sda, %ma-Global_current_idr
+	movleq imm.33, Var_2_i2c_drive_sda
+	orleq Var_1_i2c_drive_sda, Var_2_i2c_drive_sda
+	mem Var_2_i2c_drive_sda, %ma-Global_current_idr
+	memr Var_3_i2c_drive_sda, %ma-Global_current_idr
+	memr Var_4_i2c_drive_sda, %ma-Global_mOISC_idr
+	mem Var_3_i2c_drive_sda, Var_4_i2c_drive_sda
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	pcs _TMP, link_register
+i2c_high_sda: 	subleq _NULL, _NULL
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	memr Var_1_i2c_high_sda, %ma-Global_current_idr
+	movleq imm.42, Var_2_i2c_high_sda
+	andleq Var_1_i2c_high_sda, Var_2_i2c_high_sda
+	mem Var_2_i2c_high_sda, %ma-Global_current_idr
+	memr Var_3_i2c_high_sda, %ma-Global_current_idr
+	memr Var_4_i2c_high_sda, %ma-Global_mOISC_idr
+	mem Var_3_i2c_high_sda, Var_4_i2c_high_sda
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	pcs _TMP, link_register
+i2c_init: 	subleq _NULL, _NULL
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	pcs _TMP, link_register
+i2c_write: 	subleq _NULL, _NULL
+	memr Var_4_i2c_write, m_ptr
+	subleq imm.0, m_ptr
+	memr Var_3_i2c_write, m_ptr
+	subleq imm.0, m_ptr
+	memr Var_2_i2c_write, m_ptr
+	subleq imm.0, m_ptr
+	memr Var_1_i2c_write, m_ptr
+	subleq imm.0, m_ptr
+	memr Var_0_i2c_write, m_ptr
+	subleq imm.0, m_ptr
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	mem Var_0_i2c_write, _TMP
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	mem Var_1_i2c_write, _TMP
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	mem Var_2_i2c_write, _TMP
+	movleq imm.3, _TMP
+	addleq m_ptr, _TMP
+	mem Var_3_i2c_write, _TMP
+	movleq imm.4, _TMP
+	addleq m_ptr, _TMP
+	mem Var_4_i2c_write, _TMP
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	memr Var_19_i2c_write, %ma-Global_mOISC_ior
+	memr Var_20_i2c_write, Var_19_i2c_write
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	mem Var_20_i2c_write, _TMP
+	movleq imm.7, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	subleq _NULL, _NULL -> Label_21_i2c_write
+Label_21_i2c_write: 	subleq _NULL, _NULL
+	movleq imm.7, _TMP
+	addleq m_ptr, _TMP
+	memr Var_22_i2c_write, _TMP
+	movleq Var_22_i2c_write, Var_23_i2c_write
+	subleq imm.12, Var_23_i2c_write
+	movleq CHR, Var_23_i2c_write
+	andleq _icmp_slt, Var_23_i2c_write -> Label_38_i2c_write
+	subleq _NULL, _NULL -> Label_24_i2c_write
+Label_24_i2c_write: 	subleq _NULL, _NULL
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	memr Var_25_i2c_write, _TMP
+	movleq imm.7, _TMP
+	addleq m_ptr, _TMP
+	memr Var_26_i2c_write, _TMP
+	movleq imm.6, Var_27_i2c_write
+	subleq Var_26_i2c_write, Var_27_i2c_write
+	movleq Var_27_i2c_write, _TMP
+	movleq Var_25_i2c_write, _TMP2
+	movleq Var_25_i2c_write, _TMPZERO
+	movleq _ONECONST, _ONETMP
+	movleq _ZERO, _TMP4
+	subleq _ZERO, _TMP2 -> negativeOrZero_568_
+	shrleq Var_25_i2c_write, _TMP
+	movleq _TMP, Var_28_i2c_write
+	subleq _TMP, _TMP -> exit_568_
+negativeOrZero_568_: 	andleq _NEGATIVE, _TMPZERO
+	subleq _TMPZERO, _TMP4 -> exit2_568_
+	movleq _ZERO, _TMP4
+	subleq _ONECONST, _TMP
+loop_568_: 	shrleq Var_27_i2c_write, _ONETMP
+	orleq _NEGATIVE, _ONETMP
+	movleq _ONETMP, Var_28_i2c_write
+	movleq _ZERO, _TMP4
+	movleq _ONECONST, _ONETMP
+	subleq _ONECONST, _TMP
+	subleq _TMP, _TMP4 -> loop_568_
+exit2_568_: 	movleq Var_25_i2c_write, Var_28_i2c_write
+exit_568_: 	subleq _NULL, _NULL
+	movleq imm.0, Var_29_i2c_write
+	andleq Var_28_i2c_write, Var_29_i2c_write
+	movleq imm.8, _TMP
+	addleq m_ptr, _TMP
+	mem Var_29_i2c_write, _TMP
+	movleq imm.8, _TMP
+	addleq m_ptr, _TMP
+	memr Var_30_i2c_write, _TMP
+	movleq Var_30_i2c_write, Var_31_i2c_write
+	subleq imm.0, Var_31_i2c_write
+	movleq CHR, Var_31_i2c_write
+	andleq _icmp_eq, Var_31_i2c_write -> Label_33_i2c_write
+	subleq _NULL, _NULL -> Label_32_i2c_write
+Label_32_i2c_write: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	subleq _NULL, _NULL -> Label_34_i2c_write
+Label_33_i2c_write: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	subleq _NULL, _NULL -> Label_34_i2c_write
+Label_34_i2c_write: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	subleq _NULL, _NULL -> Label_35_i2c_write
+Label_35_i2c_write: 	subleq _NULL, _NULL
+	movleq imm.7, _TMP
+	addleq m_ptr, _TMP
+	memr Var_36_i2c_write, _TMP
+	movleq imm.0, Var_37_i2c_write
+	addleq Var_36_i2c_write, Var_37_i2c_write
+	movleq imm.7, _TMP
+	addleq m_ptr, _TMP
+	mem Var_37_i2c_write, _TMP
+	subleq _NULL, _NULL -> Label_21_i2c_write
+Label_38_i2c_write: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_release_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr Var_39_i2c_write, %ma-Global_mOISC_ior
+	memr Var_40_i2c_write, Var_39_i2c_write
+	movleq imm.33, Var_41_i2c_write
+	andleq Var_40_i2c_write, Var_41_i2c_write
+	movleq imm.6, _TMP
+	movleq Var_41_i2c_write, _TMP2
+	movleq Var_41_i2c_write, _TMPZERO
+	movleq _ONECONST, _ONETMP
+	movleq _ZERO, _TMP4
+	subleq _ZERO, _TMP2 -> negativeOrZero_598_
+	shrleq Var_41_i2c_write, _TMP
+	movleq _TMP, Var_42_i2c_write
+	subleq _TMP, _TMP -> exit_598_
+negativeOrZero_598_: 	andleq _NEGATIVE, _TMPZERO
+	subleq _TMPZERO, _TMP4 -> exit2_598_
+	movleq _ZERO, _TMP4
+	subleq _ONECONST, _TMP
+loop_598_: 	shrleq imm.6, _ONETMP
+	orleq _NEGATIVE, _ONETMP
+	movleq _ONETMP, Var_42_i2c_write
+	movleq _ZERO, _TMP4
+	movleq _ONECONST, _ONETMP
+	subleq _ONECONST, _TMP
+	subleq _TMP, _TMP4 -> loop_598_
+exit2_598_: 	movleq Var_41_i2c_write, Var_42_i2c_write
+exit_598_: 	subleq _NULL, _NULL
+	movleq imm.12, _TMP
+	addleq m_ptr, _TMP
+	mem Var_42_i2c_write, _TMP
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_drive_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq imm.9, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	subleq _NULL, _NULL -> Label_43_i2c_write
+Label_43_i2c_write: 	subleq _NULL, _NULL
+	movleq imm.9, _TMP
+	addleq m_ptr, _TMP
+	memr Var_44_i2c_write, _TMP
+	movleq Var_44_i2c_write, Var_45_i2c_write
+	subleq imm.7, Var_45_i2c_write
+	movleq CHR, Var_45_i2c_write
+	andleq _icmp_slt, Var_45_i2c_write -> Label_60_i2c_write
+	subleq _NULL, _NULL -> Label_46_i2c_write
+Label_46_i2c_write: 	subleq _NULL, _NULL
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	memr Var_47_i2c_write, _TMP
+	movleq imm.9, _TMP
+	addleq m_ptr, _TMP
+	memr Var_48_i2c_write, _TMP
+	movleq imm.12, Var_49_i2c_write
+	subleq Var_48_i2c_write, Var_49_i2c_write
+	movleq Var_49_i2c_write, _TMP
+	movleq Var_47_i2c_write, _TMP2
+	movleq Var_47_i2c_write, _TMPZERO
+	movleq _ONECONST, _ONETMP
+	movleq _ZERO, _TMP4
+	subleq _ZERO, _TMP2 -> negativeOrZero_612_
+	shrleq Var_47_i2c_write, _TMP
+	movleq _TMP, Var_50_i2c_write
+	subleq _TMP, _TMP -> exit_612_
+negativeOrZero_612_: 	andleq _NEGATIVE, _TMPZERO
+	subleq _TMPZERO, _TMP4 -> exit2_612_
+	movleq _ZERO, _TMP4
+	subleq _ONECONST, _TMP
+loop_612_: 	shrleq Var_49_i2c_write, _ONETMP
+	orleq _NEGATIVE, _ONETMP
+	movleq _ONETMP, Var_50_i2c_write
+	movleq _ZERO, _TMP4
+	movleq _ONECONST, _ONETMP
+	subleq _ONECONST, _TMP
+	subleq _TMP, _TMP4 -> loop_612_
+exit2_612_: 	movleq Var_47_i2c_write, Var_50_i2c_write
+exit_612_: 	subleq _NULL, _NULL
+	movleq imm.0, Var_51_i2c_write
+	andleq Var_50_i2c_write, Var_51_i2c_write
+	movleq imm.8, _TMP
+	addleq m_ptr, _TMP
+	mem Var_51_i2c_write, _TMP
+	movleq imm.8, _TMP
+	addleq m_ptr, _TMP
+	memr Var_52_i2c_write, _TMP
+	movleq Var_52_i2c_write, Var_53_i2c_write
+	subleq imm.0, Var_53_i2c_write
+	movleq CHR, Var_53_i2c_write
+	andleq _icmp_eq, Var_53_i2c_write -> Label_55_i2c_write
+	subleq _NULL, _NULL -> Label_54_i2c_write
+Label_54_i2c_write: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	subleq _NULL, _NULL -> Label_56_i2c_write
+Label_55_i2c_write: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	subleq _NULL, _NULL -> Label_56_i2c_write
+Label_56_i2c_write: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	subleq _NULL, _NULL -> Label_57_i2c_write
+Label_57_i2c_write: 	subleq _NULL, _NULL
+	movleq imm.9, _TMP
+	addleq m_ptr, _TMP
+	memr Var_58_i2c_write, _TMP
+	movleq imm.0, Var_59_i2c_write
+	addleq Var_58_i2c_write, Var_59_i2c_write
+	movleq imm.9, _TMP
+	addleq m_ptr, _TMP
+	mem Var_59_i2c_write, _TMP
+	subleq _NULL, _NULL -> Label_43_i2c_write
+Label_60_i2c_write: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_release_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr Var_61_i2c_write, %ma-Global_mOISC_ior
+	memr Var_62_i2c_write, Var_61_i2c_write
+	movleq imm.33, Var_63_i2c_write
+	andleq Var_62_i2c_write, Var_63_i2c_write
+	movleq imm.6, _TMP
+	movleq Var_63_i2c_write, _TMP2
+	movleq Var_63_i2c_write, _TMPZERO
+	movleq _ONECONST, _ONETMP
+	movleq _ZERO, _TMP4
+	subleq _ZERO, _TMP2 -> negativeOrZero_640_
+	shrleq Var_63_i2c_write, _TMP
+	movleq _TMP, Var_64_i2c_write
+	subleq _TMP, _TMP -> exit_640_
+negativeOrZero_640_: 	andleq _NEGATIVE, _TMPZERO
+	subleq _TMPZERO, _TMP4 -> exit2_640_
+	movleq _ZERO, _TMP4
+	subleq _ONECONST, _TMP
+loop_640_: 	shrleq imm.6, _ONETMP
+	orleq _NEGATIVE, _ONETMP
+	movleq _ONETMP, Var_64_i2c_write
+	movleq _ZERO, _TMP4
+	movleq _ONECONST, _ONETMP
+	subleq _ONECONST, _TMP
+	subleq _TMP, _TMP4 -> loop_640_
+exit2_640_: 	movleq Var_63_i2c_write, Var_64_i2c_write
+exit_640_: 	subleq _NULL, _NULL
+	movleq imm.12, _TMP
+	addleq m_ptr, _TMP
+	mem Var_64_i2c_write, _TMP
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_drive_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq imm.13, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	movleq imm.4, _TMP
+	addleq m_ptr, _TMP
+	memr Var_65_i2c_write, _TMP
+	movleq Var_65_i2c_write, Var_66_i2c_write
+	subleq imm.1, Var_66_i2c_write
+	movleq CHR, Var_66_i2c_write
+	andleq _icmp_eq, Var_66_i2c_write -> Label_69_i2c_write
+	subleq _NULL, _NULL -> Label_67_i2c_write
+Label_67_i2c_write: 	subleq _NULL, _NULL
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	memr Var_68_i2c_write, _TMP
+	movleq imm.13, _TMP
+	addleq m_ptr, _TMP
+	mem Var_68_i2c_write, _TMP
+	subleq _NULL, _NULL -> Label_71_i2c_write
+Label_69_i2c_write: 	subleq _NULL, _NULL
+	movleq imm.3, _TMP
+	addleq m_ptr, _TMP
+	memr Var_70_i2c_write, _TMP
+	movleq imm.13, _TMP
+	addleq m_ptr, _TMP
+	mem Var_70_i2c_write, _TMP
+	subleq _NULL, _NULL -> Label_71_i2c_write
+Label_71_i2c_write: 	subleq _NULL, _NULL
+	movleq imm.43, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	subleq _NULL, _NULL -> Label_72_i2c_write
+Label_72_i2c_write: 	subleq _NULL, _NULL
+	movleq imm.43, _TMP
+	addleq m_ptr, _TMP
+	memr Var_73_i2c_write, _TMP
+	movleq Var_73_i2c_write, Var_74_i2c_write
+	subleq imm.7, Var_74_i2c_write
+	movleq CHR, Var_74_i2c_write
+	andleq _icmp_slt, Var_74_i2c_write -> Label_89_i2c_write
+	subleq _NULL, _NULL -> Label_75_i2c_write
+Label_75_i2c_write: 	subleq _NULL, _NULL
+	movleq imm.13, _TMP
+	addleq m_ptr, _TMP
+	memr Var_76_i2c_write, _TMP
+	movleq imm.43, _TMP
+	addleq m_ptr, _TMP
+	memr Var_77_i2c_write, _TMP
+	movleq imm.12, Var_78_i2c_write
+	subleq Var_77_i2c_write, Var_78_i2c_write
+	movleq Var_78_i2c_write, _TMP
+	movleq Var_76_i2c_write, _TMP2
+	movleq Var_76_i2c_write, _TMPZERO
+	movleq _ONECONST, _ONETMP
+	movleq _ZERO, _TMP4
+	subleq _ZERO, _TMP2 -> negativeOrZero_667_
+	shrleq Var_76_i2c_write, _TMP
+	movleq _TMP, Var_79_i2c_write
+	subleq _TMP, _TMP -> exit_667_
+negativeOrZero_667_: 	andleq _NEGATIVE, _TMPZERO
+	subleq _TMPZERO, _TMP4 -> exit2_667_
+	movleq _ZERO, _TMP4
+	subleq _ONECONST, _TMP
+loop_667_: 	shrleq Var_78_i2c_write, _ONETMP
+	orleq _NEGATIVE, _ONETMP
+	movleq _ONETMP, Var_79_i2c_write
+	movleq _ZERO, _TMP4
+	movleq _ONECONST, _ONETMP
+	subleq _ONECONST, _TMP
+	subleq _TMP, _TMP4 -> loop_667_
+exit2_667_: 	movleq Var_76_i2c_write, Var_79_i2c_write
+exit_667_: 	subleq _NULL, _NULL
+	movleq imm.0, Var_80_i2c_write
+	andleq Var_79_i2c_write, Var_80_i2c_write
+	movleq imm.8, _TMP
+	addleq m_ptr, _TMP
+	mem Var_80_i2c_write, _TMP
+	movleq imm.8, _TMP
+	addleq m_ptr, _TMP
+	memr Var_81_i2c_write, _TMP
+	movleq Var_81_i2c_write, Var_82_i2c_write
+	subleq imm.0, Var_82_i2c_write
+	movleq CHR, Var_82_i2c_write
+	andleq _icmp_eq, Var_82_i2c_write -> Label_84_i2c_write
+	subleq _NULL, _NULL -> Label_83_i2c_write
+Label_83_i2c_write: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	subleq _NULL, _NULL -> Label_85_i2c_write
+Label_84_i2c_write: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	subleq _NULL, _NULL -> Label_85_i2c_write
+Label_85_i2c_write: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	subleq _NULL, _NULL -> Label_86_i2c_write
+Label_86_i2c_write: 	subleq _NULL, _NULL
+	movleq imm.43, _TMP
+	addleq m_ptr, _TMP
+	memr Var_87_i2c_write, _TMP
+	movleq imm.0, Var_88_i2c_write
+	addleq Var_87_i2c_write, Var_88_i2c_write
+	movleq imm.43, _TMP
+	addleq m_ptr, _TMP
+	mem Var_88_i2c_write, _TMP
+	subleq _NULL, _NULL -> Label_72_i2c_write
+Label_89_i2c_write: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_release_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr Var_90_i2c_write, %ma-Global_mOISC_ior
+	memr Var_91_i2c_write, Var_90_i2c_write
+	movleq imm.33, Var_92_i2c_write
+	andleq Var_91_i2c_write, Var_92_i2c_write
+	movleq imm.6, _TMP
+	movleq Var_92_i2c_write, _TMP2
+	movleq Var_92_i2c_write, _TMPZERO
+	movleq _ONECONST, _ONETMP
+	movleq _ZERO, _TMP4
+	subleq _ZERO, _TMP2 -> negativeOrZero_695_
+	shrleq Var_92_i2c_write, _TMP
+	movleq _TMP, Var_93_i2c_write
+	subleq _TMP, _TMP -> exit_695_
+negativeOrZero_695_: 	andleq _NEGATIVE, _TMPZERO
+	subleq _TMPZERO, _TMP4 -> exit2_695_
+	movleq _ZERO, _TMP4
+	subleq _ONECONST, _TMP
+loop_695_: 	shrleq imm.6, _ONETMP
+	orleq _NEGATIVE, _ONETMP
+	movleq _ONETMP, Var_93_i2c_write
+	movleq _ZERO, _TMP4
+	movleq _ONECONST, _ONETMP
+	subleq _ONECONST, _TMP
+	subleq _TMP, _TMP4 -> loop_695_
+exit2_695_: 	movleq Var_92_i2c_write, Var_93_i2c_write
+exit_695_: 	subleq _NULL, _NULL
+	movleq imm.12, _TMP
+	addleq m_ptr, _TMP
+	mem Var_93_i2c_write, _TMP
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_drive_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq imm.4, _TMP
+	addleq m_ptr, _TMP
+	memr Var_94_i2c_write, _TMP
+	movleq Var_94_i2c_write, Var_95_i2c_write
+	subleq imm.1, Var_95_i2c_write
+	movleq CHR, Var_95_i2c_write
+	andleq _icmp_eq, Var_95_i2c_write -> Label_120_i2c_write
+	subleq _NULL, _NULL -> Label_96_i2c_write
+Label_96_i2c_write: 	subleq _NULL, _NULL
+	movleq imm.3, _TMP
+	addleq m_ptr, _TMP
+	memr Var_97_i2c_write, _TMP
+	movleq imm.13, _TMP
+	addleq m_ptr, _TMP
+	mem Var_97_i2c_write, _TMP
+	movleq imm.35, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	subleq _NULL, _NULL -> Label_98_i2c_write
+Label_98_i2c_write: 	subleq _NULL, _NULL
+	movleq imm.35, _TMP
+	addleq m_ptr, _TMP
+	memr Var_99_i2c_write, _TMP
+	movleq Var_99_i2c_write, Var_100_i2c_write
+	subleq imm.7, Var_100_i2c_write
+	movleq CHR, Var_100_i2c_write
+	andleq _icmp_slt, Var_100_i2c_write -> Label_115_i2c_write
+	subleq _NULL, _NULL -> Label_101_i2c_write
+Label_101_i2c_write: 	subleq _NULL, _NULL
+	movleq imm.13, _TMP
+	addleq m_ptr, _TMP
+	memr Var_102_i2c_write, _TMP
+	movleq imm.35, _TMP
+	addleq m_ptr, _TMP
+	memr Var_103_i2c_write, _TMP
+	movleq imm.12, Var_104_i2c_write
+	subleq Var_103_i2c_write, Var_104_i2c_write
+	movleq Var_104_i2c_write, _TMP
+	movleq Var_102_i2c_write, _TMP2
+	movleq Var_102_i2c_write, _TMPZERO
+	movleq _ONECONST, _ONETMP
+	movleq _ZERO, _TMP4
+	subleq _ZERO, _TMP2 -> negativeOrZero_716_
+	shrleq Var_102_i2c_write, _TMP
+	movleq _TMP, Var_105_i2c_write
+	subleq _TMP, _TMP -> exit_716_
+negativeOrZero_716_: 	andleq _NEGATIVE, _TMPZERO
+	subleq _TMPZERO, _TMP4 -> exit2_716_
+	movleq _ZERO, _TMP4
+	subleq _ONECONST, _TMP
+loop_716_: 	shrleq Var_104_i2c_write, _ONETMP
+	orleq _NEGATIVE, _ONETMP
+	movleq _ONETMP, Var_105_i2c_write
+	movleq _ZERO, _TMP4
+	movleq _ONECONST, _ONETMP
+	subleq _ONECONST, _TMP
+	subleq _TMP, _TMP4 -> loop_716_
+exit2_716_: 	movleq Var_102_i2c_write, Var_105_i2c_write
+exit_716_: 	subleq _NULL, _NULL
+	movleq imm.0, Var_106_i2c_write
+	andleq Var_105_i2c_write, Var_106_i2c_write
+	movleq imm.8, _TMP
+	addleq m_ptr, _TMP
+	mem Var_106_i2c_write, _TMP
+	movleq imm.8, _TMP
+	addleq m_ptr, _TMP
+	memr Var_107_i2c_write, _TMP
+	movleq Var_107_i2c_write, Var_108_i2c_write
+	subleq imm.0, Var_108_i2c_write
+	movleq CHR, Var_108_i2c_write
+	andleq _icmp_eq, Var_108_i2c_write -> Label_110_i2c_write
+	subleq _NULL, _NULL -> Label_109_i2c_write
+Label_109_i2c_write: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	subleq _NULL, _NULL -> Label_111_i2c_write
+Label_110_i2c_write: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	subleq _NULL, _NULL -> Label_111_i2c_write
+Label_111_i2c_write: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	subleq _NULL, _NULL -> Label_112_i2c_write
+Label_112_i2c_write: 	subleq _NULL, _NULL
+	movleq imm.35, _TMP
+	addleq m_ptr, _TMP
+	memr Var_113_i2c_write, _TMP
+	movleq imm.0, Var_114_i2c_write
+	addleq Var_113_i2c_write, Var_114_i2c_write
+	movleq imm.35, _TMP
+	addleq m_ptr, _TMP
+	mem Var_114_i2c_write, _TMP
+	subleq _NULL, _NULL -> Label_98_i2c_write
+Label_115_i2c_write: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_release_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr Var_116_i2c_write, %ma-Global_mOISC_ior
+	memr Var_117_i2c_write, Var_116_i2c_write
+	movleq imm.33, Var_118_i2c_write
+	andleq Var_117_i2c_write, Var_118_i2c_write
+	movleq imm.6, _TMP
+	movleq Var_118_i2c_write, _TMP2
+	movleq Var_118_i2c_write, _TMPZERO
+	movleq _ONECONST, _ONETMP
+	movleq _ZERO, _TMP4
+	subleq _ZERO, _TMP2 -> negativeOrZero_744_
+	shrleq Var_118_i2c_write, _TMP
+	movleq _TMP, Var_119_i2c_write
+	subleq _TMP, _TMP -> exit_744_
+negativeOrZero_744_: 	andleq _NEGATIVE, _TMPZERO
+	subleq _TMPZERO, _TMP4 -> exit2_744_
+	movleq _ZERO, _TMP4
+	subleq _ONECONST, _TMP
+loop_744_: 	shrleq imm.6, _ONETMP
+	orleq _NEGATIVE, _ONETMP
+	movleq _ONETMP, Var_119_i2c_write
+	movleq _ZERO, _TMP4
+	movleq _ONECONST, _ONETMP
+	subleq _ONECONST, _TMP
+	subleq _TMP, _TMP4 -> loop_744_
+exit2_744_: 	movleq Var_118_i2c_write, Var_119_i2c_write
+exit_744_: 	subleq _NULL, _NULL
+	movleq imm.12, _TMP
+	addleq m_ptr, _TMP
+	mem Var_119_i2c_write, _TMP
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_drive_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	subleq _NULL, _NULL -> Label_120_i2c_write
+Label_120_i2c_write: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.39, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	addleq imm.0, m_ptr
+	mem imm.5, m_ptr
+	pcs _TMP, link_register
+i2c_read: 	subleq _NULL, _NULL
+	memr Var_2_i2c_read, m_ptr
+	subleq imm.0, m_ptr
+	memr Var_1_i2c_read, m_ptr
+	subleq imm.0, m_ptr
+	memr Var_0_i2c_read, m_ptr
+	subleq imm.0, m_ptr
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	mem Var_0_i2c_read, _TMP
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	mem Var_1_i2c_read, _TMP
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	mem Var_2_i2c_read, _TMP
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq imm.3, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	memr Var_14_i2c_read, %ma-Global_mOISC_ior
+	memr Var_15_i2c_read, Var_14_i2c_read
+	movleq imm.3, _TMP
+	addleq m_ptr, _TMP
+	mem Var_15_i2c_read, _TMP
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	subleq _NULL, _NULL -> Label_16_i2c_read
+Label_16_i2c_read: 	subleq _NULL, _NULL
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	memr Var_17_i2c_read, _TMP
+	movleq Var_17_i2c_read, Var_18_i2c_read
+	subleq imm.12, Var_18_i2c_read
+	movleq CHR, Var_18_i2c_read
+	andleq _icmp_slt, Var_18_i2c_read -> Label_33_i2c_read
+	subleq _NULL, _NULL -> Label_19_i2c_read
+Label_19_i2c_read: 	subleq _NULL, _NULL
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	memr Var_20_i2c_read, _TMP
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	memr Var_21_i2c_read, _TMP
+	movleq imm.6, Var_22_i2c_read
+	subleq Var_21_i2c_read, Var_22_i2c_read
+	movleq Var_22_i2c_read, _TMP
+	movleq Var_20_i2c_read, _TMP2
+	movleq Var_20_i2c_read, _TMPZERO
+	movleq _ONECONST, _ONETMP
+	movleq _ZERO, _TMP4
+	subleq _ZERO, _TMP2 -> negativeOrZero_785_
+	shrleq Var_20_i2c_read, _TMP
+	movleq _TMP, Var_23_i2c_read
+	subleq _TMP, _TMP -> exit_785_
+negativeOrZero_785_: 	andleq _NEGATIVE, _TMPZERO
+	subleq _TMPZERO, _TMP4 -> exit2_785_
+	movleq _ZERO, _TMP4
+	subleq _ONECONST, _TMP
+loop_785_: 	shrleq Var_22_i2c_read, _ONETMP
+	orleq _NEGATIVE, _ONETMP
+	movleq _ONETMP, Var_23_i2c_read
+	movleq _ZERO, _TMP4
+	movleq _ONECONST, _ONETMP
+	subleq _ONECONST, _TMP
+	subleq _TMP, _TMP4 -> loop_785_
+exit2_785_: 	movleq Var_20_i2c_read, Var_23_i2c_read
+exit_785_: 	subleq _NULL, _NULL
+	movleq imm.0, Var_24_i2c_read
+	andleq Var_23_i2c_read, Var_24_i2c_read
+	movleq imm.8, _TMP
+	addleq m_ptr, _TMP
+	mem Var_24_i2c_read, _TMP
+	movleq imm.8, _TMP
+	addleq m_ptr, _TMP
+	memr Var_25_i2c_read, _TMP
+	movleq Var_25_i2c_read, Var_26_i2c_read
+	subleq imm.0, Var_26_i2c_read
+	movleq CHR, Var_26_i2c_read
+	andleq _icmp_eq, Var_26_i2c_read -> Label_28_i2c_read
+	subleq _NULL, _NULL -> Label_27_i2c_read
+Label_27_i2c_read: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	subleq _NULL, _NULL -> Label_29_i2c_read
+Label_28_i2c_read: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	subleq _NULL, _NULL -> Label_29_i2c_read
+Label_29_i2c_read: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	subleq _NULL, _NULL -> Label_30_i2c_read
+Label_30_i2c_read: 	subleq _NULL, _NULL
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	memr Var_31_i2c_read, _TMP
+	movleq imm.0, Var_32_i2c_read
+	addleq Var_31_i2c_read, Var_32_i2c_read
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	mem Var_32_i2c_read, _TMP
+	subleq _NULL, _NULL -> Label_16_i2c_read
+Label_33_i2c_read: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_release_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr Var_34_i2c_read, %ma-Global_mOISC_ior
+	memr Var_35_i2c_read, Var_34_i2c_read
+	movleq imm.33, Var_36_i2c_read
+	andleq Var_35_i2c_read, Var_36_i2c_read
+	movleq imm.6, _TMP
+	movleq Var_36_i2c_read, _TMP2
+	movleq Var_36_i2c_read, _TMPZERO
+	movleq _ONECONST, _ONETMP
+	movleq _ZERO, _TMP4
+	subleq _ZERO, _TMP2 -> negativeOrZero_815_
+	shrleq Var_36_i2c_read, _TMP
+	movleq _TMP, Var_37_i2c_read
+	subleq _TMP, _TMP -> exit_815_
+negativeOrZero_815_: 	andleq _NEGATIVE, _TMPZERO
+	subleq _TMPZERO, _TMP4 -> exit2_815_
+	movleq _ZERO, _TMP4
+	subleq _ONECONST, _TMP
+loop_815_: 	shrleq imm.6, _ONETMP
+	orleq _NEGATIVE, _ONETMP
+	movleq _ONETMP, Var_37_i2c_read
+	movleq _ZERO, _TMP4
+	movleq _ONECONST, _ONETMP
+	subleq _ONECONST, _TMP
+	subleq _TMP, _TMP4 -> loop_815_
+exit2_815_: 	movleq Var_36_i2c_read, Var_37_i2c_read
+exit_815_: 	subleq _NULL, _NULL
+	movleq imm.4, _TMP
+	addleq m_ptr, _TMP
+	mem Var_37_i2c_read, _TMP
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_drive_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq imm.9, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	subleq _NULL, _NULL -> Label_38_i2c_read
+Label_38_i2c_read: 	subleq _NULL, _NULL
+	movleq imm.9, _TMP
+	addleq m_ptr, _TMP
+	memr Var_39_i2c_read, _TMP
+	movleq Var_39_i2c_read, Var_40_i2c_read
+	subleq imm.7, Var_40_i2c_read
+	movleq CHR, Var_40_i2c_read
+	andleq _icmp_slt, Var_40_i2c_read -> Label_55_i2c_read
+	subleq _NULL, _NULL -> Label_41_i2c_read
+Label_41_i2c_read: 	subleq _NULL, _NULL
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	memr Var_42_i2c_read, _TMP
+	movleq imm.9, _TMP
+	addleq m_ptr, _TMP
+	memr Var_43_i2c_read, _TMP
+	movleq imm.12, Var_44_i2c_read
+	subleq Var_43_i2c_read, Var_44_i2c_read
+	movleq Var_44_i2c_read, _TMP
+	movleq Var_42_i2c_read, _TMP2
+	movleq Var_42_i2c_read, _TMPZERO
+	movleq _ONECONST, _ONETMP
+	movleq _ZERO, _TMP4
+	subleq _ZERO, _TMP2 -> negativeOrZero_830_
+	shrleq Var_42_i2c_read, _TMP
+	movleq _TMP, Var_45_i2c_read
+	subleq _TMP, _TMP -> exit_830_
+negativeOrZero_830_: 	andleq _NEGATIVE, _TMPZERO
+	subleq _TMPZERO, _TMP4 -> exit2_830_
+	movleq _ZERO, _TMP4
+	subleq _ONECONST, _TMP
+loop_830_: 	shrleq Var_44_i2c_read, _ONETMP
+	orleq _NEGATIVE, _ONETMP
+	movleq _ONETMP, Var_45_i2c_read
+	movleq _ZERO, _TMP4
+	movleq _ONECONST, _ONETMP
+	subleq _ONECONST, _TMP
+	subleq _TMP, _TMP4 -> loop_830_
+exit2_830_: 	movleq Var_42_i2c_read, Var_45_i2c_read
+exit_830_: 	subleq _NULL, _NULL
+	movleq imm.0, Var_46_i2c_read
+	andleq Var_45_i2c_read, Var_46_i2c_read
+	movleq imm.8, _TMP
+	addleq m_ptr, _TMP
+	mem Var_46_i2c_read, _TMP
+	movleq imm.8, _TMP
+	addleq m_ptr, _TMP
+	memr Var_47_i2c_read, _TMP
+	movleq Var_47_i2c_read, Var_48_i2c_read
+	subleq imm.0, Var_48_i2c_read
+	movleq CHR, Var_48_i2c_read
+	andleq _icmp_eq, Var_48_i2c_read -> Label_50_i2c_read
+	subleq _NULL, _NULL -> Label_49_i2c_read
+Label_49_i2c_read: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	subleq _NULL, _NULL -> Label_51_i2c_read
+Label_50_i2c_read: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	subleq _NULL, _NULL -> Label_51_i2c_read
+Label_51_i2c_read: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	subleq _NULL, _NULL -> Label_52_i2c_read
+Label_52_i2c_read: 	subleq _NULL, _NULL
+	movleq imm.9, _TMP
+	addleq m_ptr, _TMP
+	memr Var_53_i2c_read, _TMP
+	movleq imm.0, Var_54_i2c_read
+	addleq Var_53_i2c_read, Var_54_i2c_read
+	movleq imm.9, _TMP
+	addleq m_ptr, _TMP
+	mem Var_54_i2c_read, _TMP
+	subleq _NULL, _NULL -> Label_38_i2c_read
+Label_55_i2c_read: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_release_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr Var_56_i2c_read, %ma-Global_mOISC_ior
+	memr Var_57_i2c_read, Var_56_i2c_read
+	movleq imm.33, Var_58_i2c_read
+	andleq Var_57_i2c_read, Var_58_i2c_read
+	movleq imm.6, _TMP
+	movleq Var_58_i2c_read, _TMP2
+	movleq Var_58_i2c_read, _TMPZERO
+	movleq _ONECONST, _ONETMP
+	movleq _ZERO, _TMP4
+	subleq _ZERO, _TMP2 -> negativeOrZero_858_
+	shrleq Var_58_i2c_read, _TMP
+	movleq _TMP, Var_59_i2c_read
+	subleq _TMP, _TMP -> exit_858_
+negativeOrZero_858_: 	andleq _NEGATIVE, _TMPZERO
+	subleq _TMPZERO, _TMP4 -> exit2_858_
+	movleq _ZERO, _TMP4
+	subleq _ONECONST, _TMP
+loop_858_: 	shrleq imm.6, _ONETMP
+	orleq _NEGATIVE, _ONETMP
+	movleq _ONETMP, Var_59_i2c_read
+	movleq _ZERO, _TMP4
+	movleq _ONECONST, _ONETMP
+	subleq _ONECONST, _TMP
+	subleq _TMP, _TMP4 -> loop_858_
+exit2_858_: 	movleq Var_58_i2c_read, Var_59_i2c_read
+exit_858_: 	subleq _NULL, _NULL
+	movleq imm.4, _TMP
+	addleq m_ptr, _TMP
+	mem Var_59_i2c_read, _TMP
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_drive_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	subleq _NULL, _NULL -> Label_60_i2c_read
+Label_60_i2c_read: 	subleq _NULL, _NULL
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	memr Var_61_i2c_read, _TMP
+	movleq Var_61_i2c_read, Var_62_i2c_read
+	subleq imm.12, Var_62_i2c_read
+	movleq CHR, Var_62_i2c_read
+	andleq _icmp_slt, Var_62_i2c_read -> Label_77_i2c_read
+	subleq _NULL, _NULL -> Label_63_i2c_read
+Label_63_i2c_read: 	subleq _NULL, _NULL
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	memr Var_64_i2c_read, _TMP
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	memr Var_65_i2c_read, _TMP
+	movleq imm.6, Var_66_i2c_read
+	subleq Var_65_i2c_read, Var_66_i2c_read
+	movleq Var_66_i2c_read, _TMP
+	movleq Var_64_i2c_read, _TMP2
+	movleq Var_64_i2c_read, _TMPZERO
+	movleq _ONECONST, _ONETMP
+	movleq _ZERO, _TMP4
+	subleq _ZERO, _TMP2 -> negativeOrZero_877_
+	shrleq Var_64_i2c_read, _TMP
+	movleq _TMP, Var_67_i2c_read
+	subleq _TMP, _TMP -> exit_877_
+negativeOrZero_877_: 	andleq _NEGATIVE, _TMPZERO
+	subleq _TMPZERO, _TMP4 -> exit2_877_
+	movleq _ZERO, _TMP4
+	subleq _ONECONST, _TMP
+loop_877_: 	shrleq Var_66_i2c_read, _ONETMP
+	orleq _NEGATIVE, _ONETMP
+	movleq _ONETMP, Var_67_i2c_read
+	movleq _ZERO, _TMP4
+	movleq _ONECONST, _ONETMP
+	subleq _ONECONST, _TMP
+	subleq _TMP, _TMP4 -> loop_877_
+exit2_877_: 	movleq Var_64_i2c_read, Var_67_i2c_read
+exit_877_: 	subleq _NULL, _NULL
+	movleq imm.0, Var_68_i2c_read
+	andleq Var_67_i2c_read, Var_68_i2c_read
+	movleq imm.8, _TMP
+	addleq m_ptr, _TMP
+	mem Var_68_i2c_read, _TMP
+	movleq imm.8, _TMP
+	addleq m_ptr, _TMP
+	memr Var_69_i2c_read, _TMP
+	movleq Var_69_i2c_read, Var_70_i2c_read
+	subleq imm.0, Var_70_i2c_read
+	movleq CHR, Var_70_i2c_read
+	andleq _icmp_eq, Var_70_i2c_read -> Label_72_i2c_read
+	subleq _NULL, _NULL -> Label_71_i2c_read
+Label_71_i2c_read: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	subleq _NULL, _NULL -> Label_73_i2c_read
+Label_72_i2c_read: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	subleq _NULL, _NULL -> Label_73_i2c_read
+Label_73_i2c_read: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	subleq _NULL, _NULL -> Label_74_i2c_read
+Label_74_i2c_read: 	subleq _NULL, _NULL
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	memr Var_75_i2c_read, _TMP
+	movleq imm.0, Var_76_i2c_read
+	addleq Var_75_i2c_read, Var_76_i2c_read
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	mem Var_76_i2c_read, _TMP
+	subleq _NULL, _NULL -> Label_60_i2c_read
+Label_77_i2c_read: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_release_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr Var_78_i2c_read, %ma-Global_mOISC_ior
+	memr Var_79_i2c_read, Var_78_i2c_read
+	movleq imm.33, Var_80_i2c_read
+	andleq Var_79_i2c_read, Var_80_i2c_read
+	movleq imm.6, _TMP
+	movleq Var_80_i2c_read, _TMP2
+	movleq Var_80_i2c_read, _TMPZERO
+	movleq _ONECONST, _ONETMP
+	movleq _ZERO, _TMP4
+	subleq _ZERO, _TMP2 -> negativeOrZero_909_
+	shrleq Var_80_i2c_read, _TMP
+	movleq _TMP, Var_81_i2c_read
+	subleq _TMP, _TMP -> exit_909_
+negativeOrZero_909_: 	andleq _NEGATIVE, _TMPZERO
+	subleq _TMPZERO, _TMP4 -> exit2_909_
+	movleq _ZERO, _TMP4
+	subleq _ONECONST, _TMP
+loop_909_: 	shrleq imm.6, _ONETMP
+	orleq _NEGATIVE, _ONETMP
+	movleq _ONETMP, Var_81_i2c_read
+	movleq _ZERO, _TMP4
+	movleq _ONECONST, _ONETMP
+	subleq _ONECONST, _TMP
+	subleq _TMP, _TMP4 -> loop_909_
+exit2_909_: 	movleq Var_80_i2c_read, Var_81_i2c_read
+exit_909_: 	subleq _NULL, _NULL
+	movleq imm.4, _TMP
+	addleq m_ptr, _TMP
+	mem Var_81_i2c_read, _TMP
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq imm.7, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	subleq _NULL, _NULL -> Label_82_i2c_read
+Label_82_i2c_read: 	subleq _NULL, _NULL
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	memr Var_83_i2c_read, _TMP
+	movleq Var_83_i2c_read, Var_84_i2c_read
+	subleq imm.7, Var_84_i2c_read
+	movleq CHR, Var_84_i2c_read
+	andleq _icmp_slt, Var_84_i2c_read -> Label_99_i2c_read
+	subleq _NULL, _NULL -> Label_85_i2c_read
+Label_85_i2c_read: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr Var_86_i2c_read, %ma-Global_mOISC_ior
+	memr Var_87_i2c_read, Var_86_i2c_read
+	movleq imm.33, Var_88_i2c_read
+	andleq Var_87_i2c_read, Var_88_i2c_read
+	movleq imm.6, _TMP
+	movleq Var_88_i2c_read, _TMP2
+	movleq Var_88_i2c_read, _TMPZERO
+	movleq _ONECONST, _ONETMP
+	movleq _ZERO, _TMP4
+	subleq _ZERO, _TMP2 -> negativeOrZero_924_
+	shrleq Var_88_i2c_read, _TMP
+	movleq _TMP, Var_89_i2c_read
+	subleq _TMP, _TMP -> exit_924_
+negativeOrZero_924_: 	andleq _NEGATIVE, _TMPZERO
+	subleq _TMPZERO, _TMP4 -> exit2_924_
+	movleq _ZERO, _TMP4
+	subleq _ONECONST, _TMP
+loop_924_: 	shrleq imm.6, _ONETMP
+	orleq _NEGATIVE, _ONETMP
+	movleq _ONETMP, Var_89_i2c_read
+	movleq _ZERO, _TMP4
+	movleq _ONECONST, _ONETMP
+	subleq _ONECONST, _TMP
+	subleq _TMP, _TMP4 -> loop_924_
+exit2_924_: 	movleq Var_88_i2c_read, Var_89_i2c_read
+exit_924_: 	subleq _NULL, _NULL
+	movleq imm.12, _TMP
+	addleq m_ptr, _TMP
+	mem Var_89_i2c_read, _TMP
+	movleq imm.7, _TMP
+	addleq m_ptr, _TMP
+	memr Var_90_i2c_read, _TMP
+	movleq imm.12, _TMP
+	addleq m_ptr, _TMP
+	memr Var_91_i2c_read, _TMP
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	memr Var_92_i2c_read, _TMP
+	movleq imm.12, Var_93_i2c_read
+	subleq Var_92_i2c_read, Var_93_i2c_read
+	movleq Var_93_i2c_read, Var_94_i2c_read
+	shlleq Var_91_i2c_read, Var_94_i2c_read
+	movleq Var_94_i2c_read, Var_95_i2c_read
+	orleq Var_90_i2c_read, Var_95_i2c_read
+	movleq imm.7, _TMP
+	addleq m_ptr, _TMP
+	mem Var_95_i2c_read, _TMP
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	subleq _NULL, _NULL -> Label_96_i2c_read
+Label_96_i2c_read: 	subleq _NULL, _NULL
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	memr Var_97_i2c_read, _TMP
+	movleq imm.0, Var_98_i2c_read
+	addleq Var_97_i2c_read, Var_98_i2c_read
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	mem Var_98_i2c_read, _TMP
+	subleq _NULL, _NULL -> Label_82_i2c_read
+Label_99_i2c_read: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_drive_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_release_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq imm.7, _TMP
+	addleq m_ptr, _TMP
+	memr Var_100_i2c_read, _TMP
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	memr Var_101_i2c_read, _TMP
+	movleq Var_101_i2c_read, _TMP
+	addleq imm.0, _TMP
+	movleq _TMP, Var_102_i2c_read
+	mem Var_100_i2c_read, Var_102_i2c_read
+	movleq imm.7, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	subleq _NULL, _NULL -> Label_103_i2c_read
+Label_103_i2c_read: 	subleq _NULL, _NULL
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	memr Var_104_i2c_read, _TMP
+	movleq Var_104_i2c_read, Var_105_i2c_read
+	subleq imm.7, Var_105_i2c_read
+	movleq CHR, Var_105_i2c_read
+	andleq _icmp_slt, Var_105_i2c_read -> Label_120_i2c_read
+	subleq _NULL, _NULL -> Label_106_i2c_read
+Label_106_i2c_read: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr Var_107_i2c_read, %ma-Global_mOISC_ior
+	memr Var_108_i2c_read, Var_107_i2c_read
+	movleq imm.33, Var_109_i2c_read
+	andleq Var_108_i2c_read, Var_109_i2c_read
+	movleq imm.6, _TMP
+	movleq Var_109_i2c_read, _TMP2
+	movleq Var_109_i2c_read, _TMPZERO
+	movleq _ONECONST, _ONETMP
+	movleq _ZERO, _TMP4
+	subleq _ZERO, _TMP2 -> negativeOrZero_963_
+	shrleq Var_109_i2c_read, _TMP
+	movleq _TMP, Var_110_i2c_read
+	subleq _TMP, _TMP -> exit_963_
+negativeOrZero_963_: 	andleq _NEGATIVE, _TMPZERO
+	subleq _TMPZERO, _TMP4 -> exit2_963_
+	movleq _ZERO, _TMP4
+	subleq _ONECONST, _TMP
+loop_963_: 	shrleq imm.6, _ONETMP
+	orleq _NEGATIVE, _ONETMP
+	movleq _ONETMP, Var_110_i2c_read
+	movleq _ZERO, _TMP4
+	movleq _ONECONST, _ONETMP
+	subleq _ONECONST, _TMP
+	subleq _TMP, _TMP4 -> loop_963_
+exit2_963_: 	movleq Var_109_i2c_read, Var_110_i2c_read
+exit_963_: 	subleq _NULL, _NULL
+	movleq imm.12, _TMP
+	addleq m_ptr, _TMP
+	mem Var_110_i2c_read, _TMP
+	movleq imm.7, _TMP
+	addleq m_ptr, _TMP
+	memr Var_111_i2c_read, _TMP
+	movleq imm.12, _TMP
+	addleq m_ptr, _TMP
+	memr Var_112_i2c_read, _TMP
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	memr Var_113_i2c_read, _TMP
+	movleq imm.12, Var_114_i2c_read
+	subleq Var_113_i2c_read, Var_114_i2c_read
+	movleq Var_114_i2c_read, Var_115_i2c_read
+	shlleq Var_112_i2c_read, Var_115_i2c_read
+	movleq Var_115_i2c_read, Var_116_i2c_read
+	orleq Var_111_i2c_read, Var_116_i2c_read
+	movleq imm.7, _TMP
+	addleq m_ptr, _TMP
+	mem Var_116_i2c_read, _TMP
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	subleq _NULL, _NULL -> Label_117_i2c_read
+Label_117_i2c_read: 	subleq _NULL, _NULL
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	memr Var_118_i2c_read, _TMP
+	movleq imm.0, Var_119_i2c_read
+	addleq Var_118_i2c_read, Var_119_i2c_read
+	movleq imm.6, _TMP
+	addleq m_ptr, _TMP
+	mem Var_119_i2c_read, _TMP
+	subleq _NULL, _NULL -> Label_103_i2c_read
+Label_120_i2c_read: 	subleq _NULL, _NULL
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_drive_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_low_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq imm.7, _TMP
+	addleq m_ptr, _TMP
+	memr Var_121_i2c_read, _TMP
+	movleq imm.2, _TMP
+	addleq m_ptr, _TMP
+	memr Var_122_i2c_read, _TMP
+	movleq Var_122_i2c_read, _TMP
+	addleq imm.5, _TMP
+	movleq _TMP, Var_123_i2c_read
+	mem Var_121_i2c_read, Var_123_i2c_read
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_scl
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.13, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_high_sda
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	pcs _TMP, link_register
+MAX30205_read: 	subleq _NULL, _NULL
+	memr Var_0_MAX30205_read, m_ptr
+	subleq imm.0, m_ptr
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	mem Var_0_MAX30205_read, _TMP
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	memr Var_3_MAX30205_read, _TMP
+	movleq m_ptr, _TMP
+	addleq imm.1, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.29, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.5, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq Var_3_MAX30205_read, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_read
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	pcs _TMP, link_register
+led_init: 	subleq _NULL, _NULL
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	memr link_register, m_ptr
+	subleq imm.0, m_ptr
+	pcs _TMP, link_register
+main: 	subleq _NULL, _NULL
+	movleq link_register, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.0, _TMP
+	addleq m_ptr, _TMP
+	mem imm.5, _TMP
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	memr Var_4_main, _TMP
+	addleq imm.0, _TMP
+	memr Var_4_main.0, _TMP
+	movleq imm.5, Var_4_main
+	movleq imm.5, Var_4_main.0
+	movleq imm.3, _TMP
+	addleq m_ptr, _TMP
+	mem imm.1, _TMP
+	memr Var_5_main, %ma-Global_mOISC_csr
+	mem imm.20, Var_5_main
+	movleq m_ptr, _TMP
+	addleq imm.4, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> spiLEDInit
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq m_ptr, _TMP
+	addleq imm.4, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> i2c_init
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr Var_6_main, %ma-Global_mOISC_ior
+	memr Var_7_main, Var_6_main
+	movleq Var_7_main, Var_8_main
+	andleq imm.44, Var_8_main
+	memr Var_9_main, %ma-Global_mOISC_ior
+	mem Var_8_main, Var_9_main
+	movleq m_ptr, _TMP
+	addleq imm.4, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.9, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> delay
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr Var_10_main, %ma-Global_mOISC_ior
+	memr Var_11_main, Var_10_main
+	movleq Var_11_main, Var_12_main
+	orleq imm.45, Var_12_main
+	memr Var_13_main, %ma-Global_mOISC_ior
+	mem Var_12_main, Var_13_main
+	movleq m_ptr, _TMP
+	addleq imm.4, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> RH_RF95_init
+	memr Var_14_main, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq Var_14_main, Var_15_main
+	subleq imm.5, Var_15_main
+	movleq CHR, Var_15_main
+	andleq _icmp_eq, Var_15_main -> Label_18_main
+	subleq _NULL, _NULL -> Label_16_main
+Label_16_main: 	subleq _NULL, _NULL
+	subleq _NULL, _NULL -> Label_17_main
+Label_17_main: 	subleq _NULL, _NULL
+	subleq _NULL, _NULL -> Label_17_main
+Label_18_main: 	subleq _NULL, _NULL
+	subleq _NULL, _NULL -> Label_19_main
+Label_19_main: 	subleq _NULL, _NULL
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	addleq imm.5, _TMP
+	addleq imm.5, _TMP
+	movleq _TMP, Var_20_main
+	movleq m_ptr, _TMP
+	addleq imm.4, m_ptr
+	mem _TMP, m_ptr
+	movleq Var_20_main, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> MAX30205_read
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	movleq imm.1, _TMP
+	addleq m_ptr, _TMP
+	addleq imm.5, _TMP
+	addleq imm.5, _TMP
+	movleq _TMP, Var_21_main
+	movleq imm.3, _TMP
+	addleq m_ptr, _TMP
+	memr Var_22_main, _TMP
+	movleq m_ptr, _TMP
+	addleq imm.4, m_ptr
+	mem _TMP, m_ptr
+	movleq Var_21_main, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	movleq Var_22_main, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> RH_RF95_send
+	memr Var_23_main, m_ptr
+	subleq imm.0, m_ptr
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr Var_24_main, %ma-Global_mOISC_csr
+	mem imm.5, Var_24_main
+	memr Var_25_main, %ma-Global_mOISC_ior
+	memr Var_26_main, Var_25_main
+	movleq Var_26_main, Var_27_main
+	orleq imm.21, Var_27_main
+	memr Var_28_main, %ma-Global_mOISC_ior
+	mem Var_27_main, Var_28_main
+	movleq m_ptr, _TMP
+	addleq imm.4, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.0, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> delay
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr Var_29_main, %ma-Global_mOISC_ior
+	memr Var_30_main, Var_29_main
+	movleq Var_30_main, Var_31_main
+	andleq imm.46, Var_31_main
+	memr Var_32_main, %ma-Global_mOISC_ior
+	mem Var_31_main, Var_32_main
+	movleq m_ptr, _TMP
+	addleq imm.4, m_ptr
+	mem _TMP, m_ptr
+	movleq imm.0, _TMP
+	addleq imm.0, m_ptr
+	mem _TMP, m_ptr
+	pc _TMP, link_register
+	subleq _PCMCR_RETADDRBL, link_register
+	subleq _NULL, _NULL -> delay
+	memr _TMP, m_ptr
+	movleq _TMP, m_ptr
+	memr Var_33_main, %ma-Global_mOISC_csr
+	mem imm.20, Var_33_main
+	subleq _NULL, _NULL -> Label_19_main
+_SUBLMCR:	255
+_MOVMCR:	238
+_ADDMCR:	204
+_SHLMCR:	153
+_SHRMCR:	136
+_ORMCR:	119
+_ANDMCR:	102
+_XORMCR:	85
+_XNORMCR:	68
+_PCMCR:	51
+_MEMMCR:	34
+_MEMRMCR:	17
+_PCSMCR:	0
+_NULL:	0
+m_ptr:	31500
+link_register:	0
+_TMP:	0
+%ma-Global_mOISC_ior:	15194
+Global_mOISC_ior:	7
+%ma-Global_mOISC_idr:	15196
+Global_mOISC_idr:	6
+%ma-Global_mOISC_isr:	15198
+Global_mOISC_isr:	5
+%ma-Global_mOISC_csr:	15200
+Global_mOISC_csr:	4
+%ma-Global_mOISC_icr:	15202
+Global_mOISC_icr:	3
+%ma-Global_mOISC_iwr:	15204
+Global_mOISC_iwr:	2
+%ma-Global_mOISC_chr:	15206
+Global_mOISC_chr:	1
+%ma-Global_mOISC_mcr:	15208
+Global_mOISC_mcr:	0
+%ma-Global_current_idr:	15210
+Global_current_idr:	192
+imm.0:	1
+Var_0_memcpy:	0
+Var_1_memcpy:	0
+Var_2_memcpy:	0
+imm.1:	2
+imm.2:	3
+Var_10_memcpy:	0
+Var_11_memcpy:	0
+imm.3:	4
+Var_12_memcpy:	0
+Var_13_memcpy:	0
+imm.4:	5
+imm.5:	0
+imm.6:	6
+Var_15_memcpy:	0
+Var_16_memcpy:	0
+Var_17_memcpy:	0
+_icmp_slt:	4
+Var_19_memcpy:	0
+Var_20_memcpy:	0
+Var_21_memcpy:	0
+Var_22_memcpy:	0
+Var_23_memcpy:	0
+Var_24_memcpy:	0
+Var_25_memcpy:	0
+Var_26_memcpy:	0
+Var_27_memcpy:	0
+Var_29_memcpy:	0
+Var_30_memcpy:	0
+Var_0_delay:	0
+Var_5_delay:	0
+Var_6_delay:	0
+Var_7_delay:	0
+_icmp_sle:	12
+Var_10_delay:	0
+Var_11_delay:	0
+Var_0_spi_ll:	0
+Var_1_spi_ll:	0
+Var_2_spi_ll:	0
+imm.7:	8
+imm.8:	9
+imm.9:	10
+Var_14_spi_ll:	0
+Var_15_spi_ll:	0
+Var_16_spi_ll:	0
+imm.10:	247
+Var_17_spi_ll:	0
+Var_18_spi_ll:	0
+imm.11:	127
+Var_19_spi_ll:	0
+Var_20_spi_ll:	0
+imm.12:	7
+Var_21_spi_ll:	0
+Var_22_spi_ll:	0
+Var_23_spi_ll:	0
+Var_24_spi_ll:	0
+Var_26_spi_ll:	0
+Var_27_spi_ll:	0
+Var_29_spi_ll:	0
+Var_30_spi_ll:	0
+Var_31_spi_ll:	0
+Var_32_spi_ll:	0
+_TMP2:	0
+_TMP4:	0
+_TMPZERO:	0
+_ONECONST:	1
+_ONETMP:	1
+_ZERO:	0
+_NEGATIVE:	-32768
+Var_33_spi_ll:	0
+Var_34_spi_ll:	0
+Var_35_spi_ll:	0
+Var_36_spi_ll:	0
+Var_37_spi_ll:	0
+Var_38_spi_ll:	0
+Var_39_spi_ll:	0
+Var_40_spi_ll:	0
+Var_41_spi_ll:	0
+Var_42_spi_ll:	0
+Var_44_spi_ll:	0
+Var_45_spi_ll:	0
+Var_48_spi_ll:	0
+Var_49_spi_ll:	0
+Var_51_spi_ll:	0
+Var_52_spi_ll:	0
+Var_53_spi_ll:	0
+Var_54_spi_ll:	0
+Var_55_spi_ll:	0
+Var_56_spi_ll:	0
+Var_57_spi_ll:	0
+Var_58_spi_ll:	0
+Var_59_spi_ll:	0
+Var_60_spi_ll:	0
+Var_61_spi_ll:	0
+Var_62_spi_ll:	0
+Var_63_spi_ll:	0
+Var_64_spi_ll:	0
+Var_65_spi_ll:	0
+Var_66_spi_ll:	0
+Var_67_spi_ll:	0
+Var_68_spi_ll:	0
+Var_69_spi_ll:	0
+Var_70_spi_ll:	0
+Var_71_spi_ll:	0
+Var_72_spi_ll:	0
+Var_73_spi_ll:	0
+Var_74_spi_ll:	0
+Var_75_spi_ll:	0
+Var_77_spi_ll:	0
+Var_78_spi_ll:	0
+Var_80_spi_ll:	0
+Var_81_spi_ll:	0
+Var_82_spi_ll:	0
+imm.13:	11
+_PCMCR_RETADDRBL:	-8
+Var_83_spi_ll:	0
+Var_84_spi_ll:	0
+Var_85_spi_ll:	0
+Var_86_spi_ll:	0
+Var_0_spitransaction:	0
+Var_9_spitransaction:	0
+Var_10_spitransaction:	0
+Var_11_spitransaction:	0
+Var_12_spitransaction:	0
+imm.14:	255
+Var_14_spitransaction:	0
+Var_15_spitransaction:	0
+Var_17_spitransaction:	0
+Var_18_spitransaction:	0
+Var_19_spitransaction:	0
+Var_20_spitransaction:	0
+Var_21_spitransaction:	0
+Var_22_spitransaction:	0
+Var_23_spitransaction:	0
+Var_24_spitransaction:	0
+Var_25_spitransaction:	0
+Var_26_spitransaction:	0
+Var_27_spitransaction:	0
+Var_28_spitransaction:	0
+Var_29_spitransaction:	0
+Var_30_spitransaction:	0
+Var_32_spitransaction:	0
+Var_33_spitransaction:	0
+Var_35_spitransaction:	0
+Var_36_spitransaction:	0
+Var_2_spiselect:	0
+Var_3_spiselect:	0
+Var_4_spiselect:	0
+Var_5_spiselect:	0
+Var_6_spiselect:	0
+Var_7_spiselect:	0
+Var_2_spiunselect:	0
+Var_3_spiunselect:	0
+Var_4_spiunselect:	0
+Var_5_spiunselect:	0
+Var_6_spiunselect:	0
+Var_1_spiLEDInit:	0
+Var_2_spiLEDInit:	0
+imm.15:	59
+Var_3_spiLEDInit:	0
+Var_4_spiLEDInit:	0
+Var_5_spiLEDInit:	0
+Var_0_spiWrite:	0
+Var_1_spiWrite:	0
+Var_6_spiWrite:	0
+Var_7_spiWrite:	0
+Var_8_spiWrite:	0
+Var_9_spiWrite:	0
+Var_0_spiRead:	0
+Var_4_spiRead:	0
+Var_5_spiRead:	0
+Var_6_spiRead:	0
+Var_0_spiBurstWrite:	0
+Var_1_spiBurstWrite:	0
+Var_2_spiBurstWrite:	0
+Var_7_spiBurstWrite:	0
+Var_8_spiBurstWrite:	0
+imm.16:	128
+Var_10_spiBurstWrite:	0
+Var_11_spiBurstWrite:	0
+imm.17:	-1
+Var_12_spiBurstWrite:	0
+_icmp_eq:	8
+Var_14_spiBurstWrite:	0
+Var_15_spiBurstWrite:	0
+Var_16_spiBurstWrite:	0
+Var_17_spiBurstWrite:	0
+Var_18_spiBurstWrite:	0
+imm.18:	217
+Var_1_RH_RF95_setFrequency_868:	0
+Var_2_RH_RF95_setFrequency_868:	0
+Var_3_RH_RF95_setFrequency_868:	0
+imm.19:	228
+Var_1_RH_RF95_setFrequency_915:	0
+imm.20:	192
+Var_2_RH_RF95_setFrequency_915:	0
+Var_3_RH_RF95_setFrequency_915:	0
+Var_0_RH_RF95_setPreambleLength:	0
+Var_3_RH_RF95_setPreambleLength:	0
+Var_4_RH_RF95_setPreambleLength:	0
+imm.21:	32
+Var_5_RH_RF95_setPreambleLength:	0
+Var_6_RH_RF95_setPreambleLength:	0
+Var_7_RH_RF95_setPreambleLength:	0
+imm.22:	33
+Var_8_RH_RF95_setPreambleLength:	0
+Var_1_RH_RF95_setModeIdle:	0
+imm.23:	29
+imm.24:	114
+Var_1_RH_RF95_setModemConfig_Bw125Cr45Sf128:	0
+imm.25:	30
+imm.26:	116
+Var_2_RH_RF95_setModemConfig_Bw125Cr45Sf128:	0
+imm.27:	38
+Var_3_RH_RF95_setModemConfig_Bw125Cr45Sf128:	0
+imm.28:	146
+Var_1_RH_RF95_setModemConfig_Bw500Cr45Sf128:	0
+Var_2_RH_RF95_setModemConfig_Bw500Cr45Sf128:	0
+Var_3_RH_RF95_setModemConfig_Bw500Cr45Sf128:	0
+imm.29:	72
+Var_1_RH_RF95_setModemConfig_Bw31_25Cr48Sf512:	0
+imm.30:	148
+Var_2_RH_RF95_setModemConfig_Bw31_25Cr48Sf512:	0
+Var_3_RH_RF95_setModemConfig_Bw31_25Cr48Sf512:	0
+imm.31:	120
+Var_1_RH_RF95_setModemConfig_Bw125Cr48Sf4096:	0
+imm.32:	196
+Var_2_RH_RF95_setModemConfig_Bw125Cr48Sf4096:	0
+Var_3_RH_RF95_setModemConfig_Bw125Cr48Sf4096:	0
+Var_0_RH_RF95_setTxPower:	0
+Var_3_RH_RF95_setTxPower:	0
+Var_4_RH_RF95_setTxPower:	0
+Var_5_RH_RF95_setTxPower:	0
+Var_6_RH_RF95_setTxPower:	0
+Var_1_RH_RF95_setModeTx:	0
+imm.33:	64
+Var_2_RH_RF95_setModeTx:	0
+Var_0_RH_RF95_send:	0
+Var_1_RH_RF95_send:	0
+Var_6_RH_RF95_send:	0
+Var_7_RH_RF95_send:	0
+imm.34:	251
+_icmp_sgt:	2
+imm.35:	13
+Var_10_RH_RF95_send:	0
+Var_11_RH_RF95_send:	0
+Var_12_RH_RF95_send:	0
+Var_13_RH_RF95_send:	0
+Var_14_RH_RF95_send:	0
+Var_15_RH_RF95_send:	0
+Var_16_RH_RF95_send:	0
+Var_17_RH_RF95_send:	0
+Var_18_RH_RF95_send:	0
+imm.36:	34
+Var_19_RH_RF95_send:	0
+imm.37:	18
+Var_21_RH_RF95_send:	0
+Var_22_RH_RF95_send:	0
+Var_23_RH_RF95_send:	0
+Var_27_RH_RF95_send:	0
+Var_2_RH_RF95_init:	0
+imm.38:	200
+Var_3_RH_RF95_init:	0
+Var_4_RH_RF95_init:	0
+imm.39:	14
+Var_7_RH_RF95_init:	0
+imm.40:	15
+Var_8_RH_RF95_init:	0
+Var_10_RH_RF95_init:	0
+Var_1_i2c_low_scl:	0
+Var_2_i2c_low_scl:	0
+Var_3_i2c_low_scl:	0
+Var_4_i2c_low_scl:	0
+Var_5_i2c_low_scl:	0
+Var_6_i2c_low_scl:	0
+Var_7_i2c_low_scl:	0
+imm.41:	63
+Var_8_i2c_low_scl:	0
+Var_1_i2c_high_scl:	0
+Var_2_i2c_high_scl:	0
+Var_3_i2c_high_scl:	0
+Var_4_i2c_high_scl:	0
+Var_1_i2c_low_sda:	0
+Var_2_i2c_low_sda:	0
+Var_3_i2c_low_sda:	0
+Var_4_i2c_low_sda:	0
+Var_5_i2c_low_sda:	0
+Var_6_i2c_low_sda:	0
+Var_7_i2c_low_sda:	0
+imm.42:	191
+Var_8_i2c_low_sda:	0
+Var_1_i2c_release_sda:	0
+Var_2_i2c_release_sda:	0
+Var_3_i2c_release_sda:	0
+Var_4_i2c_release_sda:	0
+Var_1_i2c_drive_sda:	0
+Var_2_i2c_drive_sda:	0
+Var_3_i2c_drive_sda:	0
+Var_4_i2c_drive_sda:	0
+Var_1_i2c_high_sda:	0
+Var_2_i2c_high_sda:	0
+Var_3_i2c_high_sda:	0
+Var_4_i2c_high_sda:	0
+Var_0_i2c_write:	0
+Var_1_i2c_write:	0
+Var_2_i2c_write:	0
+Var_3_i2c_write:	0
+Var_4_i2c_write:	0
+Var_19_i2c_write:	0
+Var_20_i2c_write:	0
+Var_22_i2c_write:	0
+Var_23_i2c_write:	0
+Var_25_i2c_write:	0
+Var_26_i2c_write:	0
+Var_27_i2c_write:	0
+Var_28_i2c_write:	0
+Var_29_i2c_write:	0
+Var_30_i2c_write:	0
+Var_31_i2c_write:	0
+Var_36_i2c_write:	0
+Var_37_i2c_write:	0
+Var_39_i2c_write:	0
+Var_40_i2c_write:	0
+Var_41_i2c_write:	0
+Var_42_i2c_write:	0
+Var_44_i2c_write:	0
+Var_45_i2c_write:	0
+Var_47_i2c_write:	0
+Var_48_i2c_write:	0
+Var_49_i2c_write:	0
+Var_50_i2c_write:	0
+Var_51_i2c_write:	0
+Var_52_i2c_write:	0
+Var_53_i2c_write:	0
+Var_58_i2c_write:	0
+Var_59_i2c_write:	0
+Var_61_i2c_write:	0
+Var_62_i2c_write:	0
+Var_63_i2c_write:	0
+Var_64_i2c_write:	0
+Var_65_i2c_write:	0
+Var_66_i2c_write:	0
+Var_68_i2c_write:	0
+Var_70_i2c_write:	0
+imm.43:	12
+Var_73_i2c_write:	0
+Var_74_i2c_write:	0
+Var_76_i2c_write:	0
+Var_77_i2c_write:	0
+Var_78_i2c_write:	0
+Var_79_i2c_write:	0
+Var_80_i2c_write:	0
+Var_81_i2c_write:	0
+Var_82_i2c_write:	0
+Var_87_i2c_write:	0
+Var_88_i2c_write:	0
+Var_90_i2c_write:	0
+Var_91_i2c_write:	0
+Var_92_i2c_write:	0
+Var_93_i2c_write:	0
+Var_94_i2c_write:	0
+Var_95_i2c_write:	0
+Var_97_i2c_write:	0
+Var_99_i2c_write:	0
+Var_100_i2c_write:	0
+Var_102_i2c_write:	0
+Var_103_i2c_write:	0
+Var_104_i2c_write:	0
+Var_105_i2c_write:	0
+Var_106_i2c_write:	0
+Var_107_i2c_write:	0
+Var_108_i2c_write:	0
+Var_113_i2c_write:	0
+Var_114_i2c_write:	0
+Var_116_i2c_write:	0
+Var_117_i2c_write:	0
+Var_118_i2c_write:	0
+Var_119_i2c_write:	0
+Var_0_i2c_read:	0
+Var_1_i2c_read:	0
+Var_2_i2c_read:	0
+Var_14_i2c_read:	0
+Var_15_i2c_read:	0
+Var_17_i2c_read:	0
+Var_18_i2c_read:	0
+Var_20_i2c_read:	0
+Var_21_i2c_read:	0
+Var_22_i2c_read:	0
+Var_23_i2c_read:	0
+Var_24_i2c_read:	0
+Var_25_i2c_read:	0
+Var_26_i2c_read:	0
+Var_31_i2c_read:	0
+Var_32_i2c_read:	0
+Var_34_i2c_read:	0
+Var_35_i2c_read:	0
+Var_36_i2c_read:	0
+Var_37_i2c_read:	0
+Var_39_i2c_read:	0
+Var_40_i2c_read:	0
+Var_42_i2c_read:	0
+Var_43_i2c_read:	0
+Var_44_i2c_read:	0
+Var_45_i2c_read:	0
+Var_46_i2c_read:	0
+Var_47_i2c_read:	0
+Var_48_i2c_read:	0
+Var_53_i2c_read:	0
+Var_54_i2c_read:	0
+Var_56_i2c_read:	0
+Var_57_i2c_read:	0
+Var_58_i2c_read:	0
+Var_59_i2c_read:	0
+Var_61_i2c_read:	0
+Var_62_i2c_read:	0
+Var_64_i2c_read:	0
+Var_65_i2c_read:	0
+Var_66_i2c_read:	0
+Var_67_i2c_read:	0
+Var_68_i2c_read:	0
+Var_69_i2c_read:	0
+Var_70_i2c_read:	0
+Var_75_i2c_read:	0
+Var_76_i2c_read:	0
+Var_78_i2c_read:	0
+Var_79_i2c_read:	0
+Var_80_i2c_read:	0
+Var_81_i2c_read:	0
+Var_83_i2c_read:	0
+Var_84_i2c_read:	0
+Var_86_i2c_read:	0
+Var_87_i2c_read:	0
+Var_88_i2c_read:	0
+Var_89_i2c_read:	0
+Var_90_i2c_read:	0
+Var_91_i2c_read:	0
+Var_92_i2c_read:	0
+Var_93_i2c_read:	0
+Var_94_i2c_read:	0
+Var_95_i2c_read:	0
+Var_97_i2c_read:	0
+Var_98_i2c_read:	0
+Var_100_i2c_read:	0
+Var_101_i2c_read:	0
+Var_102_i2c_read:	0
+Var_104_i2c_read:	0
+Var_105_i2c_read:	0
+Var_107_i2c_read:	0
+Var_108_i2c_read:	0
+Var_109_i2c_read:	0
+Var_110_i2c_read:	0
+Var_111_i2c_read:	0
+Var_112_i2c_read:	0
+Var_113_i2c_read:	0
+Var_114_i2c_read:	0
+Var_115_i2c_read:	0
+Var_116_i2c_read:	0
+Var_118_i2c_read:	0
+Var_119_i2c_read:	0
+Var_121_i2c_read:	0
+Var_122_i2c_read:	0
+Var_123_i2c_read:	0
+Var_0_MAX30205_read:	0
+Var_3_MAX30205_read:	0
+Var_4_main:	0
+Var_4_main.0:	0
+Var_5_main:	0
+Var_6_main:	0
+Var_7_main:	0
+Var_8_main:	0
+imm.44:	239
+Var_9_main:	0
+Var_10_main:	0
+Var_11_main:	0
+Var_12_main:	0
+imm.45:	16
+Var_13_main:	0
+Var_14_main:	0
+Var_15_main:	0
+Var_20_main:	0
+Var_21_main:	0
+Var_22_main:	0
+Var_23_main:	0
+Var_24_main:	0
+Var_25_main:	0
+Var_26_main:	0
+Var_27_main:	0
+Var_28_main:	0
+Var_29_main:	0
+Var_30_main:	0
+Var_31_main:	0
+imm.46:	223
+Var_32_main:	0
+Var_33_main:	0

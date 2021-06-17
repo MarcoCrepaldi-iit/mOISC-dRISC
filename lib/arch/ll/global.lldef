@@ -1,0 +1,8 @@
+@<GlobalVarName> = dso_local global <Type> inttoptr (<ty> <value> to <ty2>*), align <Alignment>
+@<GlobalVarName> = common global [<num> x <ty>] zeroinitializer, align <Alignment>
+@<GlobalVarName> = global <Type> inttoptr (<ty> <value> to <ty2>*), align <Alignment>
+@<GlobalVarName> = dso_local global <Type> null, align <Alignment>
+@<GlobalVarName> = dso_local global <Type> <value>, align <Alignment>
+@<GlobalVarName> = global <Type> null, align <Alignment>
+@<GlobalVarName> = global <Type> <value>, align <Alignment>
+

@@ -1,0 +1,10 @@
+<result> = icmp eq <ty> <op1>, <op2>
+<result> = icmp ne <ty> <op1>, <op2>
+<result> = icmp ugt <ty> <op1>, <op2>
+<result> = icmp uge <ty> <op1>, <op2>
+<result> = icmp ult <ty> <op1>, <op2>
+<result> = icmp ule <ty> <op1>, <op2>
+<result> = icmp sgt <ty> <op1>, <op2>
+<result> = icmp sge <ty> <op1>, <op2>
+<result> = icmp slt <ty> <op1>, <op2>
+<result> = icmp sle <ty> <op1>, <op2>

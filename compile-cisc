@@ -1,0 +1,107 @@
+spo=31500
+if [ "$1" = "" ]; then
+	echo ""
+	echo "this script compiles and assembles a source .c code assuming CISC mode"
+	echo "stack pointer initial value:" $spo
+	echo "supported architectures: arm, riscv, mipsel, x86, ll"
+	echo ""
+	echo "error: expected two arguments, e.g., ./compile-fast examples/sensor arm"
+	exit 1
+fi
+if [ "$2" = "" ]; then
+	echo ""
+	echo "this script compiles and assembles  a source .c code assuming CISC mode"
+	echo "stack pointer initial value:" $spo
+	echo "supported architectures: arm, riscv, mipsel, x86, ll"
+	echo ""
+	echo "error: expected two arguments, e.g., ./compile-fast examples/sensor arm"
+	exit 1
+fi
+if [ "$3" = "" ]; then
+	arch=''
+else
+	arch=$3
+fi
+if [ "$4" = "" ]; then
+	llcc='std'
+else
+	llcc=$4
+fi
+
+filename="$1"
+if [ "$2" = "riscv" ]; then
+	echo "compiling for RISC-V architectures (CISC mode):"
+	python3 mc.py -in $filename -out $filename -arch riscv32,generic-rv32 -spo $spo -f
+	if [ $? -eq 0 ]; then
+	    echo "assembling:"
+	    python3 m.py -in $filename -out $filename -f
+	    if [ $? -eq 0 ]; then
+	       echo "done."
+	    else
+	       exit 1
+	    fi
+	else
+	    exit 1
+	fi
+fi
+if [ "$2" = "mipsel" ]; then
+	echo "compiling for MIPS architectures (CISC mode):"
+	python3 mc.py -in $filename -out $filename -arch mipsel,mips32r2 -spo $spo -f
+	if [ $? -eq 0 ]; then
+	    echo "assembling:"
+	    python3 m.py -in $filename -out $filename -f
+	    if [ $? -eq 0 ]; then
+	       echo "done."
+	    else
+	       exit 1
+	    fi
+	else
+	    exit 1
+	fi
+fi
+if [ "$2" = "x86" ]; then
+	echo "compiling for X86 architectures (CISC mode):"
+	python3 mc.py -in $filename -out $filename -arch x86,i486 -spo $spo -f
+	if [ $? -eq 0 ]; then
+	    echo "assembling:"
+	    python3 m.py -in $filename -out $filename -f
+	    if [ $? -eq 0 ]; then
+	       echo "done."
+	    else
+	       exit 1
+	    fi
+	else
+	    exit 1
+	fi
+fi
+if [ "$2" = "arm" ]; then
+	echo "compiling for ARM architectures (CISC mode):"
+	python3 mc.py -in $filename -out $filename -arch arm,arm9 -spo $spo -f
+	if [ $? -eq 0 ]; then
+	    echo "assembling:"
+	    python3 m.py -in $filename -out $filename -f
+	    if [ $? -eq 0 ]; then
+	       echo "done."
+	    else
+	       exit 1
+	    fi
+	else
+	    exit 1
+	fi
+fi
+if [ "$2" = "ll" ]; then
+	echo "compiling with LLVM IR (CISC mode):"
+	python3 mc.py -in $filename -out $filename -arch ll,$arch -spo $spo -f -llcc $llcc
+	if [ $? -eq 0 ]; then
+	    echo "assembling:"
+	    python3 m.py -in $filename -out $filename -f
+	    if [ $? -eq 0 ]; then
+	       echo "done."
+	    else
+	       exit 1
+	    fi
+	else
+	    exit 1
+	fi
+fi
+

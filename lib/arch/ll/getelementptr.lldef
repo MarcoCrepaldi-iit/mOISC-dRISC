@@ -1,0 +1,2 @@
+<result> = getelementptr inbounds [<Num> x <ty>], [<Num> x <ty>]* <name>, <ty> <val>, <ty> <val> 
+<result> = getelementptr inbounds <ty0>, <ty1>* <ptrval>, <ty2> <idx>

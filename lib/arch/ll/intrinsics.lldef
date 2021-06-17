@@ -1,0 +1,4 @@
+declare void @llvm.memset.p0i8.i64(<ty0> nocapture writeonly, <ty1>, <ty2>, i1 immarg)
+declare void @llvm.memset.p0i8.i32(<ty0> nocapture writeonly, <ty1>, <ty2>, i1 immarg)
+declare void @llvm.memset.p0i8.i16(<ty0> nocapture writeonly, <ty1>, <ty2>, i1 immarg)
+

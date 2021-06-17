@@ -1,0 +1,1 @@
+@<GlobalVarName> = constant [<dim> x <ty>] [$], align <Alignment>

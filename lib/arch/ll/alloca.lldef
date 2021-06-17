@@ -1,0 +1,2 @@
+<result> = alloca [<num> x <type>], align <alignment>
+<result> = alloca <type>, align <alignment>

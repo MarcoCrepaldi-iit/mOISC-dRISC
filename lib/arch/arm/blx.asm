@@ -1,0 +1,10 @@
+	exec _PCMCR, MCR
+	exec _TMP, lr
+	exec _SUBLMCR, MCR
+	exec _PCMCR_RETADDRBL, lr
+	exec _SUBLMCR, MCR
+	exec _NULL, _NULL -> %1
+_SUBLMCR:	255
+_PCMCR:		51
+_NULL:		0
+_PCMCR_RETADDRBL:	-12

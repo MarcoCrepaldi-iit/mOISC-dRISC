@@ -1,0 +1,3 @@
+<result> = bitcast <ty> <value> to [<num> x <ty>]*
+<result> = bitcast [<num> x <ty>]* <var> to <ty2>
+<result> = bitcast <ty> <value> to <ty2>

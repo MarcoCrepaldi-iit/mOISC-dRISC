@@ -1,0 +1,3 @@
+store volatile <ty> <value>, <ty>* <pointer>, align <alignment>
+store <ty> <value>, <ty>* <pointer>, align <alignment>
+

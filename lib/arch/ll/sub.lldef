@@ -1,0 +1,4 @@
+<result> = sub nuw nsw <ty> <op1>, <op2>  
+<result> = sub nuw <ty> <op1>, <op2>      
+<result> = sub nsw <ty> <op1>, <op2>    
+<result> = sub <ty> <op1>, <op2> 

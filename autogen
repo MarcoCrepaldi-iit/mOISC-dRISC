@@ -1,0 +1,10 @@
+if [ "$1" = "" ]; then
+	echo ""
+	echo "this script autogenerates a dRISC/mOISC RTL code based on assembler opcodes"
+	echo "use an additional argument -mkfull to make a full-featured processor"
+	echo ""
+	echo "error: expected at least one argument (up to 5), e.g., ./autogen examples/rfm95"
+	exit 1
+fi
+echo "autogenerating RTL code:"
+python3 mautogen.py -in $1.asm $2 $3 $4 $5

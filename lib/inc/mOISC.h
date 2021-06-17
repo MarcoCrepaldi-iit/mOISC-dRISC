@@ -25,4 +25,4 @@ int __getisr(void);*/
 
 // Compatibility w.r.t. x86 memcpy
 void memcpy(void *dest, const void *src, int n);
-#endif // FOO_H_
+#endif 

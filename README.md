@@ -3,7 +3,7 @@
 This is an open source implementation of a multi-One Instruction Set Processor (mOISC) or dynamic Reduced Instruction Set Computer (dRISC) based on 14 execution modes, for microcontroller applications. 
 
 This repository comprises a basic compilation and translation toolchain from C source code compiled with LLVM and LLVM assembly to the
-mOISC assembler. mOISC can be used for educational purposes or other research activities, for instance devising other architectures.
+mOISC assembler and a proof-of-concept microarchitecture written in VHDL. mOISC can be used for educational purposes or other research activities, for instance devising other architectures.
 
 ###### <strong>A full machine description (registers included) is available in the first comments of the file `m.py`</strong>.
 
@@ -87,7 +87,7 @@ To run graphical simulation (internally invoking `gtkwave`), run the following c
 ```
 ./simulate examples/sine_wave
 ```
-Press CTRL-C to stop simulation execution (few seconds will be enough for `sine_wave`). The simulation will generate a VCD file that will be opened by the `simulate` script in `gtkwave`. Add IOR to the currently displayed wave to see the effect of the code on the I/O output port. You can also add `\DEBUG.INFO` for information on the currently executed function. 
+Press CTRL-C to stop simulation execution (few seconds will be enough for `sine_wave`). The simulation engine will generate a VCD file that will be opened in the same `examples/` subdirectory, and used as input for `gtkwave`. Once opened, add IOR to the currently displayed wave to see the effect of the code on the I/O output port. You can also add `\DEBUG.INFO` for information on the currently executed function. 
 
 ## Generation of mOISC microarchitecture VHDL code
 

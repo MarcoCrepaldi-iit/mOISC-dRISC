@@ -193,8 +193,9 @@
 #
 # ASSEMBLER USAGE
 #
-# command line: python3 -in m.py <programname>
-#               <programname> is the name of the assembler file without extension
+# command line: python3 -in m.py <programname> -out <codeout>
+#               <programname> is the name of the assembler file without extension, <codeout> is the main name of the 
+#               output files
 #
 # class usage and some methods:
 #

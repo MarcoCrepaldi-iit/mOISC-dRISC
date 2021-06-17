@@ -1,7 +1,6 @@
 # mOISC-dRISC
 
-This is an open source implementation of a multi-One Instruction Set Processor (mOISC) based on 14 execution modes
-for microcontroller applications. 
+This is an open source implementation of a multi-One Instruction Set Processor (mOISC) or dynamic Reduced Instruction Set Computer (dRISC) based on 14 execution modes, for microcontroller applications. 
 
 This repository comprises a basic compilation and translation toolchain from C source code compiled with LLVM and LLVM assembly to the
 mOISC assembler. mOISC can be used for educational purposes or other research activities, for instance devising other architectures.

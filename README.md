@@ -9,8 +9,7 @@ mOISC assembler and an RTL proof-of-concept microarchitecture written in VHDL. m
 
 Copyiright (C) 2020-2021 Marco Crepaldi, Istituto Italiano di Tecnologia (www.iit.it), Electronic Design Laboratory (https://edl.iit.it)
 
-This software is *experimental*, we have not implemented all LLVM-IR commands, and it works for simple programs. This software is only a starting point
-to devise more complex projects/architectures. This code is the output of an our internal research project involving OISC.
+This software is *experimental*, we have not implemented all LLVM-IR instructions, and it works for simple programs. This software is only a starting point to devise more complex projects/architectures. This code is the output of an our internal research project involving OISC.
 
 ## Prerequisites
 

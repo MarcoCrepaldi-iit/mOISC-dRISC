@@ -7,7 +7,7 @@
 #define mOISC_1MHz                                          64
 #define mOISC_10kHz                                         0
 
-// Boolean variables (only int16_t types are available and killed to 16 bit in dRISC)
+// Boolean variables (only int types are available and these are killed to 16 bit in dRISC)
 #define true                                                1
 #define false                                               0
 

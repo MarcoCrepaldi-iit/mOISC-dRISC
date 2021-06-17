@@ -5,7 +5,7 @@ This is an open source implementation of a multi-One Instruction Set Processor (
 This repository comprises a basic compilation and translation toolchain from C source code compiled with LLVM and LLVM assembly to the
 mOISC assembler. mOISC can be used for educational purposes or other research activities, for instance devising other architectures.
 
-###### <strong>A full machine description is available in the first comments of the file `m.py`</strong>.
+###### <strong>A full machine description (registers included) is available in the first comments of the file `m.py`</strong>.
 
 Copyiright (C) 2020-2021 Marco Crepaldi, Istituto Italiano di Tecnologia (www.iit.it), Electronic Design Laboratory (https://edl.iit.it)
 
@@ -92,10 +92,10 @@ Press ctrl-c to stop simulation execution. The simulation will generate a VCD fi
 
 ## Generation of mOISC microarchitecture VHDL code
 
-The toolchain also provides automatic VHDL and Quartus project files generation for a Cyclone 10LP Evaluation board, with IOR port
+The toolchain also provides automatic VHDL and Quartus project files generation for a [Cyclone 10LP Evaluation Kit](https://www.intel.com/content/www/us/en/programmable/products/boards_and_kits/dev-kits/altera/cyclone-10-lp-evaluation-kit.html), with IOR port
 configured by default to the following pins:
 
-| FPGA Pin  | dRISC pin  |
+| FPGA Pin  | dRISC Pin |
 |-----------|-----------|
 | PIN_B1    | IOR[0]    |
 | PIN_C2    | IOR[1]    |
@@ -105,7 +105,7 @@ configured by default to the following pins:
 | PIN_L14   | IOR[5]    |
 | PIN_G1    | IOR[6]    |
 | PIN_J2    | IOR[7]    |
-| PIN_D9    | RST.      |
+| PIN_D9    | RST       |
 
 In all cases, pins can be configured using `mautogen.py` and by adding additional arguments to `autogen`. Run `python3 mautogen.py -help` for further information.
 
@@ -119,14 +119,16 @@ The script calls `autogen` and will generate a full Quartus project in a subfold
 instructions used in the assembly code. Make sure the code is compiled in OISC mode. The generated processor
 will be able to run both CISC and OISC mode code in any case, but `autogen` will process only OISC mode assembler files.
 
-To generate a full featured processor run:
+To generate a full featured processor (recommended) run:
 ```
 ./autogen examples/sine_wave -mkfull
 ```
-It will generate a full featured processor in a subfolder `quartusrtl.out.full`. In this case the OISC mode assembly is dummy but it is required for 
-code generation.
+This way, the tool will generate a full featured processor in a subfolder `quartusrtl.out.full`. In this case the OISC mode assembly is dummy but it is required for code generation.
 
-### Note on commands syntax and other options
+In all cases, the VHDL project will contain the MIF file for internal SRAM initialization including the compiled code.
+To run other codes, it is just necessary to overwrite the file `fpga.mif` and re-generate the assembly file for the FPGA.
+
+### Note on command options
 
 The mOISC toolchain is based on `m.py`, `mc.py` and `mautogen.py`, that are called in the scripts `compile`, `compile-cisc`, `simulate` and `autogen`.
 All these programs refer to the subfolder `\lib` and all its files. Other compilation and simulation options are available.

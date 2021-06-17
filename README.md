@@ -3,7 +3,7 @@
 This is an open source implementation of a multi-One Instruction Set Processor (mOISC) or dynamic Reduced Instruction Set Computer (dRISC) based on 14 execution modes, for microcontroller applications. 
 
 This repository comprises a basic compilation and translation toolchain from C source code compiled with LLVM and LLVM assembly to the
-mOISC assembler and a proof-of-concept microarchitecture written in VHDL. mOISC can be used for educational purposes or other research activities, for instance devising other architectures.
+mOISC assembler and an RTL proof-of-concept microarchitecture written in VHDL. mOISC can be used for educational purposes or other research activities, for instance devising other architectures.
 
 ###### <strong>A full machine description (registers included) is available in the first comments of the file `m.py`</strong>.
 
@@ -14,8 +14,9 @@ to devise more complex projects/architectures. This code is the output of an our
 
 ## Prerequisites
 
-The software has been tested under MacOS with Darwin Kernel Version 20.5.0, and under CentOS Linux 7, Kernel 3.10.0-1160.25.1.el7. We have tested compilation using LLVM 9.0 and 10.0.
-To run the program you need to install the following software:
+The software has been tested under MacOS with Darwin Kernel Version 20.5.0, and under CentOS Linux 7, Kernel 3.10.0-1160.25.1.el7. We have tested compilation using LLVM 9.0 and 10.0. The RTL description has been verified using Quartus Prime Lite 19.1 and 20.1. 
+
+To run the compilation and simulation toolchain you need to install the following software:
 
 + `python3` ([download](https://www.python.org/downloads/));
 + `python3` module `argparse` (once `python3` is installed run `python3 -m pip install argparse`);
@@ -23,6 +24,12 @@ To run the program you need to install the following software:
 + other `python3` modules (`os`, `sys`, `re`, `pathlib`, `dataclasses`, `struct`, `itertools`, `curses`, `binascii`, `time`);
 + `llvm` and `clang` version >= 9.0 ([download](https://llvm.org));
 + `gtkwave` ([download](http://gtkwave.sourceforge.net)).
+
+For the FPGA synthesis you need to install the following software:
+
++ Quartus Prime Lite ([download]https://fpgasoftware.intel.com/?edition=lite);
+
+*Note: Quartus Prime Lite is subject to the acceptance of the End User License Agreement. See section License for further details.*
 
 ## Compiling C source code
 

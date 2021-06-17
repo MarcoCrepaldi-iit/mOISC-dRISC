@@ -83,17 +83,16 @@ After compilation the following files will be generated: `sine_wave.asm` (assemb
 
 ## Simulation of the compiled code
 
-To run graphical simulation (internally invoking `gtkwave`), run the following command:
+To run graphical simulation (internally invoking `gtkwave`), run the following command,
 ```
 ./simulate examples/sine_wave
 ```
-Press ctrl-c to stop simulation execution. The simulation will generate a VCD file that will be opened by the `simulate` script in 
-`gtkwave`. Add to the viewed wave at least the IOR to see the effect of the code on the I/O output port. 
+Press CTRL-C to stop simulation execution (few seconds will be enough for `sine_wave`). The simulation will generate a VCD file that will be opened by the `simulate` script in `gtkwave`. Add IOR to the currently displayed wave to see the effect of the code on the I/O output port. You can also add `\DEBUG.INFO` for information on the currently executed function. 
 
 ## Generation of mOISC microarchitecture VHDL code
 
 The toolchain also provides automatic VHDL and Quartus project files generation for a [Cyclone 10LP Evaluation Kit](https://www.intel.com/content/www/us/en/programmable/products/boards_and_kits/dev-kits/altera/cyclone-10-lp-evaluation-kit.html), with IOR port
-configured by default to the following pins:
+pin mapping configured by default as,
 
 | FPGA Pin  | dRISC Pin |
 |-----------|-----------|

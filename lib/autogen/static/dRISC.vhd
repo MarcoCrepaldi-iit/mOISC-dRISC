@@ -114,7 +114,7 @@ component  iobuf_iobuf_bidir_30p IS
 	 ); 
 end component;
  
--- Intel Cyclone 10 LP on-chip PLL (3x outputs)
+-- Intel Cyclone 10 LP on-chip PLL (4x outputs)
 component dRISC_PLL IS
 	PORT
 	(

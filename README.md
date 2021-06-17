@@ -27,7 +27,7 @@ To run the compilation and simulation toolchain you need to install the followin
 
 For the FPGA synthesis you need to install the following software:
 
-+ Quartus Prime Lite ([download]https://fpgasoftware.intel.com/?edition=lite);
++ Quartus Prime Lite ([download](https://fpgasoftware.intel.com/?edition=lite));
 
 *Note: Quartus Prime Lite is subject to the acceptance of the End User License Agreement. See section License for further details.*
 

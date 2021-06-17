@@ -5,12 +5,12 @@ This is an open source implementation of a multi-One Instruction Set Processor (
 This repository comprises a basic compilation and translation toolchain from C source code compiled with LLVM and LLVM assembly to the
 mOISC assembler. mOISC can be used for educational purposes or other research activities, for instance devising other architectures.
 
+###### <strong>A full machine description is available in the first comments of the file `m.py`</strong>.
+
 Copyiright (C) 2020-2021 Marco Crepaldi, Istituto Italiano di Tecnologia (www.iit.it), Electronic Design Laboratory (https://edl.iit.it)
 
 This software is *experimental*, we have not implemented all LLVM-IR commands, and it works for simple programs. This software is only a starting point
-to devise more complex projects/architectures.
-
-<strong>A full machine description is available in the first comments of the file `m.py`</strong>.
+to devise more complex projects/architectures. This code is the output of an our internal research project involving OISC.
 
 ## Prerequisites
 
@@ -90,13 +90,32 @@ To run graphical simulation (internally invoking `gtkwave`), run the following c
 Press ctrl-c to stop simulation execution. The simulation will generate a VCD file that will be opened by the `simulate` script in 
 `gtkwave`. Add to the viewed wave at least the IOR to see the effect of the code on the I/O output port. 
 
-## Generation of the mOISC VHDL code
+## Generation of mOISC microarchitecture VHDL code
 
-To generate processor VHDL code and Quartus project files, run the following command:
+The toolchain also provides automatic VHDL and Quartus project files generation for a Cyclone 10LP Evaluation board, with IOR port
+configured by default to the following pins:
+
+| FPGA Pin  | dRISC pin  |
+|-----------|-----------|
+| PIN_B1    | IOR[0]    |
+| PIN_C2    | IOR[1]    |
+| PIN_F3    | IOR[2]    |
+| PIN_D1    | IOR[3]    |
+| PIN_G2    | IOR[4]    |
+| PIN_L14   | IOR[5]    |
+| PIN_G1    | IOR[6]    |
+| PIN_J2    | IOR[7]    |
+| PIN_D9    | RST.      |
+
+In all cases, pins can be configured using `mautogen.py` and by adding additional arguments to `autogen`. Run `python3 mautogen.py -help` for further information.
+
+*Note: the pin configuration exemplified in the `mautogen.py` command line help works for the example `iotest.c`*
+
+To generate processor VHDL code and Quartus project files the toolchain uses `mautogen.py`. Run the following script:
 ```
 ./autogen examples/sine_wave
 ```
-The program will generate a full Quartus project in a subfolder `quartusrtl.out`, including only the 
+The script calls `autogen` and will generate a full Quartus project in a subfolder `quartusrtl.out`, including only the 
 instructions used in the assembly code. Make sure the code is compiled in OISC mode. The generated processor
 will be able to run both CISC and OISC mode code in any case, but `autogen` will process only OISC mode assembler files.
 
@@ -104,12 +123,13 @@ To generate a full featured processor run:
 ```
 ./autogen examples/sine_wave -mkfull
 ```
-It will generate a full featured processor in a subfolder `quartusrtl.out.full`. In this case the OISC mode assembly is dummy.
+It will generate a full featured processor in a subfolder `quartusrtl.out.full`. In this case the OISC mode assembly is dummy but it is required for 
+code generation.
 
 ### Note on commands syntax and other options
 
 The mOISC toolchain is based on `m.py`, `mc.py` and `mautogen.py`, that are called in the scripts `compile`, `compile-cisc`, `simulate` and `autogen`.
-All these programs refer to the subfolder `\lib` and all its files.
+All these programs refer to the subfolder `\lib` and all its files. Other compilation and simulation options are available.
 
 For instance, run the command `python3 m.py -help` to print the options of `m.py`. The same applies for `mc.py` and `mautogen.py`.
 

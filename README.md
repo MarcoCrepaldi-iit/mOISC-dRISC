@@ -6,17 +6,44 @@ for microcontroller applications.
 This repository comprises a basic compilation and translation toolchain from C source code compiled with LLVM and LLVM assembly to the
 mOISC assembler. mOISC can be used for educational purposes or other research activities, for instance devising other architectures.
 
+Copyiright (C) 2020-2021 Marco Crepaldi, Istituto Italiano di Tecnologia (www.iit.it), Electronic Design Laboratory (edl.iit.it)
+
+This software is *experimental*, we have not implemented all LLVM-IR commands, and it works for simple programs.
+
 ## Pre-Requisites
 
 The software has been tested under MacOS with Darwin Kernel Version 20.5.0, and under CentOS Linux 7, Kernel 3.10.0-1160.25.1.el7.
 To run the program you need the following software:
 
-+ Python3
++ python3 ([download](https://www.python.org/downloads/))
 + gtkWave ([download](http://gtkwave.sourceforge.net))
-+ llvm and clang version >= 9.0 ([download](http://gtkwave.sourceforge.net))
-+ Python3 modules: argparse (run : {python3 -m pip install argparse})
++ llvm and clang version >= 9.0 ([download](https://llvm.org))
++ python3 modules: argparse (once python3 is installed run `python3 -m pip install argparse`)
 
 ## Compiling C source code
+
+Compilation from C to binary files is achieved using `mc.py` and `m.py`. For ease of use we have created two scritps that compile
+the code by running both programs in sequence.
+
+All the source files can be placed in the `examples/` folder. 
+
+### Compiling in OISC mode (LLVM-IR)
+
+To compile in OISC mode an example code `test_wave.c` run the following command,
+```
+./compile examples/test_wave ll
+```
+where `ll` stands for low-level and invokes compilation based on clang LLVM-IR output.
+After compilation the files ``
+
+To translate from known ISA architectures, run the following command,
+```
+./compile examples/test_wave arm
+```
+where `arm` identifies the ISA. Supported ISA are `x86`, `riscv`, `arm`, `mipsel`.
+
+
+
 
 ## License
 

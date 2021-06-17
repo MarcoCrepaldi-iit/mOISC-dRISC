@@ -12,10 +12,10 @@ to devise more complex projects/architectures.
 
 <strong>A full machine description is available in the first comments of the file `m.py`</strong>.
 
-## Pre-Requisites
+## Prerequisites
 
-The software has been tested under MacOS with Darwin Kernel Version 20.5.0, and under CentOS Linux 7, Kernel 3.10.0-1160.25.1.el7.
-To run the program you need the following software:
+The software has been tested under MacOS with Darwin Kernel Version 20.5.0, and under CentOS Linux 7, Kernel 3.10.0-1160.25.1.el7. We have tested compilation using LLVM 9.0 and 10.0.
+To run the program you need to install the following software:
 
 + `python3` ([download](https://www.python.org/downloads/));
 + `gtkwave` ([download](http://gtkwave.sourceforge.net));

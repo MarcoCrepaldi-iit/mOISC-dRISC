@@ -21,6 +21,7 @@ To run the program you need to install the following software:
 + `gtkwave` ([download](http://gtkwave.sourceforge.net));
 + `llvm` and `clang` version >= 9.0 ([download](https://llvm.org));
 + `python3` module `argparse` (once `python3` is installed run `python3 -m pip install argparse`);
++ `python3` module `vcd` (once `python3` is installed run `python3 -m pip install pyvcd`);
 + other builtin `python3` modules (`os`, `sys`, `re`, `pathlib`, `dataclasses`, `struct`, `itertools`, `curses`, `binascii`, `time`).
  
 ## Compiling C source code

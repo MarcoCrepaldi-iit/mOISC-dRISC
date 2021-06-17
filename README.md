@@ -11,7 +11,7 @@ Copyiright (C) 2020-2021 Marco Crepaldi, Istituto Italiano di Tecnologia (www.ii
 This software is *experimental*, we have not implemented all LLVM-IR commands, and it works for simple programs. This software is only a starting point
 to devise more complex projects/architectures.
 
-*A full machine description is available in the first comments of the file `m.py`*.
+<strong>A full machine description is available in the first comments of the file `m.py`</strong>.
 
 ## Pre-Requisites
 
@@ -21,8 +21,8 @@ To run the program you need the following software:
 + `python3` ([download](https://www.python.org/downloads/));
 + `gtkwave` ([download](http://gtkwave.sourceforge.net));
 + `llvm` and `clang` version >= 9.0 ([download](https://llvm.org));
-+ python3 module `argparse` (once python3 is installed run `python3 -m pip install argparse`);
-+ other builtin python3 modules (`os`, `sys`, `re`, `pathlib`, `dataclasses`, `struct`, `itertools`, `curses`, `binascii`, `time`).
++ `python3` module `argparse` (once `python3` is installed run `python3 -m pip install argparse`);
++ other builtin `python3` modules (`os`, `sys`, `re`, `pathlib`, `dataclasses`, `struct`, `itertools`, `curses`, `binascii`, `time`).
  
 ## Compiling C source code
 
@@ -106,7 +106,7 @@ To generate a full featured processor run:
 ```
 It will generate a full featured processor in a subfolder `quartusrtl.out.full`. In this case the OISC mode assembly is dummy.
 
-### Note on commands syntax
+### Note on commands syntax and other options
 
 The mOISC toolchain is based on `m.py`, `mc.py` and `mautogen.py`, that are called in the scripts `compile`, `compile-cisc`, `simulate` and `autogen`.
 All these programs refer to the subfolder `\lib` and all its files.

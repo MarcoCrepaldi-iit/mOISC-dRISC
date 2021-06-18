@@ -146,7 +146,31 @@ For all descriptions, the synthesis tool is configured by default to optimize lo
 For both cases, the VHDL project will contain the MIF file for internal SRAM initialization including the compiled code.
 To run other programs, it is just necessary to overwrite the file `fpga.mif` and re-generate the assembly file for the FPGA.
 
-### Note on command line options
+### Example
+
+Assuming you have a [Cyclone 10LP Evaluation Kit](https://www.intel.com/content/www/us/en/programmable/products/boards_and_kits/dev-kits/altera/cyclone-10-lp-evaluation-kit.html), let us assume you want to run a sample program that repeatedly shows a count from 0 to 15 in a binary format on some
+pins of the output port.
+
+Make sure you have correctly installed Quartus Prime Lite and your USB Blaster drivers supplied by Intel. Without functional drivers it is
+not possible to program the FPGA.
+
+First, compile the program by running:
+```
+./compile examples/iotest ll
+```
+Then, generate the VHDL description with a new pin configuration (listed in the `mautogen.py` command line help):
+```
+./autogen examples/iotest -mkfull -pincfg PIN\_L14,PIN\_K15,PIN\_J14,PIN\_J13,PIN\_C11,PIN\_F14,PIN\_B1,PIN\_C2
+```
+The program will generate a full featured processor in a subfolder `quartusrtl.out.full`. Move this folder somewhere else if you want to keep
+the generated RTL separated from the main development folder.
+
+Open the Quartus Prime Lite software and open the project (*File*, *Open Project...* menu) included in the `quartusrtl.out.full` folder. 
+Compile the design. Connect the evaluation board to your computer and open the programmer (*Tools*, *Programmer* menu). Make sure
+you first set up your hardware (*Hardware Setup...* button). Then click on <strong> Auto Detect </strong>. The system will detect the connected
+boards and will ask to overwrite the existing configuration. Click on yes. Add the generated programmer binary file in a subfolder `output_files` to the device (not on the additional memory in the scan chain). Make sure that *Program/Configure* is flagged and click on the *Start* button. You should have now programmed your device, and see some blinking on the on-board green LED bank.
+
+## Note on command line options
 
 The mOISC toolchain is based on `m.py`, `mc.py` and `mautogen.py`, that are called in the scripts `compile`, `compile-cisc`, `simulate` and `autogen`.
 All these programs refer to the subfolder `/lib` and all its files. Other compilation and simulation options are available.

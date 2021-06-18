@@ -5,7 +5,7 @@
 
 Open source implementation of a multi-One Instruction Set Processor (mOISC) or dynamic Reduced Instruction Set Computer (dRISC) for microcontroller applications.
 
-This repository comprises a basic monolithic compilation toolchain that compiles C source code to mOISC assembly and binary files using the `clang` front-end LLVM-IR output. Moreover, it translates `clang` and `llc` generated assembly of commercial ISA (ARM, MIPS, RISC-V and x86) to the
+This repository comprises a basic monolithic compilation toolchain that compiles C source code to mOISC assembly and to binary files using the `clang` front-end LLVM-IR output. Moreover, it translates `clang` and `llc` generated assembly of commercial ISA (ARM, MIPS, RISC-V and x86) to the
 mOISC assembler and binary files and provides an RTL proof-of-concept microarchitecture written in VHDL. mOISC can be used for educational purposes or other research activities, for instance for devising other minimalistic computer architectures.
 
 Copyright (C) 2020-2021 Marco Crepaldi, Istituto Italiano di Tecnologia (www.iit.it), Electronic Design Laboratory (https://edl.iit.it).

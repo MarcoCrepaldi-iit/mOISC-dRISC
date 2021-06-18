@@ -112,7 +112,7 @@
 # a = 0x33 - set exec to pc 		a, b, c: mem[b] = pc, 					pc += 3
 # a = 0x22 - set exec to mem 		a, b, c: mem[mem[b]] = mem[a], 			pc += 3
 # a = 0x11 - set exec to memr 		a, b, c: mem[a] = mem[mem[b]], 			pc += 3
-# a = 0x00 - set exec to pcs 		a, b, c: pc = mem[b] 					if mem[b] == 0: pc = c; else; pc = mem[b]
+# a = 0x00 - set exec to pcs 		a, b, c: -					if mem[b] == 0: pc = c; else; pc = mem[b]
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 #

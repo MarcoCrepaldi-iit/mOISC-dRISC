@@ -81,8 +81,8 @@
 # a, b, c are operands	
 #
 # the logical operation is exactly the same of the standard mode, with the difference that "exec" is replaced by
-# the specific opcode. this way the execution of the machine saves one instruction to set MCR. this mode is
-# effective if code has a very high MCR change rate in standard mode
+# the specific opcode. this way the machine always sets an MCR per instruction. this mode is
+# effective if code has a very high MCR change rate in standard mode, asymptotic to 50%
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 #
@@ -255,7 +255,7 @@
 # IDR:  <value_idr>
 # where <value_*> is an 8 bit unsigned integer
 #
-# code memory - starting from address 8 the program memory can be arbitrarily specified, e.g.:
+# program memory - starting from address 8 the program memory can be arbitrarily specified, e.g.:
 # label.0:		exec R5, T -> C
 #				exec R5, R5
 #				exec 10, 25
@@ -269,7 +269,7 @@
 #				memr A4, A5
 #               ...
 #
-# data memory - data memory can be appended at the end of the program, e.g.:
+# data memory - data memory can be appended immediately at the end of the program, e.g.:
 # R5:		123
 # T:		-56
 # C:		0

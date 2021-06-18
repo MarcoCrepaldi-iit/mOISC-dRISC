@@ -99,7 +99,7 @@ To run graphical simulation (internally invoking `gtkwave`), run the following c
 The tool will open the files `sine_wave.bin` and `sine_wave.sym` that are obtained based on the previously
 run compilation.
 
-Press CTRL-C to stop simulation execution (few seconds will be enough for `sine_wave`). The simulation engine will generate a VCD file that will be opened in the same `examples/` subdirectory, and used as input for `gtkwave`. Once opened, add IOR to the currently displayed wave to see the effect of the code on the I/O output port. You can also add `\DEBUG.INFO` for information on the currently executed function. 
+Let the system simulate for a while, then press CTRL-C to stop the simulation execution and visualyze the results (few seconds will be enough for `sine_wave`). The simulation engine will generate a VCD file that will be opened in the same `examples/` subdirectory, and used as input for `gtkwave`. Once opened, add IOR to the currently displayed wave to see the effect of the code on the I/O output port. You can also add `\DEBUG.INFO` for information on the currently executed function.
 
 ## Generation of synthesizable VHDL code
 

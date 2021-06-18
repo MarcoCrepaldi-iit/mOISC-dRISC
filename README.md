@@ -10,7 +10,7 @@ mOISC assembler and binary files and provides an RTL proof-of-concept microarchi
 
 Copyright (C) 2020-2021 Marco Crepaldi, Istituto Italiano di Tecnologia (www.iit.it), Electronic Design Laboratory (https://edl.iit.it).
 
-The software is *experimental* and *work in progress*. We have not implemented all LLVM-IR instructions, and the compiler works for simple programs based on integer variables, vectors and pointers. The mOISC processor (picocontroller) is conceived for low complexity applications. This software is a starting point to devise more complex projects/architectures. This code is the output of an our internal research project involving OISC.
+The software is *experimental* and *work in progress*. We have not implemented all LLVM-IR instructions, nor all commercial ISA instructions and the compiler works for simple programs based on integer variables, vectors and pointers. The mOISC processor (picocontroller) is conceived for low complexity applications. This software is a starting point to devise more complex projects/architectures. This code is the output of an our internal research project involving OISC.
 
 ## CPU description
 

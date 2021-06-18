@@ -23,7 +23,7 @@ The software has been tested under MacOS with the Darwin Kernel Version 20.5.0, 
 To run the compilation and simulation toolchain you need to install the following software:
 
 + `python3` ([download](https://www.python.org/downloads/));
-+ `python3` modules listed [here](./requirements.txt) - you may run `pip3 install -r ./requirements.txt`. *NOTE*: creating a Python *virtualenv* is adviced.
++ `python3` modules listed [here](./requirements.txt) - you may run `pip3 install -r ./requirements.txt`. *Note*: the creation of a Python *virtualenv* is adviced.
 + `llvm` and `clang` version >= 9.0 ([download](https://llvm.org));
 + `gtkwave` ([download](http://gtkwave.sourceforge.net)).
 
@@ -31,7 +31,7 @@ For the FPGA synthesis you need to install the following software:
 
 + Quartus Prime Lite ([download](https://fpgasoftware.intel.com/?edition=lite));
 
-*Note: Using Quartus Prime is subject to the acceptance of the End User License Agreement. See section License for further details.*
+*Note: Using Quartus Prime is subject to the acceptance of the Intel End User License Agreement (EULA). See section License for further details.*
 
 ## Compilation of C source code
 

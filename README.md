@@ -149,10 +149,9 @@ To run other programs, it is just necessary to overwrite the file `fpga.mif` and
 ### Example
 
 Assuming you have a [Cyclone 10LP Evaluation Kit](https://www.intel.com/content/www/us/en/programmable/products/boards_and_kits/dev-kits/altera/cyclone-10-lp-evaluation-kit.html), let us assume you want to run a sample program that repeatedly shows a count from 0 to 15 in a binary format on some
-pins of the output port.
+pins of the output port to see if the toolchain is working correctly. This demo is included in the file `examples/iotest.c`
 
-Make sure you have correctly installed Quartus Prime Lite and your USB Blaster drivers supplied by Intel. Without functional drivers it is
-not possible to program the FPGA.
+Make sure you have correctly installed [Quartus Prime Lite](https://fpgasoftware.intel.com/?edition=lite) and your *USB Blaster* drivers supplied by Intel. Without functional drivers it is not possible to program the FPGA.
 
 First, compile the program by running:
 ```
@@ -168,7 +167,7 @@ the generated RTL separated from the main development folder.
 Open the Quartus Prime Lite software and open the project (*File*, *Open Project...* menu) included in the `quartusrtl.out.full` folder. 
 Compile the design. Connect the evaluation board to your computer and open the programmer (*Tools*, *Programmer* menu). Make sure
 you first set up your hardware (*Hardware Setup...* button). Then click on <strong> Auto Detect </strong>. The system will detect the connected
-boards and will ask to overwrite the existing configuration. Click on yes. Add the generated programmer binary file in a subfolder `output_files` to the device (not on the additional memory in the scan chain). Make sure that *Program/Configure* is flagged and click on the *Start* button. You should have now programmed your device, and see some blinking on the on-board green LED bank.
+boards and will ask to overwrite the existing configuration. Click on *Yes*. Add the generated programmer binary file in a subfolder `output_files` to the device (not on the additional memory in the scan chain). Make sure that *Program/Configure* is flagged and click on the *Start* button. You should have now programmed your device, and see the incremental blinking cycle (at different speeds) on the on-board green LED bank.
 
 ## Note on command line options
 

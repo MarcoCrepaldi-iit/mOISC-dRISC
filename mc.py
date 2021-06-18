@@ -62,7 +62,7 @@ class arch_to_drisc:
 		self.primitive_directory = "./lib/arch"
 		self.primitives_mipsel = ['sra','beq', 'movz', 'lui', 'not', 'add', 'and', 'move', 'or', 'sll', 'srl', 'sub', 'xnor', 'xor', 'lw', 'sw','label','j','jr','nop','jal','main','slti','beqz','bgtz','bnez','bne','negu','bgez','__setcsr','__seticr','__setidr','__setiwr','__setchr', '__setior', '__getior','__getisr']
 		self.primitives_x86 = ['al_restore', 'bl_restore', 'cl_restore', 'dl_restore', 'leal_leftmost_quadruple','testb','setl','movl_rightmost_vector_zero','movl_leftmost_vector_zero', 'movl_rightmost_triple', 'movl_leftmost_zero', 'movl_rightmost_zero', 'al_reg', 'bl_reg', 'dl_reg', 'main_redirect', 'rep_movsl_noop', 'movl_leftmost_triple', 'rep_movsl', 'cl_reg', 'addl_leftmost', 'addl_rightmost', 'jl', 'leal', 'leal_leftmost', 'jne', 'jle', 'jg', 'je', 'sarl','jge', '__setior','__setcsr', '__setidr', '__seticr', '__setiwr', '__setchr', '__getior', '__getisr', 'jmp','addl','shll','andl','orl','orl_leftmost','orl_rightmost','calll', 'subl', 'subl_rightmost', 'subl_leftmost', 'xorl', 'retl', 'popl', 'main', 'pushl', 'label', 'movl', 'movl_rightmost', 'movl_leftmost', 'cmpl', 'cmpl_rightmost', 'cmpl_leftmost']
-		self.primitives_arm = ['movlt','ldr_triple_lsl_wb','str_triple_lsl','tst','blx', 'add_lsl','bx_noex', 'main_redirect', 'ble', 'bge', 'ldr_double_const','lsl','mvn','bne','stm_xt','stm_xt_wb','stm_xt_op','ldm_xt','ldm_xt_wb','ldm_xt_op','blt','asr','ldr_triple_lsl','beq', 'bic', 'ldrb_double', 'ldrb_triple', 'pop', 'pop2','lsr','rsb','orr','orr_lsl', 'and', 'and_lsr', 'bl','push', 'push2', 'push3', 'push4', 'push5', 'push6', 'bgt','cmp', 'ldr_double', 'ldr_triple','b', 'move', 'mov_pc_lr', 'add', 'str_double', 'str_triple', 'sub', '_main','label','__setcsr','__seticr','__setidr','__setiwr','__setchr', '__setior', '__getior','__getisr']
+		self.primitives_arm = ['movlt','ldr_triple_lsl_wb','str_triple_lsl','tst','blx', 'add_lsl','bx_noex', 'main_redirect', 'ble', 'bge', 'ldr_double_const','lsl','mvn','bne','stm_xt','stm_xt_wb','stm_xt_op','ldm_xt','ldm_xt_wb','ldm_xt_op','blt','asr','ldr_triple_lsl','beq', 'bic', 'ldrb_double', 'ldrb_triple', 'pop', 'pop2','lsr','rsb','orr','orr_lsl', 'and', 'and_lsr', 'bl','push', 'push2', 'push3', 'push4', 'push5', 'push6', 'bgt','cmp', 'ldr_double', 'ldr_triple','b', 'move', 'mov_pc_lr', 'add', 'str_double', 'str_triple', 'sub', '_main','label','__setcsr','__seticr','__setidr','__setiwr','__setchr', '__setior', '__getior','__getisr','cmn']
 		self.primitives_riscv32 = ['sra','bge','blt','beq', 'lui', 'not', 'add', 'and', 'mv', 'or', 'sll', 'srl', 'sub', 'xnor', 'xor', 'lw', 'sw','label','j','jr','nop','call','main','slti','beqz','bgtz','bnez','bne','bgez','__setcsr','__seticr','__setidr','__setiwr','__setchr', '__setior', '__getior','__getisr']
 		self.primitives_ll = ['constant','global', 'label','add','icmp','getelementptr','and','alloca','bitcast_to','sext_to','store','inttoptr','br','load']
 		#self.primitives_ll = ['icmp','and','br']
@@ -2521,6 +2521,19 @@ class arch_to_drisc:
 						drisc_asm = self.update_links_arm(primitivein, operands, operands_len, isref=isref)
 						self.asm_writer.append(drisc_asm)
 						newLabel = False
+					elif line[0:4] == 'cmn ':
+						metadata = line.split('cmn ')
+						metadata[1] = re.sub(r"^\s+|\s+$", "", metadata[1])
+						operands = metadata[1].split(",")
+						operands_len = len(operands)
+						if operands_len < 2:
+							sys.stdout.write(bcolors.FAIL +'Error: Something is wrong with the ARM assembler on line ' + str(lineidx) + '.\n' + bcolors.ENDC)
+							raise Exception
+						primitivein = self.macro_primitives_exec[self.primitives.index('cmn')]
+						
+						drisc_asm = self.update_links_arm(primitivein, operands, operands_len, isref=isref)
+						self.asm_writer.append(drisc_asm)
+						newLabel = False
 					elif line[0:4] == 'tst ':
 						metadata = line.split('tst ')
 						metadata[1] = re.sub(r"^\s+|\s+$", "", metadata[1])
@@ -3024,6 +3037,13 @@ class arch_to_drisc:
 				 	self.DATARAM_VALUE.append('0')
 				 	bytenum += 1
 				 	newLabel = False
+				if line[0:6] == ".globl":
+					self.isGlobl = True
+				if line[0:9] == '.zerofill':
+					line = line.replace('\t',' ')
+					metadata = line.split(",")
+					self.DATARAM_LBL.append(metadata[2])
+					self.DATARAM_VALUE.append('0')	
 
 		except Exception as e:
 			sys.stdout.write(bcolors.FAIL + "Error: " + bcolors.ENDC + "cannot virtualize target.\n")
@@ -4209,6 +4229,11 @@ class arch_to_drisc:
 					 		self.isGlobl = False
 				if line[0:6] == ".globl":
 					self.isGlobl = True
+				if line[0:9] == '.zerofill':
+					line = line.replace('\t',' ')
+					metadata = line.split(",")
+					self.DATARAM_LBL.append(metadata[2])
+					self.DATARAM_VALUE.append('0')					
 
 		except Exception as e:
 			sys.stdout.write(bcolors.FAIL + "Error: " + bcolors.ENDC + "cannot virtualize target.\n")

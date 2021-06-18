@@ -14,7 +14,7 @@ The software is *experimental* and *work in progress*. We have not implemented a
 
 ## CPU description
 
-##### <strong>A full machine description (registers included) is available in the first commented lines of the file `m.py`</strong>.
+##### <strong>A full machine description (registers included) is available in the first commented lines of the file `m.py` [here](./m.py) </strong>.
 
 ## Prerequisites
 

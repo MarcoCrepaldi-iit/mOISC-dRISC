@@ -23,9 +23,7 @@ The software has been tested under MacOS with the Darwin Kernel Version 20.5.0, 
 To run the compilation and simulation toolchain you need to install the following software:
 
 + `python3` ([download](https://www.python.org/downloads/));
-+ `python3` module `argparse` (once `python3` is installed run `python3 -m pip install argparse`);
-+ `python3` module `vcd` (once `python3` is installed run `python3 -m pip install pyvcd`);
-+ other `python3` modules (`os`, `sys`, `re`, `pathlib`, `dataclasses`, `struct`, `itertools`, `curses`, `binascii`, `time`);
++ `python3` modules listed (here)[./requirements.txt] - you may run `pip3 install -r ./requiremets.txt`. *NOTE*: creating a python *virtualenv* is adviced.
 + `llvm` and `clang` version >= 9.0 ([download](https://llvm.org));
 + `gtkwave` ([download](http://gtkwave.sourceforge.net)).
 

@@ -17,7 +17,7 @@
 # Fast mode (CISC mode)
 #
 # basic instruction set:    movleq, subleq, mem, memr, pc, pcs (6)
-# complete instruction set: movleq (x2), subleq, mem, memr, pc, pcs, addleq, 
+# complete instruction set: movleq (move), subleq, mem, memr, pc, pcs, addleq, 
 #                           andleq, orleq, xorleq, xnorleq, shlleq, shrleq (14)
 #
 # Copyright (C) March 18, 2020, Marco Crepaldi, Istituto Italiano di Tecnologia (IIT)
@@ -73,6 +73,7 @@
 # Fast mode (CISC mode)
 #
 # label: {movleq, subleq, mem, memr, pc, pcs, addleq, andleq, orleq, xorleq, xnorleq, shlleq, shrleq} a, b -> c
+# note: movleq is used also for move
 #
 # a = source memory address
 # b = destination memory address
@@ -99,18 +100,19 @@
 # a = 0xFF - set exec to subleq 	a, b, c: mem[b] = mem[b] - mem[a], 		if mem[b] <= 0: pc = c; else: pc += 3
 #
 #   OISC tta machine mode (transport triggered hybrid architecture)
-# a = 0xEE - set exec to movleq 	a, b, c: mem[b] = mem[a], 			if mem[b] <= 0: pc = c; else: pc += 3	
+# a = 0xEE - set exec to movleq 	a, b, c: mem[b] = mem[a], 				if mem[b] <= 0: pc = c; else: pc += 3	
+#     if (b < 8): set exec to mov   a, b, c: mem[b] = mem[a],      			pc = c
 # a = 0xCC - set exec to addleq 	a, b, c: mem[b] = mem[a] + mem[b], 		if mem[b] <= 0: pc = c; else: pc += 3
-# a = 0x99 - set exec to shlleq 	a, b, c: mem[b] = mem[a] << mem[b], 		if mem[b] <= 0: pc = c; else: pc += 3	
-# a = 0x88 - set exec to shrleq 	a, b, c: mem[b] = mem[a] >> mem[b], 		if mem[b] <= 0: pc = c; else: pc += 3
+# a = 0x99 - set exec to shlleq 	a, b, c: mem[b] = mem[a] << mem[b], 	if mem[b] <= 0: pc = c; else: pc += 3	
+# a = 0x88 - set exec to shrleq 	a, b, c: mem[b] = mem[a] >> mem[b], 	if mem[b] <= 0: pc = c; else: pc += 3
 # a = 0x77 - set exec to orleq 		a, b, c: mem[b] = mem[a] | mem[b], 		if mem[b] <= 0: pc = c; else: pc += 3
 # a = 0x66 - set exec to andleq 	a, b, c: mem[b] = mem[a] & mem[b], 		if mem[b] <= 0: pc = c; else: pc += 3
 # a = 0x55 - set exec to xorleq 	a, b, c: mem[b] = mem[a] ^ mem[b], 		if mem[b] <= 0: pc = c; else: pc += 3
-# a = 0x44 - set exec to xnorleq 	a, b, c: mem[b] = ~(mem[a] ^ mem[b]), 		if mem[b] <= 0: pc = c; else: pc += 3
-# a = 0x33 - set exec to pc 		a, b, c: mem[b] = pc, 				pc += 3
+# a = 0x44 - set exec to xnorleq 	a, b, c: mem[b] = ~(mem[a] ^ mem[b]), 	if mem[b] <= 0: pc = c; else: pc += 3
+# a = 0x33 - set exec to pc 		a, b, c: mem[b] = pc, 					pc += 3
 # a = 0x22 - set exec to mem 		a, b, c: mem[mem[b]] = mem[a], 			pc += 3
 # a = 0x11 - set exec to memr 		a, b, c: mem[a] = mem[mem[b]], 			pc += 3
-# a = 0x00 - set exec to pcs 		a, b, c: pc = mem[b] 				(c is dummy)
+# a = 0x00 - set exec to pcs 		a, b, c: pc = mem[b] 					if mem[b] == 0: pc = c; else; pc = mem[b]
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 #

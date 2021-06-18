@@ -1,5 +1,5 @@
 # coding=utf-8
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 #
 # Dynamic Reduced Instruction Set Computer (d'RISC) assembler and simulator
 # 816 Version [a.k.a. multi-OISC (mOISC)]
@@ -10,9 +10,15 @@
 # memory parallelism: 16bit (2 bytes)
 # I/O width: 8bit (1 byte)
 #
+# Standard mode (one instruction set computer)
+#
+# basic instruction set:	exec
+#
+# Fast mode (CISC mode)
+#
 # basic instruction set:    movleq, subleq, mem, memr, pc, pcs (6)
-# complete instruction set: movleq, subleq, mem, memr, pc, pcs, addleq, 
-#                           andleq, orleq, xorleq, xnorleq, shlleq, shrleq (13)
+# complete instruction set: movleq (x2), subleq, mem, memr, pc, pcs, addleq, 
+#                           andleq, orleq, xorleq, xnorleq, shlleq, shrleq (14)
 #
 # Copyright (C) March 18, 2020, Marco Crepaldi, Istituto Italiano di Tecnologia (IIT)
 # Electronic Design Laboratory (EDL)
@@ -22,7 +28,7 @@
 #
 # dRISC 816 MACHINE DEFINITION 
 #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 #
 # Standard mode (one instruction set computer) 
 #
@@ -57,10 +63,10 @@
 #		exec a, b, c: mem[b] = mem[a], pc = c
 # 
 # or (except for 0x00), in case of indirect addressing (mem[b] = 0x01 - 0x07)
-#       exec a, b, c: mem[mem[b]] = mem[a], pc = c
+#       exec a, b, c: mem[mem[b]] = mem[a], pc += 3
 #       
 # and (except for 0x00), if addressed as a, 
-#       exec a, b, c: mem[a] = mem[mem[b]], pc = c
+#       exec a, b, c: mem[a] = mem[mem[b]], pc += 3
 #
 # hence the operation for these registers the machine is transport triggered
 #
@@ -77,7 +83,7 @@
 # the specific opcode. this way the execution of the machine saves one instruction to set MCR. this mode is
 # effective if code has a very high MCR change rate in standard mode
 #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 #
 # MACHINE REGISTERS
 #
@@ -106,7 +112,7 @@
 # a = 0x11 - set exec to memr 		a, b, c: mem[a] = mem[mem[b]], 			pc += 3
 # a = 0x00 - set exec to pcs 		a, b, c: pc = mem[b] 				(c is dummy)
 #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 #
 # b = 0x01 - CHR - CPU Halt Register
 #            Halts the CPU until a physical reset is issued and shows overflow error for subleq, surleq or addleq.
@@ -125,7 +131,7 @@
 # a = 0x08 - mem[b] = mem[a]
 # a = 0x00, 0x03, 0x05, 0x06, 0x07, 0x09-0xFE - does nothing
 #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 #
 # b = 0x02 - IWR - Interrupt Wait Register
 #            stops the processor and waits for an interrupt trigger (whose transition 0->1 or vice-versa is specified
@@ -140,7 +146,7 @@
 #                 CPU halt. The same effect occurs if trigger is waited, for instance on a non-input I/O.
 #                 Only during bootstrap IWR can be initialized as 0x00.
 #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 #
 # b = 0x03 - ICR - Interrupt Control Register
 #            sets the trigger direction for external interrupts. 
@@ -149,7 +155,7 @@
 #
 # a = 0x00-0xFF - trigger direction of the INT0-INT7 pins, 0 = 0->1, 1 = 1->0
 #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 #
 # b = 0x04 - CSR - Clock Speed Register
 #            immediately sets the CPU speed, with clock period Tclk = CSR/255 * K1 + K0, where K1 and K0 are 
@@ -159,7 +165,7 @@
 #
 # a = 0x00-0xFF - CPU speed
 #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 #
 # b = 0x05 - ISR - Interrupt Status Register
 #            after IWR is set and when reinvoking the machine after interrupt, it identified the interrupt pin
@@ -169,7 +175,7 @@
 #
 # mem[b] = 0x80, 0x40, 0x20, 0x10, 0x08, 0x04, 0x02, 0x01, where the logical 1 identifies INT0-INT7 IOR pins
 #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # 
 # I/O REGISTERS
 #
@@ -180,7 +186,7 @@
 #
 # a = 0x00-0xFF - direction for each pin, 1 output, 0 input
 #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #
 # b = 0x07 - IOR - Input/Output Register
 #            writes or read the logic value of a I/O pin, digital only
@@ -270,11 +276,11 @@
 # ONE:		1
 # ...
 #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 #
 # dRISC 816 (mOISC 816) - 1st 8 = IOR width, 2nd 16 = code/data memory width, irrespective of size
 #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 
 class bcolors:
     HEADER = '\033[95m'

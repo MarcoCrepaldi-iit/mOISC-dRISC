@@ -8,11 +8,13 @@ Open source implementation of a multi-One Instruction Set Processor (mOISC) or d
 This repository comprises a basic monolithic compilation toolchain that compiles C source code to mOISC assembly and binary files using the `clang` front-end LLVM-IR output. Moreover, it translates `clang` and `llc` generated assembly of commercial ISA (ARM, MIPS, RISC-V and x86) to the
 mOISC assembler and binary files and provides an RTL proof-of-concept microarchitecture written in VHDL. mOISC can be used for educational purposes or other research activities, for instance for devising other minimalistic computer architectures.
 
-##### <strong>A full machine description (registers included) is available in the first commented lines of the file `m.py`</strong>.
-
 Copyright (C) 2020-2021 Marco Crepaldi, Istituto Italiano di Tecnologia (www.iit.it), Electronic Design Laboratory (https://edl.iit.it).
 
 The software is *experimental* and *work in progress*. We have not implemented all LLVM-IR instructions, and the compiler works for simple programs based on integer variables, vectors and pointers. The mOISC processor (picocontroller) is conceived for low complexity applications. This software is a starting point to devise more complex projects/architectures. This code is the output of an our internal research project involving OISC.
+
+## CPU description
+
+##### <strong>A full machine description (registers included) is available in the first commented lines of the file `m.py`</strong>.
 
 ## Prerequisites
 
@@ -96,6 +98,9 @@ To run graphical simulation (internally invoking `gtkwave`), run the following c
 ```
 ./simulate examples/sine_wave
 ```
+The tool will open the files `sine_wave.bin` and `sine_wave.sym` that are obtained based on the previously
+run compilation.
+
 Press CTRL-C to stop simulation execution (few seconds will be enough for `sine_wave`). The simulation engine will generate a VCD file that will be opened in the same `examples/` subdirectory, and used as input for `gtkwave`. Once opened, add IOR to the currently displayed wave to see the effect of the code on the I/O output port. You can also add `\DEBUG.INFO` for information on the currently executed function. 
 
 ## Generation of synthesizable VHDL code
@@ -145,7 +150,7 @@ To run other programs, it is just necessary to overwrite the file `fpga.mif` and
 The mOISC toolchain is based on `m.py`, `mc.py` and `mautogen.py`, that are called in the scripts `compile`, `compile-cisc`, `simulate` and `autogen`.
 All these programs refer to the subfolder `/lib` and all its files. Other compilation and simulation options are available.
 
-For instance, run the command `python3 m.py -help` to print the options of `m.py`. The same applies for `mc.py` and `mautogen.py`.
+For instance, run the command `python3 m.py --help` to print the options of `m.py`. The same applies for `mc.py` and `mautogen.py`.
 
 ## License
 

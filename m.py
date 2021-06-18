@@ -247,8 +247,8 @@
 # machine registers - the first 8 addresses (0-7) must be reserved for bootstrap with the only sequence:
 # MCR:	<value_mcr>
 # CHR:	<value_chr>	
-# IWR:	<value_itr>
-# ICR:	<value_imr>
+# IWR:	<value_iwr>
+# ICR:	<value_icr>
 # CSR:	<value_csr>
 # ISR:	<value_dummy>
 # IOR:  <value_ior>

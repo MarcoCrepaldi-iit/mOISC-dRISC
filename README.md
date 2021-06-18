@@ -107,8 +107,7 @@ The `gtkwave` screen should look like this:
 
 ## Generation of synthesizable VHDL code
 
-The toolchain also provides automatic VHDL and Quartus project files generation for a [Cyclone 10LP Evaluation Kit](https://www.intel.com/content/www/us/en/programmable/products/boards_and_kits/dev-kits/altera/cyclone-10-lp-evaluation-kit.html), with IOR port
-pin mapping configured by default as,
+The toolchain also provides automatic VHDL and Quartus project files generation for a [Cyclone 10LP Evaluation Kit](https://www.intel.com/content/www/us/en/programmable/products/boards_and_kits/dev-kits/altera/cyclone-10-lp-evaluation-kit.html), with IOR port pin mapping configured by default as,
 
 | FPGA Pin  | dRISC Pin |
 |-----------|-----------|

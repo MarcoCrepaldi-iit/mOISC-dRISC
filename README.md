@@ -196,7 +196,7 @@ The files contained in this repository are licensed under the BSD-3-Clause licen
 + examples/RH_RF95.h, copyright (C) 2014 Mike McCauley (mikem@airspayce.com),
   with code commented on line 15 and from line 505 until the end of file by Marco Crepaldi, Istituto Italiano di Tecnologia.
 
-For all the other files, we report the BDS-3-Clause license:
+For all the other files, we report the BSD-3-Clause license:
 
 Copyright 2020-2021 Marco Crepaldi, Istituto Italiano di Tecnologia, Via Morego 30, 16163, Genova, Italy.
 

@@ -205,7 +205,7 @@ Open the Quartus Prime Lite software and open the project (*File*, *Open Project
 
 ![Quartus Project Open](./pics/project-open.png)
 
-Compile the design (double click on *Compile*). After compilation you should arrive to the following status. 
+Compile the design (double click on *Compile Design*). After compilation you should arrive to the following status. 
 
 ![Quartus Project Synthesis](./pics/synthesis.png)
 

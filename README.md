@@ -206,13 +206,13 @@ Open the Quartus Prime Lite software and open the project (*File*, *Open Project
 
 Compile the design (double click on *Compile Design*). After compilation you should arrive to the following status. 
 
+*Note: synthesis depends on the phyisical I/O pin placement.*
+
 ![Quartus Project Synthesis](./pics/synthesis.png)
 
 Connect the evaluation board to your computer and open the programmer (*Tools*, *Programmer* menu). Make sure
 you first set up your hardware (*Hardware Setup...* button). Then click on <strong> Auto Detect </strong>. The system will detect the connected
 boards and will ask to overwrite the existing configuration. Click on *Yes*. Add the generated programmer binary file in a subfolder `output_files` to the device and not to the additional memory in the same scan chain. You should see a device starting with `10CL025`. You should be able to reproduce the following screenshot.
-
-*Note: synthesis depends on the phyisical I/O pin placement.*
 
 ![Quartus Project Programming](./pics/programming.png)
 

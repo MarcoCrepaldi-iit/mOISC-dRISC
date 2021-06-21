@@ -2,7 +2,6 @@
 
 ![dRISC_logo](/logo/dRISC.png)
 
-
 Open source implementation of a multi-One Instruction Set Processor (mOISC) or dynamic Reduced Instruction Set Computer (dRISC) for microcontroller applications.
 
 This repository comprises a basic monolithic compilation toolchain that compiles C source code to mOISC assembly and to binary files using the `clang` front-end LLVM-IR output. Moreover, it translates `clang` and `llc` generated assembly of commercial ISA (ARM, MIPS, RISC-V and x86) to the
@@ -213,7 +212,7 @@ Connect the evaluation board to your computer and open the programmer (*Tools*, 
 you first set up your hardware (*Hardware Setup...* button). Then click on <strong> Auto Detect </strong>. The system will detect the connected
 boards and will ask to overwrite the existing configuration. Click on *Yes*. Add the generated programmer binary file in a subfolder `output_files` to the device and not to the additional memory in the same scan chain. You should see a device starting with `10CL025`. You should be able to reproduce the following screenshot.
 
-*Note: the synthesis depends on the phyisical I/O pin placement.*
+*Note: synthesis depends on the phyisical I/O pin placement.*
 
 ![Quartus Project Programming](./pics/programming.png)
 

@@ -217,7 +217,7 @@ boards and will ask to overwrite the existing configuration. Click on *Yes*. Add
 
 ![Quartus Project Programming](./pics/programming.png)
 
-Make sure that *Program/Configure* is flagged and click on the *Start* button. You should have now programmed your device, and see the incremental blinking cycle (at different speeds) on the on-board green LED bank, as shown in the following image.
+Make sure that *Program/Configure* is flagged and click on the *Start* button. You should have now programmed your device, and see the incremental blinking cycle (at different speeds) on the on-board green LED bank, similarly to what is shown in the following image.
 
 ![iotest demo running](./pics/iotest.gif)
 

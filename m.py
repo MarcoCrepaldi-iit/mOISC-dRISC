@@ -100,16 +100,16 @@
 # a = 0xFF - set exec to subleq 	a, b, c: mem[b] = mem[b] - mem[a], 		if mem[b] <= 0: pc = c; else: pc += 3
 #
 #   OISC tta machine mode (transport triggered hybrid architecture)
-# a = 0xEE - set exec to movleq 	a, b, c: mem[b] = mem[a], 				if mem[b] <= 0: pc = c; else: pc += 3	
-#     if (b < 8): set exec to mov   a, b, c: mem[b] = mem[a],      			pc = c
+# a = 0xEE - set exec to movleq 	a, b, c: mem[b] = mem[a], 			if mem[b] <= 0: pc = c; else: pc += 3	
+#     if (b < 8): set exec to mov   	a, b, c: mem[b] = mem[a],      			pc = c
 # a = 0xCC - set exec to addleq 	a, b, c: mem[b] = mem[a] + mem[b], 		if mem[b] <= 0: pc = c; else: pc += 3
-# a = 0x99 - set exec to shlleq 	a, b, c: mem[b] = mem[a] << mem[b], 	if mem[b] <= 0: pc = c; else: pc += 3	
-# a = 0x88 - set exec to shrleq 	a, b, c: mem[b] = mem[a] >> mem[b], 	if mem[b] <= 0: pc = c; else: pc += 3
+# a = 0x99 - set exec to shlleq 	a, b, c: mem[b] = mem[a] << mem[b], 		if mem[b] <= 0: pc = c; else: pc += 3	
+# a = 0x88 - set exec to shrleq 	a, b, c: mem[b] = mem[a] >> mem[b], 		if mem[b] <= 0: pc = c; else: pc += 3
 # a = 0x77 - set exec to orleq 		a, b, c: mem[b] = mem[a] | mem[b], 		if mem[b] <= 0: pc = c; else: pc += 3
 # a = 0x66 - set exec to andleq 	a, b, c: mem[b] = mem[a] & mem[b], 		if mem[b] <= 0: pc = c; else: pc += 3
 # a = 0x55 - set exec to xorleq 	a, b, c: mem[b] = mem[a] ^ mem[b], 		if mem[b] <= 0: pc = c; else: pc += 3
-# a = 0x44 - set exec to xnorleq 	a, b, c: mem[b] = ~(mem[a] ^ mem[b]), 	if mem[b] <= 0: pc = c; else: pc += 3
-# a = 0x33 - set exec to pc 		a, b, c: mem[b] = pc, 					pc += 3
+# a = 0x44 - set exec to xnorleq 	a, b, c: mem[b] = ~(mem[a] ^ mem[b]), 		if mem[b] <= 0: pc = c; else: pc += 3
+# a = 0x33 - set exec to pc 		a, b, c: mem[b] = pc, 				pc += 3
 # a = 0x22 - set exec to mem 		a, b, c: mem[mem[b]] = mem[a], 			pc += 3
 # a = 0x11 - set exec to memr 		a, b, c: mem[a] = mem[mem[b]], 			pc += 3
 # a = 0x00 - set exec to pcs 		a, b, c: -					if mem[b] == 0: pc = c; else; pc = mem[b]
@@ -124,7 +124,7 @@
 #            operation is processed.
 #
 #            W (255), blocking behavior
-#			 R, non-blocking behavior
+#	     R, non-blocking behavior
 #
 # a = 0xFF - halts the cpu until an external RESET is issued in the physical pin
 # a = 0x01 - overflow of the last subleq, surleq and addleq instructions. reset at a next correct add/sub/surleq
@@ -141,7 +141,7 @@
 #            is cleared and ISR is updated with a 1 corresponding to the triggered input. 
 #
 #            W, blocking behavior
-#			 R, non-blocking behavior
+#	     R, non-blocking behavior
 #
 # a = 0x00-0xFF - stops the processor and waits for interrupt
 #                 warning: writing 0x00 to IWR forces the CPU to wait indefinitely and has an effect of a functional
@@ -184,7 +184,7 @@
 # b = 0x06 - IDR - Input/output Direction Register
 #			 sets the direction of I/O pins, digital only
 #
-#			 RW, non-blocking behavior
+#	     RW, non-blocking behavior
 #
 # a = 0x00-0xFF - direction for each pin, 1 output, 0 input
 #
@@ -193,7 +193,7 @@
 # b = 0x07 - IOR - Input/Output Register
 #            writes or read the logic value of a I/O pin, digital only
 #
-#			 RW, non-blocking behavior
+#	     RW, non-blocking behavior
 #
 # a = 0x00-0xFF - logic value for each pin, high 1, low 0
 #
@@ -256,7 +256,7 @@
 # where <value_*> is an 8 bit unsigned integer
 #
 # program memory - starting from address 8 the program memory can be arbitrarily specified, e.g.:
-# label.0:		exec R5, T -> C
+# label.0:			exec R5, T -> C
 #				exec R5, R5
 #				exec 10, 25
 #               ...

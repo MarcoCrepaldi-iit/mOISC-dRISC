@@ -213,6 +213,8 @@ Connect the evaluation board to your computer and open the programmer (*Tools*, 
 you first set up your hardware (*Hardware Setup...* button). Then click on <strong> Auto Detect </strong>. The system will detect the connected
 boards and will ask to overwrite the existing configuration. Click on *Yes*. Add the generated programmer binary file in a subfolder `output_files` to the device and not to the additional memory in the same scan chain. You should see a device starting with `10CL025`. You should be able to reproduce the following screenshot.
 
+*Note: the synthesis depends on the phyisical I/O pin placement.*
+
 ![Quartus Project Programming](./pics/programming.png)
 
 Make sure that *Program/Configure* is flagged and click on the *Start* button. You should have now programmed your device, and see the incremental blinking cycle (at different speeds) on the on-board green LED bank, as shown in the following image.

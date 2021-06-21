@@ -201,10 +201,23 @@ Then, generate the VHDL description with a new pin configuration (listed in the 
 The program will generate a full featured processor in a subfolder `quartusrtl.out.full`. Move this folder somewhere else if you want to keep
 the generated RTL separated from the main development folder.
 
-Open the Quartus Prime Lite software and open the project (*File*, *Open Project...* menu) included in the `quartusrtl.out.full` folder. 
-Compile the design. Connect the evaluation board to your computer and open the programmer (*Tools*, *Programmer* menu). Make sure
+Open the Quartus Prime Lite software and open the project (*File*, *Open Project...* menu) included in the `quartusrtl.out.full` folder. You should see something similar to the following screenshot.
+
+![Quartus Project Open](./pics/project-open.png)
+
+Compile the design (double click on *Compile*). After compilation you should arrive to the following status. 
+
+![Quartus Project Synthesis](./pics/synthesis.png)
+
+Connect the evaluation board to your computer and open the programmer (*Tools*, *Programmer* menu). Make sure
 you first set up your hardware (*Hardware Setup...* button). Then click on <strong> Auto Detect </strong>. The system will detect the connected
-boards and will ask to overwrite the existing configuration. Click on *Yes*. Add the generated programmer binary file in a subfolder `output_files` to the device and not to the additional memory in the same scan chain. You should see a device starting with `10CL025`. Make sure that *Program/Configure* is flagged and click on the *Start* button. You should have now programmed your device, and see the incremental blinking cycle (at different speeds) on the on-board green LED bank.
+boards and will ask to overwrite the existing configuration. Click on *Yes*. Add the generated programmer binary file in a subfolder `output_files` to the device and not to the additional memory in the same scan chain. You should see a device starting with `10CL025`. You should be able to reproduce the following screenshot.
+
+![Quartus Project Programming](./pics/programming.png)
+
+Make sure that *Program/Configure* is flagged and click on the *Start* button. You should have now programmed your device, and see the incremental blinking cycle (at different speeds) on the on-board green LED bank, as shown in the following image.
+
+![iotest demo running](./pics/iotest.gif)
 
 ## Note on command line options
 

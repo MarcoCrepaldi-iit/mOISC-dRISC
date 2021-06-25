@@ -218,6 +218,8 @@ boards and will ask to overwrite the existing configuration. Click on *Yes*. Add
 
 Make sure that *Program/Configure* is flagged and click on the *Start* button. You should have now programmed your device, and see the incremental blinking cycle (at different speeds) on the on-board green LED bank, similarly to what is shown in the following image.
 
+*Note: this animated GIF is only indicative of the behaviour, and you should be able to see a full binary count at different speeds on the green LED bank.*
+
 ![iotest demo running](./pics/iotest.gif)
 
 ## Note on command line options

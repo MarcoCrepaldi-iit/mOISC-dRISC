@@ -137,9 +137,21 @@ run compilation.
 
 Let the system simulate for a while, then press CTRL-C to stop the simulation execution and view the results (few seconds will be enough for `sine_wave`). The simulation engine will generate a VCD file that will be opened in the same `examples/` subdirectory, and used as input for `gtkwave`. Once opened, add IOR to the currently displayed wave to see the effect of the code on the I/O output port. You can also add `\DEBUG.INFO` for information on the currently executed function.
 
-The `gtkwave` screen should look like this:
+Under Linux the `gtkwave` screen should look like this:
 
-![gtkwave](./pics/sim.png)
+![gtkwave_linux](./pics/sim.png)
+
+Under macOS, by zooming out the waveform and by activating the analog-view mode, the `gtkwave` screen should look like this for OISC mode compilation from an ARM assembly:
+
+![gtkwave_macos_arm](./pics/sim-macos-oisc-mode-arm.png)
+
+For the same code in CISC mode, assuming LLVM-IR output compilation, the `gtkwave` screen should look like this
+
+![gtkwave_macos_ll](./pics/sim-macos-cisc-mode-ll.png)
+
+You can now zoom-in to see the data memory variables evolution during the execution of the program.
+
+*Note: by default `simulate` attaches some variables to be saved in the VCD file. You can modify the script to add the variables you want to show in the simulation.*
 
 ## Generation of synthesizable VHDL code
 

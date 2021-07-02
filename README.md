@@ -141,7 +141,7 @@ Under Linux the `gtkwave` screen should look like this (code translated from ARM
 
 ![gtkwave_linux](./pics/sim.png)
 
-Under macOS, by zooming out the waveform and by activating the analog-view mode, the `gtkwave` screen should look like this for OISC mode compilation from an ARM assembly:
+Under macOS, by zooming out the waveform and by activating the analog-view mode, the `gtkwave` screen should look like this for OISC mode translation from an ARM assembly:
 
 ![gtkwave_macos_arm](./pics/sim-macos-oisc-mode-arm.png)
 

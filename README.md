@@ -145,7 +145,7 @@ Under macOS, by zooming out the waveform and by activating the analog-view mode,
 
 ![gtkwave_macos_arm](./pics/sim-macos-oisc-mode-arm.png)
 
-For the same code in CISC mode, assuming LLVM-IR output compilation, the `gtkwave` screen should look like this
+For the same code in CISC mode, assuming LLVM-IR output compilation, the `gtkwave` screen should look like this:
 
 ![gtkwave_macos_ll](./pics/sim-macos-cisc-mode-ll.png)
 

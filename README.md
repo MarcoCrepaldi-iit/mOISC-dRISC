@@ -196,7 +196,7 @@ To run other programs, it is just necessary to overwrite the file `fpga.mif` and
 
 ### Example
 
-Assuming you have a [Cyclone 10LP Evaluation Kit](https://www.intel.com/content/www/us/en/programmable/products/boards_and_kits/dev-kits/altera/cyclone-10-lp-evaluation-kit.html), let us assume you want to run a sample program that repeatedly shows a count from 0 to 15 in a binary format on some
+Assuming you have a [Cyclone 10LP Evaluation Kit](https://www.intel.com/content/www/us/en/programmable/products/boards_and_kits/dev-kits/altera/cyclone-10-lp-evaluation-kit.html), let us imagine you want to run a sample program that repeatedly shows a count from 0 to 15 in a binary format on some
 pins of the output port to see if the toolchain is working correctly. This demo is included in the file `examples/iotest.c`.
 
 Make sure you have correctly installed [Quartus Prime Lite](https://fpgasoftware.intel.com/?edition=lite) and your *USB Blaster* drivers supplied by Intel. Without functioning drivers it is not possible to program the FPGA.

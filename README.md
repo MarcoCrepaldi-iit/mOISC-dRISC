@@ -137,7 +137,7 @@ run compilation.
 
 Let the system simulate for a while, then press CTRL-C to stop the simulation execution and view the results (few seconds will be enough for `sine_wave`). The simulation engine will generate a VCD file that will be opened in the same `examples/` subdirectory, and used as input for `gtkwave`. Once opened, add IOR to the currently displayed wave to see the effect of the code on the I/O output port. You can also add `\DEBUG.INFO` for information on the currently executed function.
 
-Under Linux the `gtkwave` screen should look like this (code translated from ARM, OISC mode):
+Under Linux the `gtkwave` screen should look like this (code translated from ARM, OISC mode, with `LR` added from `VM` signal list):
 
 ![gtkwave_linux](./pics/sim.png)
 
@@ -145,7 +145,7 @@ Under macOS, by zooming out the waveform and by activating the analog-view mode,
 
 ![gtkwave_macos_arm](./pics/sim-macos-oisc-mode-arm.png)
 
-For the same code in CISC mode, assuming LLVM-IR output compilation, the `gtkwave` screen should look like this:
+For the same code in CISC mode, assuming LLVM-IR output compilation, the `gtkwave` screen should look like this (with added `LINK_REGISTER` from signal list):
 
 ![gtkwave_macos_ll](./pics/sim-macos-cisc-mode-ll.png)
 

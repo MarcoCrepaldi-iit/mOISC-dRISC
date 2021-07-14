@@ -117,8 +117,8 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 #
 # b = 0x01 - CHR - CPU Halt Register
-#            Halts the CPU until a physical reset is issued and shows overflow error for subleq, surleq or addleq.
-#            when an overflow is detected CHR becomes 0x01 until a next correct subleq, surleq or addleq occurs.
+#            Halts the CPU until a physical reset is issued and shows overflow error for subleq or addleq.
+#            when an overflow is detected CHR becomes 0x01 until a next correct subleq or addleq occurs.
 #			 it also contains flags to identify the bigger/smaller/equal relationship between pointed operands.
 #            CHR is updated only for a subleq or addleq machine mode and values hold until the next subleq/addled
 #            operation is processed.
@@ -127,7 +127,7 @@
 #	     R, non-blocking behavior
 #
 # a = 0xFF - halts the cpu until an external RESET is issued in the physical pin
-# a = 0x01 - overflow of the last subleq, surleq and addleq instructions. reset at a next correct add/sub/surleq
+# a = 0x01 - overflow of the last subleq and addleq instructions. reset at a next correct add/subleq
 # a = 0x02 - mem[b] > mem[a]
 # a = 0x04 - mem[b] < mem[a]
 # a = 0x08 - mem[b] = mem[a]

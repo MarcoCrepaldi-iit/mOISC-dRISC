@@ -241,4 +241,5 @@ All these programs refer to the subfolder `/lib` and all its files. Other compil
 
 For instance, run the command `python3 m.py --help` to print the options of `m.py`. The same applies for `mc.py` and `mautogen.py`.
 
-
+***
+This CPU, this software and this work are dedicated to Damiano.

@@ -50,8 +50,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 ## CPU description
 
-##### <strong>A full machine description (registers included) is available in the first commented lines of the file `m.py` [here](./m.py) </strong>.
-##### <strong>All this work, the Instruction Set Architecture (ISA), the CPU architecture, the compilation and simulation toolchain with our experiments, are detailed in [this](https://ieeexplore.ieee.org/document/9511494) paper. </strong>.
+##### <strong>A full machine description (registers included) is available in the first commented lines of the file `m.py` [here](./m.py)</strong>.
+##### <strong>All this work, the Instruction Set Architecture (ISA), the CPU architecture, the compilation and simulation toolchain with our experiments, are detailed in [this](https://ieeexplore.ieee.org/document/9511494) paper</strong>.
 
 ## Prerequisites
 

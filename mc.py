@@ -1010,7 +1010,7 @@ class arch_to_drisc:
 						offset = int(self.LLVM_FUNC[thisfunc_index].FunctionMaps[int(self.LLVM_FUNC[thisfunc_index].FunctionAllocs.index(self.LLVM_I[index].actual_values[BASE3]))])
 						newimmediate = self.llvm_push_immediate_dram(offset)
 						op3 = newimmediate
-					elif not op2_inAllocs:
+					elif not op3_inAllocs:
 						if self.LLVM_I[index].actual_values[BASE3][0] == "@":
 							op3 = self.LLVM_WRITER_PTR+self.LLVM_WRITER_GLOBAL+self.LLVM_I[index].actual_values[BASE3][1:]
 						elif self.LLVM_I[index].actual_values[BASE3][0] == "%":
@@ -1170,7 +1170,7 @@ class arch_to_drisc:
 
 				self.llvm_push_dram(self.LLVM_WRITER_GLOBAL+self.LLVM_I[index].actual_values[0][1:],self.LLVM_I[index].actual_values[2])
 
-			elif self.LLVM_I[index].name == ['constant', 'x', '$', 'align']:
+			elif self.LLVM_I[index].name == ['constant', 'x', '$', 'align'] or self.LLVM_I[index].name == ['dso_local', 'constant', 'x', '$', 'align']:
 				self.llvm_push_dram(self.LLVM_WRITER_PTR+self.LLVM_WRITER_GLOBAL+self.LLVM_I[index].actual_values[0][1:], self.LLVM_WRITER_GLOBAL+self.LLVM_I[index].actual_values[0][1:]+self.LLVM_WRITER_VECT+str(0))
 				for i in range(int(self.LLVM_I[index].actual_values[2])):
 					self.llvm_push_dram(self.LLVM_WRITER_GLOBAL+self.LLVM_I[index].actual_values[0][1:]+self.LLVM_WRITER_VECT+str(i), self.LLVM_I[index].actual_values[6][1+3*i])
@@ -6073,49 +6073,56 @@ class arch_to_drisc:
 		#	print(self.f_code[i])
 
 	def linker_f(self):
-		addr = 8
-		self.remap_list = []
-		self.remap_addr = []
-		self.remap_data = []
-		self.f_code_linked = []
-		for i in range(8):
-			self.f_code_linked.append(self.f_code[i])
-		for i in range(8, len(self.f_code)): # 8 + 4*i
-			asmline = self.f_code[i]
-			asmline.replace("\n","")
-			if ":" in asmline:
-				metadata = asmline.split(":")
-				rightmost = metadata[1].replace(" ", "").replace("\t", "").replace("\n","")
-				leftmost = metadata[0].replace(" ", "").replace("\t", "").replace("\n","")
-				if self.PCMCR_RESCALE in leftmost:
-					rightmost = str(int(int(rightmost)/3*2))
-				found_opcode = False
-				for j in range(len(self.OPCODE)):
-					if self.OPCODE[j]+" " in asmline:
-						found_opcode = True
-						break
-				if found_opcode:
-					self.f_code_linked.append(self.f_code[i])
-					addr += 4
+		try:
+			addr = 8
+			self.remap_list = []
+			self.remap_addr = []
+			self.remap_data = []
+			self.f_code_linked = []
+			for i in range(8):
+				self.f_code_linked.append(self.f_code[i])
+			for i in range(8, len(self.f_code)): # 8 + 4*i
+				asmline = self.f_code[i]
+				asmline.replace("\n","")
+				if ":" in asmline:
+					metadata = asmline.split(":")
+					rightmost = metadata[1].replace(" ", "").replace("\t", "").replace("\n","")
+					leftmost = metadata[0].replace(" ", "").replace("\t", "").replace("\n","")
+					if self.PCMCR_RESCALE in leftmost:
+						rightmost = str(int(int(rightmost)/3*2))
+					found_opcode = False
+					for j in range(len(self.OPCODE)):
+						if self.OPCODE[j]+" " in asmline:
+							found_opcode = True
+							break
+					if found_opcode:
+						self.f_code_linked.append(self.f_code[i])
+						addr += 4
+					else:
+						self.remap_list.append(leftmost)
+						self.remap_data.append(rightmost)
+						self.remap_addr.append(addr)
+						addr += 1
 				else:
-					self.remap_list.append(leftmost)
-					self.remap_data.append(rightmost)
-					self.remap_addr.append(addr)
-					addr += 1
-			else:
-					self.f_code_linked.append(self.f_code[i])
-					addr += 4				
-		maxlen = 0
-		for i in range(len(self.remap_list)):
-			if len(self.remap_list[i]) > maxlen:
-				maxlen = len(self.remap_list[i])
+						self.f_code_linked.append(self.f_code[i])
+						addr += 4				
+			maxlen = 0
+			for i in range(len(self.remap_list)):
+				if len(self.remap_list[i]) > maxlen:
+					maxlen = len(self.remap_list[i])
 
-		for i in range(len(self.remap_list)): # 8 + 4*i
-				if [k in self.NUMSET for k in self.remap_data[i]] != [True] * len(self.remap_data[i]):
-					self.remap_data[i] = str(self.remap_addr[self.remap_list.index(self.remap_data[i])])
-				self.f_code_linked.append(self.remap_list[i] + ":"+"\t" + self.remap_data[i])
-		#for i in range(len(self.f_code_linked)):
-		#	print(self.f_code_linked[i])
+			for i in range(len(self.remap_list)): # 8 + 4*i
+					if [k in self.NUMSET for k in self.remap_data[i]] != [True] * len(self.remap_data[i]):
+						self.remap_data[i] = str(self.remap_addr[self.remap_list.index(self.remap_data[i])])
+					self.f_code_linked.append(self.remap_list[i] + ":"+"\t" + self.remap_data[i])
+			#for i in range(len(self.f_code_linked)):
+			#	print(self.f_code_linked[i])
+		except ValueError:
+			sys.stdout.write(bcolors.FAIL +"Error: " + bcolors.ENDC +" Value \"" + str(self.remap_data[i]) +"\" to be linked in data memory is undefined. Compilation issue. \n")
+			sys.exit(1)
+		except:
+			sys.stdout.write(bcolors.FAIL +"Error: " + bcolors.ENDC +"Unknown linker error. Compilation issue. \n")
+			sys.exit(1)
 
 
 def ui_init():

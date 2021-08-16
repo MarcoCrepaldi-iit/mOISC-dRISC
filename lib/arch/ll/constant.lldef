@@ -1,1 +1,2 @@
+@<GlobalVarName> = dso_local constant [<dim> x <ty>] [$], align <Alignment>
 @<GlobalVarName> = constant [<dim> x <ty>] [$], align <Alignment>

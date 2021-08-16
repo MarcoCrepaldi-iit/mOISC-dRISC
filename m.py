@@ -407,7 +407,7 @@ class DRISC:
 							sys.stdout.flush()
 							raise Exception
 					else:
-						if addr <= 5:
+						if addr <= 7:
 							sys.stdout.write("\nError: Not all machine registers have been specified.\n")
 							raise Exception
 						cmd = proc.upper()				
@@ -984,7 +984,7 @@ class DRISC:
 
 
 
-		K_10kHz = 10e-3
+		K_10kHz = 100e-6
 		K_1MHz = 1e-6
 		K_50MHz = 20e-9
 		K_100MHz = 10e-9
